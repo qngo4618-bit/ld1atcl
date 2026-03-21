@@ -68,7 +68,7 @@ export default function Index() {
       <header className="border-b border-border bg-card">
         <div className="max-w-3xl mx-auto px-4 py-6 text-center">
           <h1 className="text-2xl font-bold text-foreground tracking-tight">
-            VNA Crew Q&A
+            Tra Cứu ATCL
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
             Tra cứu nhanh câu hỏi & đáp án từ tài liệu huấn luyện

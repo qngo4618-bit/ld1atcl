@@ -39,9 +39,6 @@ export function QACard({ item, query }: QACardProps) {
         <span className="inline-block px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded">
           {item.category}
         </span>
-        <span className="text-xs text-muted-foreground">
-          {item.source}
-        </span>
       </div>
 
       {/* Question */}
