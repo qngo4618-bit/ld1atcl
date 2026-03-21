@@ -6,7 +6,7 @@ export interface QAItem {
   category: string;
 }
 
-export const categories = ["An toàn – An ninh", "FOM – Điều hành khai thác", "An toàn chất lượng", "Dịch vụ", "IBT – Trắc nghiệm"];
+export const categories = ["An toàn – An ninh", "FOM – Điều hành khai thác", "An toàn chất lượng", "Dịch vụ", "Dịch vụ – Phục hồi & Bồi thường", "IBT – Trắc nghiệm"];
 
 export const qaData: QAItem[] = [
   { id: 1, question: "Who are authorized for travel in the flight deck with permission but without a possession of a flight deck permit issued by the CAAV or by VNA? CCOM 2.10.1.1(a)", answer: "kỹ sư tàu bay đang làm nhiệm vụ, tổ lái hoặc tv trên chuyến bay positioning, tổ lái trainee, nhân viên điều hành khai thác bay đang làm nhiệm vụ, đánh giá viên đang làm nhiệm vụ", keywords: ["flight deck", "seat", "authorized", "CAAV", "buồng lái", "permit"], category: "An toàn – An ninh" },
