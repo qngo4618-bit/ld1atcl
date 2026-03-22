@@ -1,8 +1,7 @@
 import { useState, useMemo } from "react";
 import { SearchBar } from "@/components/SearchBar";
 import { QACard } from "@/components/QACard";
-import { CategoryFilter } from "@/components/CategoryFilter";
-import { qaData, categories } from "@/data/qaData";
+import { qaData } from "@/data/qaData";
 
 function removeVietnameseTones(str: string): string {
   return str
@@ -12,13 +11,7 @@ function removeVietnameseTones(str: string): string {
     .replace(/Đ/g, "D");
 }
 
-function searchQA(query: string, categoryFilter: string | null) {
-  let items = qaData;
-
-  if (categoryFilter) {
-    items = items.filter((item) => item.category === categoryFilter);
-  }
-
+function searchQA(query: string) {
   if (!query.trim()) return [];
 
   const keywords = query
@@ -28,7 +21,7 @@ function searchQA(query: string, categoryFilter: string | null) {
 
   if (keywords.length === 0) return [];
 
-  const scored = items
+  const scored = qaData
     .map((item) => {
       let score = 0;
       const qLower = item.question.toLowerCase();
@@ -55,12 +48,8 @@ function searchQA(query: string, categoryFilter: string | null) {
 
 export default function Index() {
   const [query, setQuery] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
-  const results = useMemo(
-    () => searchQA(query, categoryFilter),
-    [query, categoryFilter]
-  );
+  const results = useMemo(() => searchQA(query), [query]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -71,7 +60,7 @@ export default function Index() {
             Tra Cứu ATCL
           </h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Tra cứu nhanh câu hỏi & đáp án từ tài liệu huấn luyện
+            Tài liệu nội bộ LĐTV1
           </p>
         </div>
       </header>
@@ -83,15 +72,6 @@ export default function Index() {
           onQueryChange={setQuery}
           resultCount={results.length}
         />
-
-        {/* Category Filter */}
-        <div className="mt-4">
-          <CategoryFilter
-            categories={categories}
-            selected={categoryFilter}
-            onSelect={setCategoryFilter}
-          />
-        </div>
       </div>
 
       {/* Results */}
@@ -102,7 +82,7 @@ export default function Index() {
               Nhập từ khoá để bắt đầu tìm kiếm
             </p>
             <p className="text-muted-foreground/60 text-xs mt-2">
-              {qaData.length} câu hỏi từ 2 nguồn tài liệu
+              {qaData.length} câu hỏi từ tài liệu nội bộ
             </p>
           </div>
         ) : results.length === 0 ? (
@@ -111,11 +91,11 @@ export default function Index() {
               Không tìm thấy kết quả cho "{query}"
             </p>
             <p className="text-muted-foreground/60 text-xs mt-2">
-              Thử từ khoá khác hoặc bỏ bộ lọc danh mục
+              Thử từ khoá khác
             </p>
           </div>
         ) : (
-          <div className="space-y-3">
+          <div className="space-y-2">
             {results.map((item) => (
               <QACard key={item.id} item={item} query={query} />
             ))}
