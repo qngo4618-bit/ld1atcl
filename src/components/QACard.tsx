@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import type { QAItem } from "@/data/qaData";
 
 interface QACardProps {
@@ -28,56 +28,43 @@ function highlightText(text: string, query: string) {
 
 export function QACard({ item, query }: QACardProps) {
   const [expanded, setExpanded] = useState(false);
-  const answerLines = item.answer.split("\n").filter(l => l.trim());
-  const isLong = answerLines.length > 3;
-  const displayLines = expanded ? answerLines : answerLines.slice(0, 3);
 
   return (
-    <div className="bg-card border border-border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
-      {/* Category + Source */}
-      <div className="flex items-center gap-2 px-4 pt-3 pb-1">
-        <span className="inline-block px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded">
-          {item.category}
-        </span>
-      </div>
-
-      {/* Question */}
-      <div className="px-4 py-2">
-        <p className="text-sm font-semibold text-foreground leading-relaxed">
+    <div className="border border-border rounded-lg overflow-hidden bg-card">
+      {/* Question - clickable */}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full text-left px-4 py-3 flex items-start gap-3 hover:bg-accent/50 transition-colors active:scale-[0.995]"
+      >
+        <ChevronRight
+          className={`h-4 w-4 mt-0.5 shrink-0 text-muted-foreground transition-transform duration-200 ${
+            expanded ? "rotate-90" : ""
+          }`}
+        />
+        <span className="text-sm font-medium text-foreground leading-relaxed">
           {highlightText(item.question, query)}
-        </p>
-      </div>
+        </span>
+      </button>
 
-      {/* Answer */}
-      <div className="px-4 pb-3 border-t border-border/50 pt-2">
-        <div className="space-y-1">
-          {displayLines.map((line, i) => (
-            <p key={i} className="text-sm text-foreground/80 leading-relaxed">
-              {line.startsWith("-") || line.startsWith("•") ? (
-                <span className="flex gap-2">
-                  <span className="text-muted-foreground select-none">•</span>
-                  <span className="font-medium">{highlightText(line.replace(/^[-•]\s*/, ""), query)}</span>
-                </span>
-              ) : (
-                <span className="font-medium">{highlightText(line, query)}</span>
-              )}
-            </p>
-          ))}
+      {/* Answer - expandable */}
+      {expanded && (
+        <div className="px-4 pb-3 pl-11 border-t border-border/50">
+          <div className="pt-3 space-y-1.5">
+            {item.answer.split("\n").filter(l => l.trim()).map((line, i) => (
+              <p key={i} className="text-sm text-foreground/80 leading-relaxed">
+                {line.startsWith("-") || line.startsWith("•") || line.startsWith("*") ? (
+                  <span className="flex gap-2">
+                    <span className="text-muted-foreground select-none shrink-0">•</span>
+                    <span>{highlightText(line.replace(/^[-•*]\s*/, ""), query)}</span>
+                  </span>
+                ) : (
+                  <span className="font-medium">{highlightText(line, query)}</span>
+                )}
+              </p>
+            ))}
+          </div>
         </div>
-
-        {isLong && (
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="mt-2 flex items-center gap-1 text-xs text-primary hover:text-primary/80 font-medium transition-colors active:scale-98"
-          >
-            {expanded ? (
-              <>Thu gọn <ChevronUp className="h-3 w-3" /></>
-            ) : (
-              <>Xem thêm ({answerLines.length - 3} dòng) <ChevronDown className="h-3 w-3" /></>
-            )}
-          </button>
-        )}
-      </div>
+      )}
     </div>
   );
 }
