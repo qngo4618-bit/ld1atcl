@@ -1,13 +1,14 @@
-import { Search, X } from "lucide-react";
+import { Search, X, Loader2 } from "lucide-react";
 import { useRef, useEffect } from "react";
 
 interface SearchBarProps {
   query: string;
   onQueryChange: (query: string) => void;
   resultCount: number;
+  isSearching?: boolean;
 }
 
-export function SearchBar({ query, onQueryChange, resultCount }: SearchBarProps) {
+export function SearchBar({ query, onQueryChange, isSearching }: SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -17,14 +18,18 @@ export function SearchBar({ query, onQueryChange, resultCount }: SearchBarProps)
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="relative group">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground transition-colors group-focus-within:text-primary" />
+        {isSearching ? (
+          <Loader2 className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-primary animate-spin" />
+        ) : (
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground transition-colors group-focus-within:text-primary" />
+        )}
         <input
           ref={inputRef}
           type="text"
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
-          placeholder="Nhập từ khoá tìm kiếm... (VD: HALON, turbulence, báo ốm)"
-          className="w-full h-14 pl-12 pr-12 bg-card border-2 border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-base"
+          placeholder="Tìm kiếm... (VD: HALON, bồi thường, SPML, MCO)"
+          className="w-full h-12 pl-12 pr-12 bg-card border-2 border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm"
           autoComplete="off"
           spellCheck={false}
         />
@@ -37,11 +42,6 @@ export function SearchBar({ query, onQueryChange, resultCount }: SearchBarProps)
           </button>
         )}
       </div>
-      {query && (
-        <p className="mt-2 text-sm text-muted-foreground text-center">
-          Tìm thấy <span className="font-semibold text-foreground">{resultCount}</span> kết quả
-        </p>
-      )}
     </div>
   );
 }
