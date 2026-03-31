@@ -40,6 +40,7 @@ export function buildIndex(data: QAItem[]): IndexedItem[] {
   });
 
   indexedSource = data;
+  return indexedData;
 }
 
 export function searchQA(
