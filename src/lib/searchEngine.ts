@@ -19,10 +19,9 @@ interface IndexedItem {
 }
 
 let indexedData: IndexedItem[] | null = null;
-let indexedSource: QAItem[] | null = null;
 
 export function buildIndex(data: QAItem[]): IndexedItem[] {
-  if (indexedData && indexedSource === data) return indexedData;
+  if (indexedData && indexedData.length === data.length) return indexedData;
 
   indexedData = data.map((item) => {
     const qLower = item.question.toLowerCase();
@@ -39,7 +38,6 @@ export function buildIndex(data: QAItem[]): IndexedItem[] {
     };
   });
 
-  indexedSource = data;
   return indexedData;
 }
 
