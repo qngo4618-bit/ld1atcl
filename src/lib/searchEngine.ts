@@ -39,7 +39,7 @@ export function buildIndex(data: QAItem[]): IndexedItem[] {
     };
   });
 
-  return indexedData;
+  indexedSource = data;
 }
 
 export function searchQA(
