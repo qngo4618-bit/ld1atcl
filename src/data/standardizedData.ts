@@ -1,151 +1,3327 @@
 import type { QAItem } from "./qaData";
 
-export const standardizedCategories = ["Dịch vụ & Phục vụ", "Xử lý tình huống", "Phục hồi & Bồi thường"];
+export const standardizedCategories = ["An toàn – An ninh", "Khai thác (FOM)", "Dịch vụ & CSKH"];
 
 export const standardizedData: QAItem[] = [
-  { id: 1, question: "(CÂU 1) SUẤT ĂN ĐẶC BIỆT", answer: "AVML: người ăn chay theo đạo Hindu / những người ăn chay theo kiểu châu Á.\nKhông sử dụng thịt, cá, gia cầm, mỡ, chất làm đông (gelatin), trứng.\nMOML: người theo đạo Hồi. Không sử dụng thịt lợn, các sản phẩm được chế biến\ntừ thịt lợn, chất làm đông (gelatin), cá không vảy, rượu và các thức uống có cồn.\nHNML: người theo đạo Hindu. Không sử dụng thịt bò, thịt bê, thịt lợn, cá sống và\ncá hun khói. Nếu khách yêu cầu suất ăn chay theo kiểu Hindu thì phải sử dụng mã\nAVML.\nVJML: người ăn chay theo đạo Jain. Không sử dụng thịt, gia cầm, hải sản, cá, trứng,\nsữa và các sản phẩm từ sữa, các loại củ và rễ.\nVLML: người không ăn cá, thịt các loại nhưng có thể ăn được trứng, sữa và các sản\nphẩm từ trứng, sữa. Không sử dụng thịt, hải sản, cá, gia cầm, mỡ, chất làm đông\n(gelatin).\n\nVOML: người ăn chay theo kiểu phương Đông. Không sử dụng thịt, gia cầm, hải\nsản, cá, trứng, sữa và các sản phẩm từ sữa, các loại củ và rễ.\nVGML: người ăn chay nghiêm ngặt. Không sử dụng tất cả các sản phẩm có nguồn\ngốc động vật, thịt, hải sản, cá, gia cầm, mỡ, chất làm đông (gelatin), trứng, sữa, sản\nphẩm từ sữa, mật ong.\nSFML: người thích các món ăn từ hải sản. Sử dụng cá và/hoặc hải sản.\nCHML: trẻ em từ 2 đến 5 tuổi. Không sử dụng thịt và cá có xương, các loạt hạt,\nthức ăn có nhiều gia vị, nước sốt đậm đặc, kẹo cứng, nho nguyên quả.\nBBML: trẻ sơ sinh và trẻ em dưới 2 tuổi. Không sử dụng nhiều gia vị, thức ăn chứa\nlúa mì, gluten, cá, trứng, các loại hoa quả họ cam, quýt, thịt lợn, thịt bê, thịt bò, thịt\ncó xương. Không sử dụng các loại thức ăn thể rắn cho trẻ dưới 1 tuổi.\nFPML: người có nhu cầu ăn bữa ăn không có chất phụ gia, không chất bảo quản.\nKhông sử dụng chất phụ gia, chất bảo quản.\nRVML: người ăn chay chủ yếu ăn rau và hoa quả. Không sử dụng các loại đồ uống\nchứa caphêin, thực phẩm qua chế biến, chất phụ gia, chất bảo quản.\nLCML: người theo chế độ ăn kiêng hạn chế calo. Lượng calo cung cấp: dưới 400\ncalo/bữa ăn. Lượng calo tối đa trong 24h là 1200 calo. Không sử dụng: thực phẩm\nchiên rán. Chất béo, dầu, đường bổ sung. Nước thịt và nước sốt. Các loại thức ăn\ntráng miệng giàu dinh dưỡng.\nLSML: người theo chế độ ăn kiểm soát natri. Không sử dụng: • Chất thay thế muối,\nmì chính (bột ngọt), các loại nước hầm, viên nước hầm cô đặc, các loại nước súp và\nhỗn hợp nước sốt chế biến sẵn. • Các loại thực phẩm đóng gói, các loại thực phẩm\nmuối hoặc hun khói. • Thực phẩm ngâm nước muối. • Pho mát qua chế biến. • Quả\nô liu, cá cơm. • Các loại bánh sử dụng bột mì tự nở hoặc natri bicarbonate. • Đồ gia\nvị (sốt cà chua, mù tạt, sốt BBQ, xì dầu, sốt Worcestershire, hỗn hợp muối gia vị). •\nNước thịt, nước sốt và dầu trộn. Hỗn hợp muối tỏi, hành, cần tây. • Bánh mỳ.\n\nLFML: người theo chế độ ăn kiêng hạn chế chất béo. Không sử dụng thực phẩm\nchiên rán, nước sốt nhiều chất béo, lòng đỏ trứng, nội tạng động vật, hải sản (tôm,\nmực, cua, tôm hùm), trứng cá, dầu và các chất béo bổ sung, đồ uống có cồn chứa\nđường tinh luyện, thịt và pho mát qua chế biến.\nNLML: người mẫn cảm với chất đường có trong sữa. Không sử dụng suất ăn này\ncho hành khách bị dị ứng sữa bò. Không sử dụng sữa và các sản phẩm chế biến từ\nsữa hoặc có chứa sữa.\nDBML: người mắc bệnh tiểu đường. Suất ăn ít đường hay suất ăn không bổ sung\nthêm đường. Không sử dụng thực phẩm chiên rán.\nBLML: người mắc các bệnh về đường ruột và dạ dày. Không sử dụng thức ăn tẩm\nnhiều gia vị, hạt tiêu, ớt bột, các loại rau gây đầy hơi như bắp cải, súp lơ…, các đồ\nuống có chứa caphêin, thực phẩm chiên rán.\nGFML: người bị dị ứng với Gluten. Không sử dụng: • Các thực phẩm làm từ hạt lúa\nmỳ, bột mỳ, lúa mạch đen, yến mạch, lúa mạch. • Các loại mỳ Ý, bánh mỳ, vụn &\nbột bánh mỳ. • Các loại ngũ cốc ăn sáng làm từ yến mạch. • Súp, nước sốt, nước\ntương (xì dầu) và các loại hỗn hợp nước thịt và bột mỳ. • Bánh ngọt, bánh nướng\nxốp (muffin), bánh nướng. • Các thực phẩm làm từ mạch nha, ovaltine. • Tinh bột\nlàm từ các loại ngũ cốc có chứa gluten. • Bột kem sữa bột ngô, thịt hộp, các sản\nphẩm thay thế thịt. • Xúc xích, các loại bánh kẹo làm từ sô cô la và các loại ngũ cốc\ncó chứa gluten. • Các loại hạt và các sản phẩm làm từ hạt.\nKSML: người theo đạo Do Thái. Không sử dụng bất cứ loại thức ăn nào không được\nlựa chọn, chế biến và phục vụ theo luật ăn kiêng và phong tục của đạo Do Thái.\n(theo bộ câu hỏi trong máy tính giám khảo)\nHFML: Nhu cầu bữa ăn có chất xơ cao. Gồm ngũ cốc, trái cây, các loại hạt, rau củ\nđều là những thực phẩm chính trong bữa ăn này.\n(theo bộ câu hỏi trong máy tính giám khảo)\n*** Hành khách có thể đặt dịch vụ Suất ăn đặc biệt theo một trong 3 cách sau:\n1/ Trong quá trình mua vé trên website của Vietnam Airlines\n2/ Sau khi đã xuất vé, hành khách truy cập website Vietnam Airlines, vào mục “Quản\nlý đặt chỗ” - “Mua dịch vụ bổ trợ” - “Dịch vụ đặc biệt” và lựa chọn suất ăn phù hợp.\n3/ Liên hệ phòng vé hoặc Trung tâm Chăm sóc Khách hàng theo số 19001100 tối\nthiểu 24 tiếng trước giờ khởi hành.\nQuy trình phục vụ SPML / Paidmeal\n1/ TV nhận thông tin SPML từ nhân viên mặt đất, PM, Cabinbook, nhân viên cung\nứng suất ăn\n2/ TV xác nhận thông tin với hành khách:\n* TV lựa chọn thời điểm confirm SPML (trước khi cất cánh hoặc trước khi phục vụ\nbữa ăn)\n* Xem boarding pass, kiểm tra tên & số ghế\n* Xác nhận thông tin về suất ăn mà khách đã đặt\n* Thông báo cho hành khách biết là suất ăn đã được cấp lên máy bay và sẽ phục vụ\nsau khi máy bay cất cánh hoặc theo yêu cầu của khách\n* Thông báo cho khách không đổi chỗ để tránh mời nhầm. Trường hợp khách có đổi\nchỗ thì báo lại cho TV", keywords: ["VJML", "suất", "NLML", "GFML", "VGML", "PM", "VOML", "HNML", "DBML", "LCML"], category: "Dịch vụ & Phục vụ" },
-  { id: 2, question: "(CÂU 2) TV lưu ý khi mời thực đơn hạng C – TCPV 4.1.6", answer: "* Chuẩn bị thực đơn đúng tuyến đường bay, bữa ăn được phục vụ\n* Danh mục thức uống được kẹp vào giữa trang thực đơn phục vụ\n* Cầm tối đa 10 cuốn/lần (thực tế cấp 3 bộ/chặng bay)\n* Mở sẵn thực đơn có ngôn ngữ phù hợp với khách\n* Mời thực đơn: Giới thiệu menu food / drink list - Mời khách tham khảo, thông báo\nthời điểm nhận yêu cầu - Xác nhận lại SPML nếu khách có đặt", keywords: ["lưu", "TV", "mời", "SPML", "TCPV", "hạng", "TCPV 4.1.6", "đơn", "thực"], category: "Dịch vụ & Phục vụ" },
-  { id: 3, question: "(CÂU 3) Rượu Cognac làm từ nguyên liệu gì? Nồng độ cồn là bao nhiêu? TV", answer: "phục vụ khách như thế nào?\n* Cognac là một dạng của rượu brandy sản xuất tại vùng Cognac của Pháp, được\nchưng cất từ loại rượu vang sản sinh trong quá trình lên men nho quả, sau một thời\ngian ủ trong thùng gỗ sồi thơm Limousin (oak) (ít nhất 2 năm trước khi được đưa ra\ntiêu thụ)\n* Nồng độ cồn: 40%\n* Phân loại rượu Cognac:\n\nV.S (Very Special) hoặc ★★★(Three Stars) là loại rượu tương đối trẻ, tuổi ít nhất\nlà 2 năm\nV.S.O.P (Very Superior Old Pale) hoặc Reserve có độ tuổi ít nhất 4 năm (VNA đang\nsử dụng trên hạng C)\nXO (Extra Old) hoặc Napoleon có độ tuổi ít nhất 6 năm\n* TV phục vụ rượu cognac bằng ly Brandy. Được mời dùng cùng với món tráng\nmiệng. Nên uống ở dạng nguyên chất, không pha hoặc thêm đá. Rót hết 1 chai nhỏ\nvào ly ~25ml", keywords: ["rượu", "TV", "XO", "cognac", "làm", "nồng", "nguyên", "VNA", "liệu"], category: "Dịch vụ & Phục vụ" },
-  { id: 4, question: "(CÂU 4) TV phục vụ khách khiếm thị BLND trên chuyến bay như thế nào?", answer: "BOARDING\n* TV cần đi trước khách BLND để khách có thể dự đoán được những thay đổi về\nhướng đi và khi lên xuống cầu thang.\n* Khi chỉ đường và đưa khách về ghế ngồi, TV trợ giúp chỉ chiều (trái hoặc phải)\ntheo hướng đi của khách và đặt tay khách lên tay ghế hoặc lưng ghế để khách tự vào\nghế ngồi.\n* Hỗ trợ cất HLXT trước chuyến bay và trả lại hành lý sau khi hạ cánh.\nTRONG QUÁ TRÌNH PHỤC VỤ\n* Hạn chế hỏi những câu hỏi cần sự giúp đỡ về thị giác, đặc biệt khi phục vụ đồ ăn\nthức uống.\n* Giới thiệu các món trên khay, gọi tên hoặc chạm nhẹ vào tay khách và nói rõ những\nmón được phục vụ trong khay. Lưu ý cho khách biết đồ uống nóng. Giới thiệu các\ndụng cụ có trong khay suất ăn hoặc xin phép khách mở bộ dao muỗng dĩa", keywords: ["TV", "PH", "thị", "NH", "blnd", "QU", "BLND", "BOARDING", "khách", "HLXT"], category: "Dịch vụ & Phục vụ" },
-  { id: 5, question: "(CÂU 5) TV phục vụ khách khiếm thính DEAF trên chuyến bay như thế nào?", answer: "TRONG QUÁ TRÌNH PHỤC VỤ\n* Giao tiếp với khách bằng ngôn ngữ biểu thị rõ ràng hoặc bằng chữ viết mà khách\ncó thể nhìn thấy được vì nhiều khách không nghe được hoặc có khả năng nghe kém,\nchỉ có thể hiểu thông qua việc quan sát môi, vẻ mặt hoặc điệu bộ của người nói\n* Kiên nhẫn, phát âm rõ ràng và chỉ nói to khi cần thiết\n* Không phục vụ khách tai nghe", keywords: ["TV", "thính", "PH", "NH", "QU", "DEAF", "khách", "phục", "deaf", "TR"], category: "Dịch vụ & Phục vụ" },
-  { id: 6, question: "(CÂU 6) TV phục vụ khách UM trên chuyến bay như thế nào?", answer: "* UM (2-6 tuổi) → cần đặt dịch vụ TV đi cùng\n* UM (6-12 tuổi) → không cần đặt dịch vụ TV đi cùng. Trên chuyến bay, TV đi lại\ntrợ giúp và chăm sóc UM khi có yêu cầu.\n* TV đi cùng UM sẽ ngồi tại vị trí đã được giữ chỗ trước, trực tiếp chăm sóc, trợ\ngiúp riêng UM trong suốt chuyến bay.\n* UM ( không có dịch vụ TV đi cùng):\n- TVT nhận bàn giao UM đầu chuyến bay từ NVM, bàn giao cho TV phụ trách trợ\ngiúp UM về chỗ ngồi.\n- Hướng dẫn UM: dây an toàn, áo phao, nút gọi TV, … các chức năng tại ghế ngồi,\nnhà vệ sinh gần nhất. Dặn UM cuối chuyến ngồi yên tại chỗ, và sẽ được hỗ trợ xuống\nmáy bay sau các hành khách khác.\nTrong suốt quá trình bay, hỗ trợ và chăm sóc UM.\nTrước khi hạ cánh, TV nhắc UM một lần nữa, cuối chuyến ngồi yên tại chỗ, và sẽ\nđược hỗ trợ xuống máy bay sau các hành khách khác\nHỗ trợ hành lý và bàn giao UM cho NVMĐ", keywords: ["TV", "UM", "bay", "TVT", "NVM", "khách", "phục", "chuyến"], category: "Dịch vụ & Phục vụ" },
-  { id: 7, question: "(CÂU 7) TV phục vụ khách WCHC trên chuyến bay như thế nào? PHM 7.1.9.7", answer: "* TV phục vụ khách WCHC di chuyển trong khoang khách của tàu bay nếu khách\nyêu cầu. Nếu WCHC có người đi cùng thì sẽ phối hợp với TV để hỗ trợ khách di\nchuyển\n* TV không lắp và phục vụ xe lăn khi cất/hạ cánh và turbulence\n* Sau khi tàu bay ổn định độ cao và bay bằng, nếu khách yêu cầu di chuyển, TV\nchuẩn bị xe lăn và hỗ trợ khách (di chuyển đến nhà vệ sinh)\n* Khi chuẩn bị hạ cánh, TV cất xe lăn vào đúng vị trí ban đầu", keywords: ["TV", "PHM 7.1.9.7", "bay", "PHM", "wchc", "WCHC", "khách", "phục", "chuyến"], category: "Dịch vụ & Phục vụ" },
-  { id: 8, question: "(CÂU 8) Bán hàng miễn thuế - TBDV 277M", answer: "Giao nhận đầu chuyến:\n* TV nhận bàn giao xe BHMT, check đúng số seal, ổ khoá 2 đầu, nhận chìa khoá và\nmở xe để kiểm đếm hàng hoá\n* Mở seal túi tiền của chặng mình: ĐI XÁM / VỀ CAM, sẽ có sẵn $50 trong túi\n* TV kiểm tra máy POS bán hàng & máy PAYOO thanh toán\n→ TV ký nhận phiếu bàn giao xe BHMT\nCác giấy tờ mà TV phải nộp về ĐTV:\n* Phiếu bàn giao xe BHMT\n* Phiếu liệt kê thiết bị, dụng cụ\n* Phiếu kê lượng tiền mặt\nCách mở máy POS bán hàng:\n* Khởi động máy POS → Password mở máy: 1956 hoặc 1957\n* Đăng nhập: MSNV (6430) / Password: 12345678\n* Nhập thông tin chuyến bay\n* Kiểm đếm số lượng hàng hoá & túi tiền ($50 usd)\n* In liên báo cáo", keywords: ["miễn", "bán", "TV", "BHMT", "TBDV", "thuế", "CAM", "hàng", "POS", "MSNV"], category: "Dịch vụ & Phục vụ" },
-  { id: 9, question: "(CÂU 9) TV hãy cho biết cách chuẩn bị, phục vụ các loại bánh mì bữa sáng?", answer: "* Bánh mì Croissant, các loại Pastry sẽ được phục vụ trong bữa ăn sáng\n* Làm nóng lò 3 phút, nướng bánh mì ở Dryheat 3-5 phút\n* Nướng ngoài túi để giữ nguyên hình dáng khi phục vụ", keywords: ["chuẩn", "TV", "phục", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 10, question: "(CÂU 10) TV chuẩn bị, phục vụ các loại bánh mì như thế nào?", answer: "(STANDARD SERVICE 3.4 & Training Edoc)\n* Làm nóng lò 3 phút, nướng bánh mì ở Dryheat 3-5 phút\n* Lấy các bánh mì ra khỏi túi trước khi nướng\n* Bánh mì tỏi & Bánh mì baguette → Dryheat 5-6 phút\n* Bánh mì Croissant / bánh mì chocolate / bánh mì tròn / bánh mì cuộn / Bánh ngọt\nĐan mạch → Dryheat 3-5 phút\n** Bánh mì không cần nướng: bánh mì hạt / bánh mì bột chua / bánh mì champion /\nbánh mì đen / bánh mì Clabatta / bánh mì nguyên cám / bánh mì vừng / bánh Muffin\nsocola", keywords: ["chuẩn", "bánh", "TV", "loại", "SERVICE", "phục", "STANDARD"], category: "Dịch vụ & Phục vụ" },
-  { id: 11, question: "(CÂU 11) TV cho biết cách hỗ trợ, hướng dẫn khách nối chuyến bị trễ giờ?", answer: "* TV tiếp cận và tiếp nhận thông tin từ khách: số hiệu chuyến bay tiếp theo, giờ cất\ncánh, điểm đến, có khai thác bởi VNA hay không … → đưa thông tin đến TVT\n* TV hỗ trợ khách đổi chỗ lên hàng ghế phía trên theo hạng ghế của khách ngồi để\nkhách xuống máy bay trước nếu còn chỗ trống\n* TVT thông báo cho NVMĐ / Đại diện VNA sau khi máy bay hạ cánh để hỗ trợ\nkhách làm thủ tục", keywords: ["TV", "dẫn", "TVT", "hướng", "NVM", "trợ", "VNA", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 12, question: "(CÂU 12) TV hãy nêu thứ tự ưu tiên khi mời thức ăn, thức uống, thu dọn khay", answer: "ăn với các khách trên cùng hàng ghế?\nThứ tự ưu tiên khi mời thức ăn với các khách trên cùng hàng ghế:\n* TV mời từ trong ra ngoài\n* Ưu tiên các hành khách là: người cao tuổi - người khuyết tật - trẻ em - phụ nữ\nThứ tự thu khay: thu từ ngoài vào trong", keywords: ["TV", "mời", "hãy", "thứ", "tiên"], category: "Dịch vụ & Phục vụ" },
-  { id: 13, question: "(CÂU 13) TV hãy nêu vị trí lắp nôi cho trẻ em trên các tàu bay của VNA và các", answer: "quy định liên quan (trọng lượng tối đa, các lưu ý khi phục vụ, khách cần đặt\nnôi trước bao lâu) PHM 7.1.4 a)\n* Khách đặt dịch vụ BSCT ít nhất 24h trước EDT\n* Chấp nhận cho trẻ sơ sinh < 11kg và dưới 2 tuổi\n* Dịch vụ BSCT áp dụng trên nguyên tắc: khách nào đặt trước sẽ cung ứng trước và\ntuỳ thuộc vào số lượng nôi trên chuyến bay\n* Vị trí lắp nôi:\n- Đầu khoang C (A321)\n- Đầu khoang C/PE/Y (A350/B787)\n* Quy định:\n- Đầu chuyến bay, TV kiểm tra số lượng nôi / Kiểm tra chốt cài còn hoạt động tốt +\nnôi đảm bảo chắc chắn, vải không bị sờn hoặc các đường may không bị đứt\n- Nôi được lắp sau khi máy bay cất cánh và seatbelt sign OFF\n- Nôi được tháo khi máy bay bắt đầu giảm độ cao để hạ cánh và cất vào vị trí ban\nđầu theo quy định\n- Infant phải được bế ra khỏi nôi khi máy bay bay qua vùng thời tiết xấu và seatbelt\nsign ON", keywords: ["TV", "trí", "BSCT", "PHM", "OFF", "ON", "EDT", "PE", "PHM 7.1.4", "lắp"], category: "Dịch vụ & Phục vụ" },
-  { id: 14, question: "(CÂU 14) TV hãy nêu quy định về điều chỉnh nhiệt độ khoang khách, nếu", answer: "khoang khách lạnh thì TV cần làm gì? TCPV 3.2.1\n* Trước khi khách lên: 22ºC (mùa hè) / 25ºC (mùa đông)\n* Trong chuyến bay: 24-25ºC (nội địa + quốc tế ngắn) 23-24ºC (quốc tế dài/trung)\n→ Sai khi cất cánh, TVT quan sát và điều chỉnh nhiệt độ phù hợp\n\nNếu khoang khách lạnh, TV báo cáo TVT điều chỉnh nhiệt độ trong khoang khách.\nTV hỏi thăm sức khoẻ của hành khách (nếu khách báo lạnh) + offer các bước để hỗ\ntrợ khách (nước ấm, áo khoác, van khí, chăn).", keywords: ["TCPV 3.2.1", "TV", "điều", "TVT", "chỉnh", "TCPV", "định", "hãy", "quy"], category: "Dịch vụ & Phục vụ" },
-  { id: 15, question: "(CÂU 15) TV cho biết cách thức phục vụ món ăn liền có nước nóng (mỳ, phở..)", answer: "hạng Y? TCPV 3.1.20\n* Không phục vụ đồ uống nóng khi:\n- Turbulence và FSB ON\n- Bàn ăn không trong tình trạng tốt\n- Đèn cá nhân bị hỏng và thời điểm phục vụ, đèn trần trong khoang khách được tắt\n* TV giám sát và trợ giúp UM trong quá trình ăn uống\n* Trẻ em hoặc khách hạn chế năng lực hành vi → chỉ phục vụ khi có người thân đi\ncùng và người thân chịu trách nhiệm đảm bảo an toàn\nCHUẨN BỊ:\n* Mở ly mỳ/phở/bánh đa cua, thêm gia vị, bỏ gói dầu (nếu có)\n* Cho nước sôi 1/2 ly để ngập phần mỳ\n* Đậy nắp khoảng 3-5 phút cho mỳ nở ra, dùng đũa trộn đều\n* Cho nước suối nguội vào để giảm độ nóng của nước mỳ (mực nước cách miệng ly\n3cm, khoảng 2/3 ly mỳ) (nước sôi trên máy bay khoang 80ºC → sau khi cho nước\nnguội sẽ còn khoảng 50ºC)\nPHỤC VỤ:\n* Khi phục vụ, TV cần có tín hiệu để gây sự chú ý với khách hàng\n* Bật đèn cá nhân cho khách vào thời điểm phục vụ, đèn trần trong cabin tắt\n* Cảnh báo với khách về thức ăn nóng và lưu ý khách cẩn thận, đặc biệt với người\ncao tuổi và trẻ em\n* Đặt thức ăn ngay ngắn, vững chắc trên khay hoặc bàn ăn", keywords: ["TV", "UM", "TCPV 3.1.20", "CHU", "PH", "thức", "TCPV", "ON", "FSB", "phục"], category: "Dịch vụ & Phục vụ" },
-  { id: 16, question: "(CÂU 16) TV cho biết cách chuẩn bị thức uống nóng hạng Y? TCPV3.1.20", answer: "TRÀ:\n* Cho tép trà vào bình/tách (số lượng theo quy định)\n* Cho 3/4 nước nóng, để 3-5 phút\n* Lấy tép trà ra khỏi bình/tách\n\n* Cho 1/4 nước suối để nguội vào, nhiệt độ trà khoảng 70ºC (cách miệng bình 5cm,\ncách miệng tách nhỏ 1cm, tách lớn 3cm)\nCÀ PHÊ:\n* Cho cà phê vào bình/tách (số lượng theo quy định)\n* Cho 1 ít nước nóng, lắc nhẹ bình cho cafe tan, đổ thêm nước nóng → tổng lượng\nnước nóng khoảng 3/4\n* Cho 1/4 nước suối để nguội vào, nhiệt độ cafe khoảng 70ºC (cách miệng bình 5cm,\ncách miệng tách nhỏ 1cm, tách lớn 3cm)\n** Hạng C: pha cafe đậm nhạt theo yêu cầu của khách\n** Hạng Y (quốc nội): Pha hết 1 gói 30g cho 1 bình xanh / (quốc tế) pha hết 2/3 gói\n30g cho 1 bình xanh", keywords: ["chuẩn", "TV", "PH", "thức", "uống", "TCPV3", "TR", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 17, question: "(CÂU 17) TV hãy cho biết cung ứng suất ăn trên các đường bay SGN/HANKUL-HAN/SGN có gì đặc biệt?", answer: "* Đối tượng hành khách chặng bay KUL đa số theo đạo Hồi, suất ăn cung ứng lên\nchặng bay này được chế biến theo tiêu chuẩn và giới luật về ăn uống của đạo Hồi.\n* Tất cả suất ăn đều có chứng chỉ Halal:", keywords: ["TV", "cung", "suất", "KUL", "HANKUL", "HAN", "SGN", "ứng", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 18, question: "(CÂU 18) TV hãy cho biết công tác giao nhận và hoàn trả Đồ uống bảo thuế đối", answer: "với các chuyến bay quốc tế?\nTrước chuyến bay:\n* TV kiểm đếm số lượng với NV cung ứng, sau đó ký xác nhận\n* Giao cung ứng liên gốc, có dấu mộc Hải quan\nTrước khi máy bay hạ cánh:\n* Thu hồi cá đồ uống có giá trị cao (rượu, trà Nhật/Oloong/Englisg Breakfast …) →\nkiểm đếm chi tiết, ghi số lượng thu hồi vào giấy tờ và xếp vào 1 xe\n* Rượu → kiểm đếm và ghi số lượng (chai nguyên / vỏ chai). Các vỏ chai từ 150ml\nthì TV phải thu hồi lại\n* Bia, nước trái cây, nước ngọt, nước tinh khiết → kiểm đếm và ghi số lượng còn\nnguyên chung với nhau\n* Trà/Cafe → ghi số lượng gói nguyên từng loại hoàn trả\nCuối chuyến bay\n* TV bàn giao trực tiếp cho NV Cung ứng\n* Thông báo cho đơn vị giám sát và yêu cầu lập biên bản nếu nhân viên cung ứng\nkhông có mặt tại tàu sau 15 phút tại thời điểm đóng chèn để nhận bàn giao", keywords: ["TV", "giao", "tác", "NV", "công", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 19, question: "(CÂU 19) TV hãy cho biết chế độ nướng, thời gian đối với các món nước như", answer: "phở, mỳ hạng C? (TCPV 3.4 & 4.1.3.1.1)\n* Phở / Bún / Mỳ (món nước) → Steam 12 phút, ủ trong lò 5 phút, Dryheat 3-5 phút\nChuẩn bị món Phở:\n- Phở được bọc trong khay thiếc bạc và để sẵn trong lò\n- TV làm nóng bát phở\nLò có chế độ STEAM → 12-14 phút ở 150ºC\nLò không có chế độ STEAM → Dryheat 12-15 phút ở 150ºC\n- Sau khi làm nóng, TV bỏ nắp thiếc ra, cẩn thận bỏ toàn bộ lá bắp cải\n- Lắc đều chai nước dùng Phở trước khi rót ra tô\n- Rải lá thơm, giá vào 1 góc tô và rót nước dùng trải đều lên phở\n- Dùng đũa khuấy đều, đảm bảo các thành phần đều được ngập trong nước Phở", keywords: ["TV", "TCPV 3.4", "chế", "TCPV", "STEAM", "thời", "nướng", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 20, question: "(CÂU 20) TV hãy nêu cách thức giao nhận báo chí trước và sau chuyến bay?", answer: "(TCPV 3.1.12)\nHiện tại báo giấy chỉ áp dụng trên đường bay Quốc nội (hạng C)\nĐường bay quốc tế → Khách sử dụng ứng dụng PressReader để đọc báo\n* Kiểm đếm số lượng theo danh mục, so sánh với phiếu giao nhận VTVP đầu chuyến\nbay, nếu có bất thường TV lập biên bản cùng với NVMĐ\n* Cuối chuyến bàn giao số báo còn lại cho NVMĐ\nPRESSREADER\n* Danh mục ấn phẩm của PressReader cung cấp hơn 7.000 đầu báo, tạp chí các thể\nloại thời sự, kinh tế, du lịch, thể thao, giải trí, v.v. với hơn 60 ngôn ngữ.\n* PressReader được hỗ trợ trên điện thoại thông minh và máy tính bảng.\n* Hỗ trợ đọc trực tuyến hoặc lưu về thiết bị cá nhân mà không bị giới hạn số lượng\nhay thời gian lưu trữ.\n* Dịch vụ ứng dụng PressReader trên chuyến bay của VNA có hiệu lực trong vòng\n48 tiếng (24 tiếng trước giờ khởi hành dự kiến tới 24 tiếng sau khi máy bay hạ cánh).\nRiêng các danh mục đã tải về có thể được lưu trữ vô thời hạn trên thiết bị của hành\nkhách.\nHướng dẫn sử dụng:\n* Hành khách truy cập app Vietnam Airlines. Tại trang chủ, hành khách vuốt mở\nthanh công cụ ở phía dưới và chọn mục “Dịch vụ trên không”\n* Tại cửa sổ “Dịch vụ trên không”, chọn “Ứng dụng PressReader”, nhập Mã đặt chỗ,\nHọ và Điểm đi như thông tin trên vé máy bay, sau đó nhấn “Xác nhận”.\n*Màn hình chuyển hướng sang giao diện ứng dụng PressReader hoặc chuyển hướng\nđến kho ứng dụng để tải PressReader. Sau khi truy cập ứng dụng, hành khách có thể\ntận hưởng những phút giây thư giãn với hơn 7.000 đầu báo và tạp chí điện tử", keywords: ["PRESSREADER", "TCPV 3.1.12", "TV", "giao", "thức", "nhận", "NVM", "TCPV", "VTVP", "VNA"], category: "Dịch vụ & Phục vụ" },
-  { id: 21, question: "(CÂU 21) TV hãy nêu cách thức giao nhận VTVP trước và sau chuyến bay?", answer: "(TCPV 3.1.12)\n* Trước chuyến bay: Kiểm đếm số lượng VP cấp lên theo danh mục, so sánh với\nphiếu giao nhận khi có mặt nhân viên cung ứng, ký nhận. Ghi số khách C/I/Y chặng\nđi vào phiếu. Nếu có bất thường, TV phải báo với ĐVGS yêu cầu lập biên bản.\n* Trên chuyến bay: Kiểm đếm, ghi vào phiếu giao nhận số lượng thu hồi các danh\nmục VP phải bàn giao trực tiếp theo quy định. Thu hồi tất cả tai nghe vảo túi và niêm\nphong từng túi. Ghi vào phiếu giao nhận số lượng túi tai nghe đã sử dụng. Đối với\nbáo chí nước ngoài gửi trên chuyến bay để dùng cho chặng sau, TV giữ nguyên kiện\nvà giao cho NVCU mặt đất\n* Sau chuyến bay: Bàn giao trực tiếp cho NVCU nơi thu hồi: tổng số túi tai nghe\nhạng Y, … Ký tên vào phiếu giao nhận. TV phải chịu trách nhiệm bồi thường trong\ntrường hợp thiếu số lượng phải hoàn trả các vật phẩm phải bàn giao trực tiếp. Thông\nbáo cho ĐVGS và yêu cầu ĐVGS lập biên bản nếu NVCU không có mặt tại tàu sau\n5 phút kể từ khi hết khách để nhận bàn giao. Trường hợp phiếu giao nhận bị thất lạc,\nTV phải lập biên bản để bàn giao với NVCU nơi thu hồi.", keywords: ["NVCU", "TCPV 3.1.12", "TV", "giao", "thức", "nhận", "TCPV", "VTVP", "VP", "VGS"], category: "Dịch vụ & Phục vụ" },
-  { id: 22, question: "(CÂU 22) TV hãy nêu quy trình xử lý khi khách có sức khỏe bất thường trên", answer: "chuyến bay?\n* TV tiếp cận kiểm tra về tình hình sức khoẻ của khách\n* Tiến hành First Aid (nếu cần) & Gọi hỗ trợ từ các TV khác\n* Báo cáo cơ trưởng\n* Đọc phát thanh tìm trợ giúp y tế trên chuyến bay\n* Cung cấp kịp thời đầy đủ thông tin cho TVT:\n- Tình trạng khách bị bệnh\n- Tình trạng hành khách xung quanh\n- FAK và bao nhiêu bình ôxy đã sử dụng? (nếu có)\n- Loại thuốc khách sử dụng.\n- Khách có người nhà đi cùng hay không\n* Chăm sóc hành khách trong chuyến bay & Hỗ trợ bác sỹ / nhân viên Y tế bằng các\nthiết bị y tế sẵn có.\n* Có thể gọi hỗ trợ Y tế tại sân bay đến hoặc dịch vụ xe lăn để hỗ trợ khách xuống\nmáy bay\n* TVT ghi các báo cáo liên quan", keywords: ["TV", "TVT", "trình", "khách", "FAK", "hãy", "quy"], category: "Dịch vụ & Phục vụ" },
-  { id: 23, question: "(CÂU 23) TV hãy nêu quy trình, thời điểm, cách sắp xếp, phục vụ quầy bar trên", answer: "tàu B787 và A350 (TCPV 3.1.3)\n* Phục vụ trên chuyến bay có FT >4h\n* Sau khi kết thúc bữa ăn lần 1, thực hiện sắp xếp các loại đồ uống và ly thuỷ tinh\ntừ xe lên quầy bar. Phát thanh tại khoang C thông báo về dịch vụ bar service. Luôn\nđảm bảo đầy đủ đồ uống và ly thuỷ tinh bày trên tủ. Luôn đảm bảo quầy bar sạch sẽ\ngọn gàng. Thực hiện thu dọn trong trường hợp phải đảm bảo quy định về an toàn\nbay. Thu dọn khi máy bay bắt đầu giảm độ cao.\n* Thức uống phải được đảm bảo theo các nguyên tắc sau:\n- Đa dạng tối đa các chủng loại thức uống được cấp lên chuyến bay\n- Nếu khả năng tủ chứa hạn chế, TV ưu tiên sắp xếp:\nRượu chai nhỏ (whiskey, vodka, cognac, sake, rượu khác) - Rượu vang - Nước hộp\n(cam, táo, cà chua) – Soft drink (coke, pepsi, 7up, bia, tonic, soda)\n- Rượu vang được mở trước khi bày trên tủ. Rượu đã bày trên tủ cần được chill lại\nsau 1h và sử dụng lại", keywords: ["TV", "FT", "trình", "TCPV", "thời", "điểm", "TCPV 3.1.3", "hãy", "quy"], category: "Dịch vụ & Phục vụ" },
-  { id: 24, question: "(CÂU 24) Khi tiếp nhận tàu tại đầu sân bay nước ngoài có bất thường trong số", answer: "lượng giao nhận (thiếu vật tư, suất ăn, thức uống), TV phải xử lý thế nào? TCPV\n3.1.16.2\nNgay sau khi lên máy bay, TV kiểm tra giấy tờ bàn giao giữa 2 tổ, crosscheck lại\nvới số lượng thực tế, nếu có bất thường → TV lập biên bản và có chữ ký xác nhận\ncủa Đại diện VNA", keywords: ["TV", "nhận", "tàu", "tiếp", "TCPV", "đầu", "tại", "VNA"], category: "Dịch vụ & Phục vụ" },
-  { id: 25, question: "(CÂU 25) TV hãy nêu quy định, hướng dẫn chiếu phim, chương trình giải trí,", answer: "quảng cáo trên chuyến bay?\nNOTICE – SERVICE NOTICE – VIETNAMESE – HD CHIẾU PHIM VIDEO\n* TVT truy cập TBDV - Hướng dẫn chiếu phim video chu kỳ mỗi tháng để nắm\nđược trình tự cụ thể của các chuyến bay\n* Chiếu các CTGT và các chương trình theo yêu cầu của nhà chức trách điểm đến\ntrước khi hạ cánh (CB thường lệ/thuê chuyến) theo tiêu chuẩn và trình tự quy định\n* TV lưu ý kiểm tra và điều chỉnh âm lượng chương trình Boarding, Safety, Landing\nmột cách phù hợp, vừa đủ nghe ở các khoang\n* Khi chiếu gần hết Safety Video, TVT quay lại bảng điều khiển để sẵn sàng điều\nchỉnh âm lượng quảng cáo phù hợp, kịp thời, tránh gây quá ồn cho hành khách\n* Bật toàn bộ HTGT cá nhân AVOD cả hạng C&Y cho tàu B787/A350 sau khi kết\nthúc chiếu Safety Video\n* Trên các chuyến bay đêm bằng tàu thân rộng, TV linh hoạt chọn thời điểm phù\nhợp để chiếu chương trình Airshow trên màn hình chung, không ảnh hưởng đến giấc\nngủ của khách", keywords: ["NOTICE", "hãy", "TVT", "VIDEO", "quy", "TV", "CHI", "HD", "PHIM", "VIETNAMESE"], category: "Dịch vụ & Phục vụ" },
-  { id: 26, question: "(CÂU 26) TV hãy cho biết tần suất kiểm tra và dọn dẹp khoang khách / toilet ở", answer: "khoang hạng C và Y là bao nhiêu? TCPV 4.3.5\n* Tần suất check cabin: 15 phút/lần (hạng Y) & 10 phút/lần (hạng C)\n* Tần suất check toilet: 15 phút/lần (hạng Y) và 10 phút/lần (hạng C)\n* Trả lời nút gọi TV không quá 45 giây (hạng Y) và 30 giây (hạng C)\n* Quan sát khách: tầm nhìn từ ngang mặt, giao tiếp (eye contact) => chú ý sức khỏe,\nchủ động nhận biết đáp ứng nhu cầu hành khách kịp thời\n* Thời gian dừng lại mỗi hàng ghế: khoảng 8-10s/hàng ghế cả 2 bên\n* Thực hiện thu ly/ rác trong khoang khách", keywords: ["kiểm", "TV", "suất", "TCPV", "TCPV 4.3.5", "tần", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 27, question: "(CÂU 27) TV hãy cho biết phương thức phục vụ báo trên khoang hạng C?", answer: "TCPV 4.1.6.2\n* Báo và tạp chí được sắp xếp ngay ngắn, rõ tiêu đề đầu báo trên giỏ mời báo hoặc\nsắp xếp trên tay\n* Mời khách theo thứ tự và nhu cầu của từng khách ngay khi khách đã ổn định chổ\nngồi", keywords: ["TV", "phương", "thức", "TCPV", "TCPV 4.1.6.2", "phục", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 28, question: "(CÂU 28) TV hãy cho biết những đối tượng khách nào được tặng quà sinh nhật", answer: "trên chuyến bay vào ngày sinh nhật? Cách thực hiện tặng quà sinh nhật đến\nkhách?\nTham khảo REFERENCE – QUY ĐỊNH TỔ CHỨC HOẠT ĐỘNG SỰ KIỆN\nTCPV 3.1.5\nKhách: VIP/CIP/MM – Khách hạng C/Platinum/Gold – Khách hạng PE/Y – Khách\nnội bộ\nTrước chuyến bay:\n* TV nhận danh sách hành khách được tặng quà từ VIAGS, thông tin của khách\nđược ghi chú trong “Tờ thông tin Tổ bay” Special Information to Cabin Crew\n* Tiếp nhận hộp quà tặng từ VIAGS (trong đó gồm thiệp chúc mừng & quà tặng)\n* Thực hiện ký nhận và lưu trữ lại chứng từ liên quan đến việc tặng quà (nếu có)\nTrên chuyến bay:\n* TVT đảm nhiệm việc tặng quà\n* Thời gian tặng sau khi phục vụ bữa ăn/thức uống\n* Tặng tại chỗ ngồi của khách\nChuẩn bị:\n* TVT cùng TVC/TVY chuẩn bị 1 ly Champagne / Vang (hạng C, nếu có) và quà\n(để trên khay 2/3), trực tiếp đến chúc mừng khách theo nội dung quy định\n* Nội dung chúc mừng khách (TVT trực tiếp chúc mừng khách, không đọc PA)\n\nTBDV 402: TV được cấp phát VTVP nâng tầm dịch vụ (sử dụng 12 tháng)\nBút bi xanh - Giấy ghi chú – Băng dính - Thiệp chúc mừng – Dây lụa làm nơ –\nHashtag cầm tay – Đèn LED – Đèn nến\nTBDV 112:\n• Chỉ áp dụng với các sự kiện cá nhân của khách hàng được VNA đánh giá có\ný nghĩa đặc biệt, có tính khả thi đối với VNA (lễ cưới, đưa đón dâu, kỷ niệm\nngày cưới, sinh nhật, đạt giải thưởng/huy chương trong các cuộc thi lớn trong\nnước và quốc tế…).\n• Các trường hợp đặc biệt khác sẽ do ban TT hoặc DVHK đánh giá cụ thể\n• Hình thức tổ chức gọn gàng, đơn giản, hạn chế ảnh hưởng đến các khách khác\ntrên chuyến bay. Ưu tiên sử dụng các dịch vụ, vật phẩm có sẵn trên máy bay\n• Không áp dụng trên chuyến bay có VIP1 (trừ khi tổ chức cho VIP1)", keywords: ["VIP1", "TCPV 3.1.5", "PA", "REFERENCE", "đối", "CH", "TCPV", "PE", "NG", "VNA"], category: "Dịch vụ & Phục vụ" },
-  { id: 29, question: "(CÂU 29) TV hãy nêu quy định về tiêu chuẩn hành lý xách tay của khách?", answer: "Tiêu chuẩn HLXT:\nHành trình đi/đến ÚC - MỸ - CHÂU ÂU\n* Hạng C/PE: tổng trọng lượng hành lý xách tay không vượt quá 18kg. Bao gồm 02\nkiện hành lý (mỗi kiện không quá 10kg) và 01 phụ kiện\n* Hạng Y: tổng trọng lượng hành lý xách tay không vượt quá 12kg. Bao gồm 01\nkiện hành lý (không quá 10kg) và 01 phụ kiện.\nHành trình khác\n* Hạng C: tổng trọng lượng hành lý xách tay không vượt quá 18kg. Bao gồm 02\nkiện hành lý (mỗi kiện không quá 10kg) và 01 phụ kiện\n* Hạng PE/Y: tổng trọng lượng hành lý xách tay không vượt quá 10kg. Bao gồm 01\nkiện hành lý (không quá 10kg) và 01 phụ kiện.\nTrong đó, kích thước tối đa 3 chiều (dài x rộng x cao) cần đảm bảo:\n- Đối với 01 kiện hành lý: 56cm x 36cm x 23cm < 115cm\n- Đối với 01 phụ kiện: 40cm x 30cm x 15cm < 85cm\nTiêu chuẩn HLKG: Cần đảm bảo kích thước tối đa 3 chiều (dài x rộng x cao) của\nmột kiện không vượt quá 158cm.\n\nQuy định HLKG áp dụng cho các hành trình Nội địa:\n* Hạng C: 1 kiện 32kg\n* Hạng PE: 1 kiện 32kg\n* Hạng Y: 1 kiện 23kg\nQuy định hành lý ký gửi miễn cước áp dụng cho các hành trình Quốc tế:\n* Hạng C: 2 kiện, mỗi kiện 32kg\n* Hạng PE: 2 kiện, mỗi kiện 23kg\n* Hạng Y: 1 kiện, mỗi kiện 23kg (nội địa, Trung Quốc, Hàn Quốc, Úc, Châu Âu)\n* Hạng Y: 2 kiện, mỗi kiện 23kg (NRT/KIX/SFO)", keywords: ["chuẩn", "tiêu", "TV", "HLKG", "CH", "định", "PE", "HLXT", "SFO", "NRT"], category: "Dịch vụ & Phục vụ" },
-  { id: 30, question: "(CÂU 30) Thế nào là khách “No Meal” và quy trình phục vụ khách PHM 8.2.2", answer: "KHÁCH “NO MEAL”\n* Là khách giờ chót cam kết không sử dụng suất ăn, khách được đáp ứng nhu\ncầu đi vào giờ chót mặc dù không đặt chỗ trước. Ngoại trừ việc không sử dụng\nsuất ăn trên chuyến bay, khách được hưởng toàn bộ dịch vụ khác như khách\nthông thường.\n* Không áp dụng: khách trên 60 tuổi; trẻ em dưới 12 tuổi; phụ nữ có thai;\nkhách có bệnh về tim mạch, huyết áp, các bệnh về đường tiêu hoá, rối loạn thần\nkinh thực vật…\nQUY TRÌNH:\n* TV xác định vị trí ngồi của khách và lưu ý khi phục vụ suất ăn.\n* Đồ uống và các tiêu chuẩn khác cho khách vẫn được giữ nguyên.\n* Khi có ý kiến từ khách, TV cần khéo léo giải thích. TV chỉ đưa “phiếu cam\nkết không sử dụng dịch vụ suất ăn” có chữ ký của khách khi thực sự cần thiết.\n* Chỉ áp dụng cho đường bay quốc nội và quốc tế FT < 3H", keywords: ["KH", "PHM 8.2.2", "FT", "TV", "MEAL", "NO", "CH", "PHM", "NH", "meal"], category: "Dịch vụ & Phục vụ" },
-  { id: 31, question: "(CÂU 31) Ai là người chịu trách nhiệm phục vụ tổ lái trên chuyến bay và trước", answer: "chuyến bay mỗi thành viên tổ bay được phục vụ gì? TCPV 3.5\n* TVT (main duty) hoặc TVC (được phân công)\n* Đầu chuyến bay: Tổ lái sẽ được phục vụ 1 chai nước suối lớn + 1 khăn bông", keywords: ["người", "TVT", "TVC", "lái", "chịu", "TCPV", "phục", "trách", "nhiệm", "TCPV 3.5"], category: "Dịch vụ & Phục vụ" },
-  { id: 32, question: "(CÂU 32) TV hãy cho biết thứ tự ưu tiên khi lấy yêu cầu, phục vụ bữa ăn, thức", answer: "uống đối với tổ lái và tần suất lên buồng lái? TCPV 3.5\n* Lấy yêu cầu theo thứ tự:\nGV bay kèm – Cơ trưởng – Cơ phó – Nhân viên kỹ thuật\nTrong trường hợp tổ bay chưa yêu cầu thì TV chủ động giữ lại mỗi choice 1 suất\n* Tần suất lên buồng lái: 30 phút/lần hoặc khi tổ lái gọi", keywords: ["TV", "TCPV 3.5", "TCPV", "GV", "hãy", "thứ", "tiên"], category: "Dịch vụ & Phục vụ" },
-  { id: 33, question: "(CÂU 33) Tiếp viên nêu nguyên tắc phục vụ thức ăn, thức uống đến tổ lái; TV", answer: "cần lưu ý gì khi phục vụ thức uống nóng? TCPV 3.5\nPHỤC VỤ BỮA ĂN:\n* Cơ trưởng và cơ phó đang thực hiện nhiệm vụ điều khiển tàu bay phải được phục\nvụ hai loại khay, món nóng khác nhau và khác thời điểm; Cơ trưởng và cơ phó đang\ntrong kíp thực hiện nhiệm vụ nhưng không điều khiển tàu bay phải được phục vụ hai\nloại khay và món nóng khác nhau và có thể được phục vụ vào cùng thời điểm.\n* Khi đề nghị tổ lái lựa chọn món ăn, TV có thể đưa thực đơn (menu) cho tổ lái\n(nhằm dễ hiểu, tránh gây nhầm lẫn).\n* TVT hoặc TVC được ủy quyền sẽ chủ động phục vụ đúng món ăn và thời điểm tổ\nbay yêu cầu.\n* Các món plating, TV phải sắp xếp ra đĩa 18cm để phục vụ.\n* Khi phục vụ bữa ăn phải có khăn trải bàn.\n* Phục vụ và thu khay ăn: TV phải đưa/thu vòng qua 2 bên (CAPT thì vòng qua bên\ntrái, FO thì vòng qua bên phải, không đưa trực tiếp vào giữa bảng điều khiển)\nPHỤC VỤ THỨC UỐNG:\n* Dùng 2 ly nhựa cao/ ly giấy cao để phục vụ thuốc uống\n* Nếu phục vụ thức uống nóng bằng ly nhựa, phải sử dụng giấy napkin lót và đảm\nbảo độ chắc chắn giữa 2 ly và để tránh nhiệt độ nóng.\n* Lượng nước rót cách miệng ly 2 hoặc 3 cm.\n* Phục vụ thức uống vòng qua 2 bên (CAPT thì vòng qua bên trái, FO thì vòng qua\nbên phải, không đưa trực tiếp vào giữa bảng điều khiển)\n* Không sử dụng khay để phục vụ thức uống\n* Không phục vụ thức uống có cồn", keywords: ["TH", "TV", "NG", "tắc", "CAPT", "viên", "TVT", "PH", "TVC", "tiếp"], category: "Dịch vụ & Phục vụ" },
-  { id: 34, question: "(CÂU 34) TV hãy cho biết cách kiểm tra & lưu ý gì trong khi sử dụng bình nước", answer: "nóng? TCPV 3.7.2.2\n* Kiểm tra trước chuyến bay, đảm bảo hoạt động tốt\n* Đảm bảo nước đủ độ nóng để phục vụ\n* Trường hợp bình không có nước, phải tắt bình không sử dụng\n* Trong quá trình cất hạ cánh, TV không sử dụng bình nước nóng", keywords: ["kiểm", "tra", "TV", "TCPV 3.7.2.2", "TCPV", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 35, question: "(CÂU 35) TV cho biết nguyên tắc xe đẩy phục vụ - TCPV 3.7.2.2", answer: "* Xe đẩy không sử dụng phải được để trong ngăn chứa, đóng cửa, phanh xe và cài\nchốt an toàn.\n* Xe đẩy nhỏ phải được để trong ngăn chứa dành cho xe đẩy nhỏ, cài chốt an toàn\ngiữa hai xe.\n* Thực phẩm cần bảo quản lạnh phải được để trong xe đẩy lớn. Phần đầu xe đẩy có\nô lưới phải được để áp sát vào hệ thống làm lạnh của máy bay để hơi lạnh có thể lưu\nthông trong xe và làm lạnh thực phẩm.\n* Xe thức ăn, thức uống được bảo quản đúng tiêu chuẩn và ướp lạnh trước khi bàn\ngiao trên chuyến bay.\n* Trước khi đẩy xe phục vụ khay ăn ra khoang khách phải quan sát để đảm bảo lối\nđi trống. Cửa xe phải được mở hoàn toàn và áp sát vào hông xe để giữ cho cửa không\nbị bật ra. Khi đóng cửa xe, phải cài chốt.\n* Không được tỳ người vào xe đẩy.\n* Phải quan sát để tránh va xe vào hai bên thành ghế hoặc vào người hành khách.\n* Không nhấn hoặc nhả phanh quá mạnh, gây tiếng động lớn giữa khoang khách.\n* Khi một TV phụ trách xe đẩy nhỏ, TV phải đứng đối diện cửa xe và hành khách,\nkéo xe đi ngược từ dưới lên, cần chú ý để không va chạm vào khách phía sau lưng\ntrong khi di chuyển.\n* Không để rác trên mặt xe khi phục vụ, thu dọn (phải dùng hộc để thu đồ đã sử\ndụng).\n* Mỗi khi dừng xe trong khoang khách để phục vụ, phải phanh xe an toàn.\n* Tiếp viên phải luôn đi kèm với xe, không được để xe trong khoang khách không\ncó người đi kèm trong thời gian quá lâu, đặc biệt là trong những lúc thời tiết xấu.\n* Trong trường hợp 02 TV đi cùng 01 xe đẩy, cần quan sát đồng nghiệp để tránh\ngiằng co xe đẩy. Không trao đổi việc riêng ngoài khoang khách.", keywords: ["đẩy", "TV", "tắc", "TCPV 3.7.2.2", "TCPV", "nguyên", "phục"], category: "Dịch vụ & Phục vụ" },
-  { id: 36, question: "(CÂU 36) TV cho biết nguyên tắc phục vụ khách VIP - TCPV 5.1.1 / PM 6.2.3.3", answer: "Khách VIP/CIP đi hạng nào thì được phục vụ theo tiêu chuẩn hạng dịch vụ đó. Tuy\nnhiên cần lưu ý một số điểm sau:\n* TV lưu ý giúp đỡ khách VIP/CIP trong việc cất xếp hành lý và ổn định chỗ ngồi.\n* Căn cứ yêu cầu đặc biệt của khách VIP trong tờ “Tờ thông tin đặc biệt cho tổ bay”\nđể lưu ý phục vụ khách theo đúng yêu cầu.\n* Sẵn sàng có mặt để giúp đỡ khách khi cần thiết.\n* Tại sân bay nối chuyến và sân bay đến, TVT giới thiệu khách VIP với đại diện\ncông ty phục vụ mặt đất hoặc đại diện VNA tại sân bay để lưu ý phục vụ khách.\n* Khi khách VIP lên máy bay, TV luôn chủ động giúp đỡ khách thu xếp hành lý và\nổn định chỗ ngồi.\n* Sau khi khách VIP ổn định chỗ ngồi, TVT chọn thời điểm thích hợp thay mặt tổ\nTV chào và giới thiệu tên mình cùng các TV chịu trách nhiệm phục vụ khách.\n* TV cần lưu ý đến những yêu cầu đặc biệt của khách VIP trong tờ thông tin đặc biệt\ndành cho TV để phục vụ khách đúng yêu cầu.\n* Khi phục vụ suất ăn, đồ uống cho khách VIP phải đảm bảo vệ sinh, chất lượng\nthực phẩm, bày biện đẹp mắt.\n* Khi mời những món ăn /thức uống nóng hoặc lạnh và các sản phẩm dịch vụ phải\nxin phép và giới thiệu cho khách.\n* Không tự ý mời những món ăn ngoài danh mục của B.DVHK quy định cấp lên\nchuyến bay, tránh làm ảnh hưởng tới sức khỏe của khách.\n* TV phải quan tâm chu đáo và phục vụ đầy đủ theo quy trình, tiêu chuẩn phục vụ\nkhách VIP.\n* Luôn sẵn sàng có mặt để phục vụ khách trong suốt chuyến bay.\n* Đảm bảo thời điểm mời khách ăn/uống thích hợp, không làm phiền hoặc gián đoạn\nsự nghỉ ngơi của khách.\n* Tránh gây tiếng ồn, đổ vỡ trong bếp, khoang khách ảnh hưởng đến khách. Tại các\nsân bay trung chuyển và sân bay đến, TVT có trách nhiệm giới thiệu khách VIP với\nnhân viên giám sát mặt đất hoặc Đại diện VNA tại sân bay để chú ý phục vụ khách.\n* Khách VIP được bố trí xuống máy bay trước tất cả các hành khách khác theo từng\nhạng ghế.", keywords: ["TV", "TCPV 5.1.1", "tắc", "PM", "TVT", "TCPV", "nguyên", "khách", "CIP", "phục"], category: "Dịch vụ & Phục vụ" },
-  { id: 37, question: "(CÂU 37) TV hãy nêu những lưu ý khi xịt thuốc khử trùng? TCPV 3.1.6", answer: "* TV tiếp nhận thông tin từ VIAGS / Đại diện VNA … thay đổi máy bay không\nđược phun thuốc diệt trùng định kỳ.\n* TV tiếp nhận thuốc diệt trùng, vỏ bình thuốc (xịt ở hầm hàng), giấy xác nhận diệt\ntrùng từ VAECO.\n* Thực hiện phun thuốc theo định mức, quy trình phun thuốc diệt trùng trên CB.\n* Đọc PA thông báo cho hành khách khi thực hiện phun thuốc diệt trùng trên CB.\n* Thực hiện việc khai báo đầy đủ (ký và ghi rõ họ tên) vào bản báo cáo “Top of\nDescent Disinsection Certificate”.\n* Điền thông tin phun thuốc vào tờ khai GD.\n* Giao nộp tờ khai GD và 2 bản báo cáo trên cùng với các vỏ bình thuốc đã phun\nhết trên cabin cho nhà chức trách sân bay khi hạ cánh", keywords: ["CB", "lưu", "TV", "PA", "VIAGS", "GD", "xịt", "TCPV", "VNA", "TCPV 3.1.6"], category: "Dịch vụ & Phục vụ" },
-  { id: 38, question: "(CÂU 38) TV hãy nêu những lưu ý khi chiếu phim boarding trước chuyến bay?", answer: "NOTICE – SERVICE NOTICE – VIETNAMESE – HD CHIEU PHIM VIDEO\n* Thời điểm TVT và cơ trưởng xác nhận với NVMD về việc máy bay đã sẵn sàng\nboarding, TVT sẽ chiếu băng boarding\n* Trước khi chiếu TVT cần chọn đúng băng boarding đúng chu kỳ, phù hợp với loại\nchuyến bay và máy bay khai thác, điều chỉnh âm lượng phù hợp.\n* Bật lại boarding video trong trường hợp còn thời gian sau khi đã chiếu 1 lượt\nboarding video.", keywords: ["lưu", "CHIEU", "NOTICE", "TV", "NVMD", "TVT", "SERVICE", "VIDEO", "HD", "PHIM"], category: "Dịch vụ & Phục vụ" },
-  { id: 39, question: "(CÂU 39) Các loại thức uống nào TV cần bàn giao chi tiết số lượng vào giấy bàn", answer: "giao? TCPV 3.1.9\n* Rượu vang, champagne, rượu con, sake, các loại trà có giá trị cao như trà Nhật,\nOolong, English Breakfast…\n* TV cần thu hồi và bàn giao lại vỏ rượu có dung tích từ 150ml trở lên, kể cả đã sử\ndụng hay chưa sử dụng → TV phải bồi thường nếu thu hồi thiếu vỏ chai", keywords: ["loại", "TV", "thức", "TCPV 3.1.9", "TCPV", "cần", "uống"], category: "Dịch vụ & Phục vụ" },
-  { id: 40, question: "(CÂU 40) TV dùng dụng cụ nào để mời túi đồ hạng C? TCPV 3.1.6", answer: "* TV cài túi ghế của khách trước khi boarding\n* Dụng cụ khi mời: giỏ mây mời báo, khay 1/1, khay 2/3 có lót khay", keywords: ["dùng", "dụng", "TV", "mời", "túi", "TCPV", "hạng", "TCPV 3.1.6"], category: "Dịch vụ & Phục vụ" },
-  { id: 41, question: "(CÂU 41) TV dùng dụng cụ nào để mời dép hạng C? TCPV 3.1.6", answer: "* TV cài túi ghế của khách trước khi boarding\n* Dụng cụ khi mời: giỏ mây mời báo, khay 1/1 có lót khay", keywords: ["dùng", "dụng", "TV", "mời", "dép", "TCPV", "hạng", "TCPV 3.1.6"], category: "Dịch vụ & Phục vụ" },
-  { id: 42, question: "(CÂU 42) TV lưu ý gì khi mặc áo khoác ngắn? TCPV 1.4.6.3", answer: "* Sử dụng vào mùa đông hoặc khi nhiệt độ tại điểm đến dưới 20 ºC\n* Mặc khi di chuyển trong nhà ga hoặc trên chuyến bay\n* Áo khoác ngắn phải luôn cài tất cả nút/cúc gọn gàng\n* Không mặc tạp dề/gile bên trong áo khoác, không mặc áo khoác khi demo ATB\nvà khi phục vụ khách ăn/uống. Đeo bảng tên bên ngoài áo khoác, phía trên ngực trái\n* TV tránh để đồ trong túi áo gây phồng, mất thẩm mỹ", keywords: ["lưu", "TV", "khoác", "ATB", "mặc", "tcpv", "TCPV", "ngắn", "TCPV 1.4.6.3"], category: "Dịch vụ & Phục vụ" },
-  { id: 43, question: "(CÂU 43) TV lưu ý gì khi mặc áo mangto và khăn quàng? TCPV 1.4.6.3", answer: "* TV phải mang theo và sử dụng khi nhiệt độ tại điểm đến <10 độ C (nước ngoài)\nvà <15 độ C (Việt Nam)\n* Tổ TV mặc khi di chuyển làm nhiệm vụ, không mặc trên máy bay\n* Áo phải cài cúc, buộc dây thắt lưng\n* Khăn thắt theo những kiểu đã được hướng dẫn", keywords: ["lưu", "TV", "mặc", "TCPV", "mangto", "quàng", "khăn", "TCPV 1.4.6.3"], category: "Dịch vụ & Phục vụ" },
-  { id: 44, question: "(CÂU 44) TV hãy giới thiệu và nêu cách phục vụ rượu Champagne?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Rượu champagne được sản xuất từ nho trồng ở vùng Champagne của Pháp, tuân\nthủ theo các quy tắc nhất định\n* Là một loại rượu sủi tăm màu trắng, nhưng nó có thể được làm từ những loại nho\nsẫm màu hơn\n* Được làm từ 3 loại giống nho: Pinot noir - Pinot Meunier – Chardonay\n* Nồng độ cồn: 12%\n* Nhiệt độ đảm bảo rượu ngon: 7-10 ºC\n* Rượu được dùng làm rượu khai vị hoặc trong các món khai vị, phô mai và trái cây", keywords: ["thiệu", "VE", "TV", "giới", "BUSINESS", "CLASS", "TRAINING", "phục", "EDOC", "UONG"], category: "Dịch vụ & Phục vụ" },
-  { id: 45, question: "(CÂU 45) TV hãy giới thiệu và nêu cách phục vụ rượu Baileys?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Rượu mùi được làm từ rượu chưng cất, thường là rượu mạnh hoặc whiskey\n* Nồng độ cồn: 25% - 55%\n* Có hương vị trái cây, kem, thảo mộc, gia vị, hoa, quả hạch. Dùng sau bữa ăn tối\nđể tốt cho tiêu hoá\nBAILEY’S IRISH CREAM\n* Xuất xứ: Iceland\n* Nồng đồ cồn 17%\n* Có nền là whiskey - Được pha trộn cùng cà phê, kem và sữa\n* TV lấy ly rượu mạnh → rót hết 01 chai Bailey vào ly và phục vụ khách", keywords: ["thiệu", "VE", "phục", "TV", "giới", "IRISH", "BUSINESS", "CREAM", "CLASS", "TRAINING"], category: "Dịch vụ & Phục vụ" },
-  { id: 46, question: "(CÂU 46) TV giới thiệu và nêu cách phục vụ rượu Remy Martin?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Cognac – Remy Martin\n* Nồng đồ cồn 40%\n* Rượu có màu vàng sáng với hương vị đặc trưng của hoa quả mùa hè, đặc biệt là\nmơ, đào chín, hoa dại quyện cùng hương vani và cam thảo được tạo ra trong qúa\ntrình ủ rượu bằng thùng gỗ sồi (từ 3-50 năm)\n* TV lấy ly rượu brandy → rót hết 01 chai Remy Martin vào ly và phục vụ khách", keywords: ["thiệu", "VE", "rượu", "TV", "giới", "BUSINESS", "CLASS", "TRAINING", "phục", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 47, question: "(CÂU 47) TV giới thiệu và nêu cách phục vụ rượu Drambuie?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Xuất xứ - Scotland\n* Nồng đồ cồn - 40%\n* Rượu có màu vàng, là sự pha trộn của rượu mạnh từ 15-17 năm tuổi và có hương\nvị trái cây, mật ong và các loại thảo mộc", keywords: ["thiệu", "VE", "rượu", "TV", "giới", "BUSINESS", "CLASS", "TRAINING", "phục", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 48, question: "(CÂU 48) TV giới thiệu và nêu cách phục vụ rượu Rhum?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Xuất xứ: Cuba\n* Nồng đồ cồn: 37.5%\n* Rượu được chưng cất từ mía, có hương thơm nhẹ, khô của hạnh nhân và trái cây\nnhiệt đới\n* Có 4 loại: Light – Medium – Full – Aromatic Rhum\n* Có thể uống thẳng hoặc uống với đá hoặc làm nên của rượu pha", keywords: ["thiệu", "VE", "rượu", "TV", "giới", "BUSINESS", "CLASS", "TRAINING", "phục", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 49, question: "(CÂU 49) TV giới thiệu và nêu cách phục vụ rượu Sake?", answer: "TRAINING EDOC – BUSINESS CLASS – KIEN THUC VE THUC UONG\n* Sake là thức uống có cồn của Nhật Bản làm từ gạo được lên men\n* Nồng đồ cồn 15-16%\n* Rượu dùng để khai vị hoặc phục vụ món chính\n* Sake được phục vụ ướp lạnh, ở nhiệt độ phòng hoặc đun/ngâm nóng, tuỳ thuộc\nvào sở thích của người uống, chất lượng của rượu sake và mùa trong năm:\nSake lạnh 10ºC\nSake nóng 50ºC", keywords: ["thiệu", "VE", "rượu", "TV", "giới", "BUSINESS", "CLASS", "TRAINING", "phục", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 50, question: "(CÂU 50) TV giới thiệu và trình bày cách thức phục vụ Welcome drink trên", answer: "chuyến bay VNA? TCPV 4.1.6.2\n* Phục vụ theo yêu cầu của từng khách\n* Ướp lạnh các thức uống, trước giờ boarding chuẩn bị rót sẵn số ly thức uống bằng\nkhoảng 50% số khách để tránh nguội thức uống và lãng phí\n* Rót 1/2 ly với nước trái cây (2/3 ly loại cũ), 1/3 ly với champagne\n* Đường bay trung/dài: phục vụ theo yêu cầu (on demand)\n* Đường bay ngắn hoặc bay A321: phục vụ trên khay (on tray)", keywords: ["thiệu", "TV", "giới", "bày", "thức", "trình", "TCPV", "TCPV 4.1.6.2", "VNA", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 51, question: "(CÂU 51) TV giới thiệu cách trình bày tách trà, cà phê hạng C được phục vụ", answer: "trên chuyến bay của VNA? TCPV 4.1.4\nTách sứ (tea/coffee cup)\n* Phục vụ cafe đen, trà đen, trà xanh, espresso\n* Cafe/trà + đường sữa (quốc nội & quốc tế ngắn)\n* Cách miệng tách 1cm, Espresso thì pha 1 shot hoặc double shot\nCốc sứ (big tea/coffee cup)\n* Phục vụ trà đen dùng với đường sữa, trà thảo mộc\n* Phục vụ cafe Capuccino + Latte\n* Chuẩn bị cafe phin kiểu Việt Nam\n* Cafe / trà đen nếu khách có nhu cầu dùng nhiều\n* Trung / Dài ưu tiên phục vụ cốc sứ cho đến hết, sau đó chuyển qua tách sứ nhỏ\n* Cách miệng tách 3cm hoặc 2/3 cốc", keywords: ["thiệu", "TV", "giới", "tách", "bày", "trình", "TCPV 4.1.4", "TCPV", "VNA", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 52, question: "(CÂU 52) TV giới thiệu rượu vang với những thông tin gì? TCPV 4.1.6.2", answer: "* Tên rượu\n* Vùng trồng nho\n* Năm thu hoạch nho\n* Giống nho\n* Hương vị\n* Thức ăn phù hợp", keywords: ["thiệu", "rượu", "TV", "giới", "vang", "TCPV", "TCPV 4.1.6.2"], category: "Dịch vụ & Phục vụ" },
-  { id: 53, question: "(CÂU 53) TV hãy cho biết những loại trà được phục vụ trên khoang C của VNA?", answer: "TRAINING EDOC – BUSINESS CLASS - BEVERAGE\n* Trà xanh Việt Nam (hương nhài / hương sen)\n* Trà xanh Nhật Bản\n* Trà xanh bạc hà\n* English Breakfast Tea\n* Trà Earl Grey (Bá tước)\n* Trà hương vị trái cây\n* Trà thảo mộc", keywords: ["BEVERAGE", "TV", "loại", "BUSINESS", "CLASS", "TRAINING", "EDOC", "VNA", "trà", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 54, question: "(CÂU 54) TV hãy cho biết những loại cà phê được phục vụ trên khoang C của", answer: "VNA? TRAINING EDOC – BUSINESS CLASS – BEVERAGE\n* Cà phê đen\n* Cà phê phin giấy\n* Cà phê Espresso – Cappuccino – Latte – Americano\n* Cà phê sữa đá /nóng Việt Nam\n* Bạc xỉu", keywords: ["BEVERAGE", "TV", "loại", "BUSINESS", "phê", "CLASS", "TRAINING", "EDOC", "VNA", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 55, question: "(CÂU 55) TV hãy cho biết cách sắp xếp khăn bông khi phục vụ trên khoang", answer: "hạng C? số lượng và những lưu ý - TCPV 4.1.6.2\n* Phục vụ khăn nóng: nhiệt độ ngoài trời < 20 ºC\n* Phục vụ khăn lạnh: nhiệt độ ngoài trời >= 20 ºC\n* Khi phục vụ: kiểm tra độ nóng của khăn và lưu ý khách khi mời\n* Dụng cụ phục vụ: giỏ mây có lót, tối đa 10 khăn / giỏ và xếp ngay ngắn\n* Sử dụng các gắp khác nhau: mời khăn (gắp vàng) – thu khăn (gắp xanh)\n→Nướng khăn bông: mở foil giấy bạc bọc khăn, cho 1 lượng nước nóng vừa đủ để\nlàm ướt khăn, bọc lại foil bạc và STEAM 10-15 phút", keywords: ["TV", "TCPV", "TCPV 4.1.6.2", "STEAM", "xếp", "sắp", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 56, question: "(CÂU 56) TV trình bày những hiểu biết về thứ hạng của rượu Cognac?", answer: "TRAINING EDOC – BUSINESS CLASS – BEVERAGE\n* Xuất sứ: Pháp\n* Nồng độ cồn: 40%\n* Cognac là một trong nhiều loại Brandy được đặt tên theo vùng Cognac, Pháp\n* Quá trình sản xuất và cách đặt tên bắt buộc phải đáp ứng các yêu cầu pháp lý nhất\nđịnh và được kiểm soát bởi cơ quan quản lý French appellation d’origine controlle\ndesgnation:\n- Chưng cất 2 lần rượu vang trắng của bất kỳ vùng trồng trọn được chỉ định\n- Giống nho được kiểm soát nghiêm ngặt, rất khô, có tính acid và loãng\n- Giống nho có ít nhất 90% Ugni Blanc, Folle Blanche và Colombard\n- Nho được ép → nước nho lên men 2-3 tuần → rượu có nồng độ cồn 7-8%\n- Tiến hành 2 lần chưng cất → thu được rượu mạnh có nồng độ cồn 70%\n- Sau khi chưng cất → ủ trong thùng gỗ sồi Limousin ít nhất 2 năm\n- Sau hơn 10 năm trong thùng gỗ → nồng độ cồn giảm còn 40%\n* Phân loại Cognac (dựa trên Cục liên ngành quốc gia Cognac BNIC):\nV.S (very special) *** → được ủ trong thùng gỗ sồi ít nhất 2 năm\nV.S.O.P (very superior old pale) → được ủ trong thùng gỗ sồi ít nhất 4 năm\nX.O (extra old - Napoleon) → được ủ trong thùng gỗ sồi ít nhất 6 năm\nVNA hiện đang sử dụng rượu Cognac VSOP trên khoang hạng C\nCognac – Martell VSOP (40%)\nCognac – Remy Martin (40%)", keywords: ["BEVERAGE", "VSOP", "TV", "hiểu", "BUSINESS", "bày", "CLASS", "trình", "TRAINING", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 57, question: "(CÂU 57) TV hãy giới thiệu về các loại bia đang trên phục vụ trên chuyến bay", answer: "của VNA? TRAINING EDOC – BUSINESS CLASS – BEVERAGE\n* Bia có nồng độ cồn từ 4-7%\n* Thành phần: nước – tinh bột – hoa bia – men\n* Gồm có: bia Việt Nam, Nhật, Úc, Pháp… như bia Halida, Carlsberg, 333, Hà Nội,\nAsahi, Kirin, Suntory, Saporro, Premium Malts (Nhật) …", keywords: ["BEVERAGE", "thiệu", "loại", "TV", "giới", "BUSINESS", "CLASS", "hãy", "TRAINING", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 58, question: "(CÂU 58) TV hãy cho biết nhiệt độ thích hợp khi phục vụ vang đỏ & vang trắng", answer: "và những món ăn phù hợp?\nTRAINING EDOC – BUSINESS CLASS – BEVERAGE\nVANG ĐỎ\n* Nhiệt độ ướp từ: 12-17 ºC\n* Được dùng với món ăn phù hợp: các món thịt đỏ và trắng, thịt nướng, thịt bò, thịt\ncừu, mỳ Ý và Phomai\nVANG TRẮNG\n* Nhiệt độ ướp từ: 7-8 ºC\n* Được dùng với món ăn phù hợp: các món cá, hải sản và thịt trắng", keywords: ["BEVERAGE", "TV", "hợp", "BUSINESS", "thích", "CLASS", "VANG", "TRAINING", "NG", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 59, question: "(CÂU 59) Quy định về dịch vụ TV đi cùng phục vụ hành khách INF/CHLD như", answer: "thế nào trên chuyến bay? (PHM 7.4)\n* Dịch vụ TV đi cùng: phải đặt ít nhất 3 ngày trước ngày bay (nội địa) và 5 ngày\ntrước ngày bay (quốc tế)\n* Mỗi người lớn / TV phụ trách:\n- Max 1 INFT + 1 CHLD dưới 6 tuổi\n- Max 2 CHLD dưới 6 tuổi\n- Không giới hạn CHLD >= 6 tuổi\n- Nếu số lượng vượt quá quy định → yêu cầu dịch vụ TV đi cùng\n* UM (2-6 tuổi) → cần đặt dịch vụ TV đi cùng. TV này được làm thủ tục theo danh\nsách của tổ tiếp viên đi làm nhiệm vụ. Bố trí ghế ngồi của tiếp viên cạnh UMNR\nhoặc cạnh người đi cùng INFT/CHLD/UMNR\n* TV đi cùng UM sẽ ngồi tại vị trí đã được giữ chỗ trước, trực tiếp chăm sóc, trợ\ngiúp riêng INFT/CHLD/UMNR trong suốt chuyến bay.", keywords: ["UMNR", "TV", "UM", "dịch", "cùng", "INFT", "PHM", "CHLD", "định", "PHM 7.4"], category: "Dịch vụ & Phục vụ" },
-  { id: 60, question: "(CÂU 60) TV hãy nêu cách thức pha cà phê phin giấy trên máy bay TCPV 3.1.24", answer: "* Chuẩn bị:\n1 tách nhỏ + đĩa lót + thìa cafe\n1 tách trà lớn\n1 bình inox nhỏ\n* Thực hiện:\nDùng nước sôi tráng qua các dụng cụ\nLấy 1 lượng nước sôi vừa đầy tách nhỏ (120ml) cho vào bình inox\nMở bao bì, đặt túi lọc vào tách trà lớn\nRót nước sôi từ bình inox vào túi lọc, khoảng 20ml. Chờ 30s cho cafe ngấm đều, sau\nđó châm thêm hết phần nước còn lại trong bình inox (80-100ml)\nĐợi khi nước đã qua hết túi lọc, lấy túi lọc ra. Sau đó rót cafe từ tách lớn sang tách\nnhỏ và phục vụ khách (với đường sữa …)", keywords: ["TV", "TCPV 3.1.24", "phê", "thức", "pha", "TCPV", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 61, question: "(CÂU 60+) TV hãy nêu cách thức pha cà phê espresso trên máy bay TCPV 3.1.4", answer: "* Nhấn nút Bật/Tắt\n* Đặt viên nén cafe vào khay đựng cafe\n* Kéo tay cầm xuống vị trí khoá\n* Đặt tách cafe (loại nhỏ) dưới ngăn chứa\n* Nhấn biểu tượng “ly nhỏ” cho cafe espresso (single). Nếu khách yêu cầu double\nespresso thì TV pha 2 lần single bằng 2 viên nén cafe khác nhau, không nhấn nút\ndouble\n* Nâng tay cầm. Lấy viên cafe ra khỏi khay đựng và bỏ đi. Lưu ý mỗi viên nén chỉ\ndùng được 1 lần.", keywords: ["TV", "TCPV 3.1.4", "phê", "thức", "pha", "TCPV", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 62, question: "(CÂU 61) TV hãy nêu cách thức phục vụ ngũ cốc vào bữa sáng TCPV 4.1.6.2", answer: "* TV chuẩn bị bát đựng ngũ cốc + ly đựng sữa\n* Khay ăn gồm bát sứ ngũ cốc, sữa tươi, trái cây\n* Chỉ phục vụ món ăn nóng sau khi khách đã dùng xong ngũ cốc", keywords: ["phục", "TV", "thức", "TCPV", "TCPV 4.1.6.2", "ngũ", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 63, question: "(CÂU 62) TV hãy nêu cách thức phục vụ phở / bánh đa cua / mỳ hạng C", answer: "TRAINING EDOC – BUSINESS CLASS\n* Làm nóng bát sứ\n* Đổ mỳ và gia vị vào bát\n* Đổ nước sôi ngập phần mỳ\n* Dùng đĩa sứ đậy bát mỳ từ 3-5 phút sau đó mang ra phục vụ khách\nLưu ý: có trải khăn bàn, dùng khay 2/3 để phục vụ, trên khay có bộ cutlery, napkin", keywords: ["phở", "TV", "BUSINESS", "thức", "CLASS", "TRAINING", "phục", "EDOC", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 64, question: "(CÂU 63) TV hãy nêu cách thức phục vụ bánh open-face trên hạng C TRAINING EDOC – BUSINESS CLASS", answer: "* TV chủ động mời khách mỗi 1 giờ 30 phút\n* Chuẩn bị khay bánh có napkin và kẹp gắp bánh mì đặt ở 1 góc khay\n* Đặt napkin xuống bàn\n* Giới thiệu các loại bánh, mời khách chọn và gắp bánh đặt trên napkin\n* Sau khi phục vụ cần bọc kín khay bánh tránh bị khô\n* Thu dọn sau khi khách dùng xong", keywords: ["bánh", "TV", "BUSINESS", "thức", "CLASS", "TRAINING", "phục", "EDOC", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 65, question: "(CÂU 64) TV hãy nêu cách thức giới thiệu tấm trải ghế và phục vụ khách", answer: "TCPV 3.1.24\n* Áp dụng chuyến bay đường dài\n* Tấm trải hình chữ nhật, may liền với phần phủ đầu ghế để giữ cho tấm phỉ đầu ghế\nkhông bị xô lệch khi sử dụng\n* Được may trần bông, hoạ tiết đơn giản\n* Kích thước 170cm x 55cm - Khối lượng 400-600gram\n* Chất liệu: vải lyocel , bông polyester 100% nguyên sinh, chống tĩnh điện, không\nphai màu, co nhăn sau khi giặt, sấy, là; sợi vải không rơi rụng\n* Sản phẩm thể hiện logo VNA, đóng gói trong túi, có đính nhãn “Xin quý khách\ngấp gọn và để lại trên ghế sau khi sử dụng” / Please help us fold and leave on the\nseat after use\n* TV giới thiệu tấm trải khi giới thiệu các VTVP tại ghế khách, hoặc sau khi mời\nmenu (trước khi MB cất cánh). Hỏi khách về thời điểm phục vụ tấm trải", keywords: ["thiệu", "TV", "giới", "TCPV 3.1.24", "thức", "TCPV", "VTVP", "MB", "VNA", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 66, question: "(CÂU 65) Khi khách xin thuốc trong FAK trên máy bay, tiếp viên phục vụ trực", answer: "tiếp phải làm gì?\n* Khi khách xin thuốc để uống, TV hỏi khách tiền sử bệnh và vấn đề dị ứng với các\nthành phần của thuốc mà khách sẽ dùng.\n* TV giới thiệu loại thuốc có trong hộp FAK, nói rõ thành phần, công dụng, liều\ndùng, nếu khách không bị dị ứng với loại thuốc → TV báo cáo TVT và xin phép mở\nhộp thuốc cho khách sử dụng.\n* TV mang thuốc + ly nước ấm để khách uống và hướng dẫn khách dùng theo chỉ\ndẫn\n* TV ghi lại các thông tin: tên khách, số ghế, số hiệu chuyến bay, ngày bay, tên TVT,\ntên thuốc, liều lượng dùng, số seal → ghi vào medical form có sẵn trong hộp FAK\n* TV seal lại hộp thuốc trước khi máy bay hạ cánh.\n* TV chăm sóc khách trong suốt chuyến bay, nếu khách cần sự trợ giúp về ý tế, TVT\nđọc phát thanh tìm sự trợ giúp của bác sĩ hoặc y tá → yêu cầu trợ giúp y tế tại sân\nbay hoặc xe thang hỗ trợ khách xuống máy bay (nếu cần)", keywords: ["TV", "thuốc", "TVT", "khách", "xin", "fak", "FAK"], category: "Dịch vụ & Phục vụ" },
-  { id: 67, question: "(CÂU 66) Khi nhận cung ứng đầu chuyến bay, TV phải kiểm tra những gì?", answer: "TCPV 3.1.11\n* Kiểm tra tem an ninh, seal, phanh xe đẩy\n* Kiểm đếm trực tiếp, so sánh với giấy tờ bàn giao (tổng xe, container, thùng nước\nmỳ, các dụng cụ chuyên dụng, số lượng dụng cụ trong xe DC dùng chung, xe ly, xe\nchứa dụng cụ ngoài khay, đường sữa, hạt rang + napkin, khăn phục vụ, mỳ ly…)\n* Xe rượu & Xe nước: số lượng xe, các loại đồ uống có cồn và không cồn, trà cafe\n* Xe ăn: kiểm tra khay ăn (2 bữa ăn nếu bay đường dài) có đầy đủ các thành phần\nvà số lượng 50-50 (nếu có) → kiểm đếm suất ăn nóng trong lò (đối chiếu với menu\nđược cấp lên) + bánh mì\n* Báo cáo TVT và NV cung ứng nếu có bất thường xảy ra\n* Ký và ghi rõ họ tên vào phiếu giao nhận", keywords: ["TV", "DC", "TVT", "cung", "nhận", "TCPV 3.1.11", "TCPV", "NV", "đầu", "ứng"], category: "Dịch vụ & Phục vụ" },
-  { id: 68, question: "(CÂU 67) Chuyến bay nào TV cần đóng cửa sổ cho khách nghỉ ngơi?", answer: "TCPV 3.2\n* Đối với chuyến bay ngày: không bắt buộc khách kéo tấm che cửa sổ xuống, chỉ\nthực hiện nhắc khách đối với chuyến bay đêm (bay qua vùng có mặt trời mọc sẽ làm\nkhách thức giấc)\n* Đối với chuyến bay ngày, khi cất hạ cánh, TVT dim nhẹ đèn để cân bằng ánh sáng\ntrong và ngoài khoang khách (không đọc PA dim đèn, tránh ảnh hưởng đến sự nghỉ\nngơi của khách & HTGT)", keywords: ["PA", "TV", "đóng", "bay", "TVT", "cửa", "cần", "TCPV", "HTGT", "TCPV 3.2"], category: "Dịch vụ & Phục vụ" },
-  { id: 69, question: "(CÂU 68) TV hãy nêu quy định dọn vệ sinh (khoang khách) đầy đủ trên chuyến", answer: "bay? TCPV 3.2.2\nMục đích:\n* Ngăn ngừa tình trạng các trang thiết bị xuống cấp\n* Giảm hỏng hóc, bảo dưỡng\n* Thuận tiện cho vận hành, khai thác về sau\nNguyên tắc:\n* Thực hiện khi phát sinh rác, vết bẩn trong chuyến bay\n* Đảm bảo máy không có mùi lạ, mùi khó chịu\n* Ghi nhận bàn giao vào biên bản bất thường và bàn giao cho đơn vị vệ sinh các vết\nbẩn không thể làm sạch trong chuyến bay\nQuy trình:\n* TV kiểm tra và ký nghiệm thu tình trạng vệ sinh tại các khu vực khoang khách,\nkhoảng bếp, buồng vệ sinh, buồng nghỉ của tổ lái/TV\n* Trong quá trình giao nhận, tất cả các hỏng hóc phải được ghi chép đầy đủ trong\nCDL (cabin defeg log)\n* Trên chuyến bay: dọn vệ sinh khi phát sinh rác, vết bẩn trong khoang khách. Tần\nsuất kiểm tra cabin để kịp thời dọn rác, đảm bảo mỹ quan, hạng C: 10 phút/lần, hạng\nY: 15 phút/lần. Sau khi phục vụ các bữa ăn/uống và trước khi giảm độ cao, TV đi\ndọc khoang khách để thu dọn rác (khoang PE/Y, TV đeo găng tay để thu rác)\n* Trước khi máy bay hạ cánh: TV hoàn tất thu dọn rác trong khoang khách. Trên\nbàn ăn, trên lối đi, trong các túi ghế mà TV có thể quan sát được và phối hợp với\nkhách thực hiện thu dọn. Trong khu vực bếp, các buồng vệ sinh, khu vực ghế ngồi\ncủa TV, crewrest, các hộc tủ ngăn chứa…\n* Trách nhiệm thực hiện: TVT chịu trách nhiệm đôn đốc, nhắc nhở các TV kiểm\ntra dọn dẹp khoang khách và buồng vệ sinh thương xuyên. Các TV chịu trách nhiệm\ntình trạng và theo khu vực chịu trách nhiệm theo quy định trong Taskcard", keywords: ["TV", "dọn", "sinh", "TCPV 3.2.2", "TVT", "TCPV", "định", "PE", "CDL", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 70, question: "(CÂU 69) TV hãy nêu quy định dọn vệ sinh (lavatory) đầy đủ trên chuyến bay?", answer: "TCPV 3.2.6\nNguyên tắc chung:\n* Đảm bảo tàu bay không có mùi lạ, mùi khó chịu\n* Ghi nhận vào biên bản bất thường và bàn giao cho ĐVVS các vết bẩn không thể\nlàm sạch trong chuyến bay\n* Không đổ vật cứng vào bồn cầu để tránh làm hư\n* Không đổ trà cafe vào bồn cầu, bồn rửa tay\nQuy trình:\n* Trước chuyến bay:\n- TV kiểm tra và ký nghiệm thu tình trạng vệ sinh tại phòng vệ sinh\n- Trong quá trình giao nhận, tất cả các hỏng hóc/ thiếu hụt/ mất mát trong phòng vệ\nsinh được phát hiện phải được ghi chép đầy đủ trong Cabin Defect Log.\n* Trên chuyến bay: Sau khi máy bay cất cánh, TV chuẩn bị các phòng vệ sinh sẵn\nsàng để khách sử dụng.\n* Quy trình dọn vệ sinh:\n- Kiểm tra, lắp đầy đủ VTVS (giấy các loại, ly giấy). Đảm bảo VTVS được sắp xếp\nđúng vị trí, ngăn nắp, sạch sẽ, sẵn sàng để hành khách sử dụng: Nắp hộp giấy/ giấy\nlau tay được tháo và rút giấy sẵn; Giấy cuộn được mở sẵn và gấp đầu cuộn hình chữ\nV; Giấy lót bồn cầu luôn đảm bảo sẵn sàng sử dụng; Xà phòng bánh (nếu có) được\nbóc sẵn vỏ;\n- Dọn sạch rác trong các khay hộc, ngăn kéo\n- Lau sạch, khô gương\n- Lau sạch bình xà phòng lỏng, khay đựng VTVP\n- Lau sạch chậu rửa, vòi rửa\n- Lau sạch các vết bẩn, ướt trên cửa tủ, tường vách ngăn, cửa phòng vệ sinh\n- Dồn rác xuống đáy thùng, đậy kín nắp thùng rác\n- Lau sạch bồn cầu, lau sàn VS sạch sẽ khô ráo\n- Xịt khử mùi & xịt thơm\n\n*Thời gian: Hạng C (10 phút/lần hoặc sau 1-2 khách dùng) / Hạng Y (15 phút/lần\nhoặc trong giai đoạn cao điểm sau 4-5 khách sử dụng)\n* Lưu ý: TV dùng găng tay nilon để dọn toilet và rửa tay bằng xà phòng sau khi dọn\nxong. TV gõ cửa 2 lần trước khi mở cửa phòng vệ sinh, chốt cửa sau khi dọn", keywords: ["TCPV 3.2.6", "TV", "dọn", "sinh", "VVS", "VTVS", "TCPV", "định", "VTVP", "VS"], category: "Dịch vụ & Phục vụ" },
-  { id: 71, question: "(CÂU 70) TV hãy nêu các loại Ly / Tách phục vụ thức uống tại khoang Y?", answer: "TRAINING EDOC – ECONOMY CLASS – DUNG CU PHUC VU\n* Ly giấy (paper tumble)\n+ Phục vụ nước trái cây, thức uống có gas, sữa, nước suối, bia, rượu pha (cách miệng\nly 2cm)\n+ Phục vụ rượu vang, vang sủi tăm, sake, rượu mạnh double shot (rót 1/2 ly)\n* Ly rượu vang (wine glass)\n+ Phục vụ rượu vang (cách miệng ly 1cm)\n* Tách trà/cafe (tea/coffee cup)\n+ Phục vụ trà, cafe nóng (cách miệng tách 1cm)", keywords: ["TV", "loại", "tách", "DUNG", "CLASS", "ECONOMY", "hãy", "TRAINING", "phục", "EDOC"], category: "Dịch vụ & Phục vụ" },
-  { id: 72, question: "(CÂU 71) TV có thị lực giảm (có giấy bác sĩ) thì đi bay cần lưu ý gì?", answer: "TCPV 1.4.6.5\n* TV phải đeo kính phù hợp khi tra cứu tài liệu, đọc thông tin trong quá trình thực\nhiện nhiệm vụ, không đeo kính trong khi di chuyển trong nhà ga\n* Kiểu dáng cổ điển, lịch sự, trang nhã, vừa vặn với khuôn mặt\n* Hình dạng: tròn, oval, chữ nhật\n* Mắt kính phải có viền, không dùng kính không gọng\n* Màu sắc: tròng trong suốt, gọng tông màu nhẹ, trang nhã, lịch sự (bạc, vàng, vàng\nhồng, nâu, đen)\n* Không cài kính trên đầu, không cài vào áo\n* Có thể dùng kính mát khi di chuyển, nhưng không dùng khi đi trong nhà ga và trên\nmáy bay\n* Đối với kính áp tròng: dùng kính không màu\n* Phải luôn đem theo kính dự phòng", keywords: ["TV", "TCPV 1.4.6.5", "lực", "thị", "giảm", "bác", "TCPV", "giấy", "thì"], category: "Dịch vụ & Phục vụ" },
-  { id: 73, question: "(CÂU 72) Trên chuyến bay đường trung, dài khi nào TV được thay giày đế thấp,", answer: "mềm và độ cao giầy bao nhiêu? TCPV 1.4.6.3\n* Trên chuyến bay, sau khi phục vụ bữa ăn, TV nữ có thể thay và sử dụng giày mềm,\nmàu đen, thoải mái, kiểu dáng giống mẫu quy định của đồng phục, độ cao từ 3-5cm\n* TV thay lại giày trước khi bật đèn sáng để phục vụ bữa ăn tiếp theo và khi máy\nbay giảm độ cao", keywords: ["đường", "TV", "chuyến", "bay", "trung", "TCPV", "dài", "TCPV 1.4.6.3"], category: "Dịch vụ & Phục vụ" },
-  { id: 74, question: "(CÂU 73) TV hãy cho biết nhiệt độ của thức uống nóng (trà/cà phê ) và thức ăn", answer: "nóng là bao nhiêu để đảm bảo chất lượng và an toàn cho khách? TCPV 3.1.20\n* Món ăn nóng (mỳ, phở, bánh đa cua, soup …): nước sôi trên máy bay là 80°C, sau\nkhi cho thêm nước nguội vào, nhiệt độ sẽ giảm còn 50°C\n* Thức uống nóng (trà, cà phê): nước sôi trên máy bay là 80°C, sau khi cho thêm\nnước nguội vào, nhiệt độ sẽ giảm còn 70°C", keywords: ["TV", "TCPV 3.1.20", "thức", "TCPV", "hãy", "nhiệt"], category: "Dịch vụ & Phục vụ" },
-  { id: 75, question: "(CÂU 74) TV hãy cho biết thời điểm nướng suất ăn của khách - TCPV 3.1.1.1", answer: "* Hạng Y: các đường bay có FT <2h có phục vụ ăn nóng (SGN-HAN / SGN-KUL\n/ SGN-SIN / SGN-BKK) thì TV được phép nướng suất ăn trước khi cất cánh\n* Hạng Y: các đường bay có FT >2h thì TV nướng suất ăn sau khi cất cánh\n* Hạng C: TV nướng suất ăn sau khi cất cánh", keywords: ["TV", "FT", "KUL", "TCPV", "HAN", "SGN", "TCPV 3.1.1.1", "thời", "BKK", "nướng"], category: "Dịch vụ & Phục vụ" },
-  { id: 76, question: "(CÂU 75) TV lưu ý gì khi bàn giao rượu vang? TCPV 3.1.9", answer: "* Các loại rượu: kiểm đếm và ghi số lượng chai nguyên. Các vỏ chai từ 150ml phải\nđược thu hồi lại và ghi số lượng theo quy định\n* TV chịu trách nhiệm bồi thường nếu thu hồi thiếu vỏ chai → trường hợp vỏ chai\nbị vỡ → TV chụp hình lại và ghi lại lý do cụ thể để giải trình\n* Hạn chế tối đa việc kiểm đếm không chính xác số lượng chai nguyên hoàn trả dẫn\nđến sự chệnh lệch giữa số lượng bàn giao và số lượng thực tế thu hồi\n* Tuyệt đối tuân thủ việc ký và ghi rõ họ tên trên phiếu giao nhận đồ uống\n* TV niêm phong xe trước khi máy bay hạ cánh", keywords: ["rượu", "lưu", "TV", "vang", "giao", "TCPV 3.1.9", "TCPV", "bàn"], category: "Dịch vụ & Phục vụ" },
-  { id: 77, question: "(CÂU 76) TV hãy cho biết dựa vào thông tin nào để TV chuẩn bị phục vụ khách", answer: "khăn bông nóng hoặc lạnh?\n* Phục vụ khăn nóng: khi nhiệt độ ngoài trời <= 20°C\n* Phục vụ khăn lạnh: khi nhiệt độ ngoài trời > 20°C\n* Khi phụ vụ: kiểm tra độ nóng của khăn và lưu ý khách khi mời\n* Dụng cụ mời: giỏ mây có lót + 10 khăn/giỏ xếp ngay ngắn + gắp vàng", keywords: ["TV", "vào", "dựa", "thông", "hãy"], category: "Dịch vụ & Phục vụ" },
-  { id: 78, question: "(CÂU 77) TV cần lưu ý gì trên chuyến bay có chuyên chở PETC – TBDV 562", answer: "* Số lượng:\n- Mỗi khách mang không quá 2 con\n- Hạng C: 01 con (không chấp nhận trên A350/B787)\n- Hạng PE: tối đa 02 con\n- Hạng Y: tối đa 02 con\n* Trọng lượng/Kích thước:\n- Chấp nhận vận chuyển PETC được nhốt trong lồng, do khách tự chuẩn bị\n- Lồng + PETC không quá 6kg\n- Kích thước lồng không quá 35 x 30 x 20 cm\n* Nhiệm vụ của TV:\n- TVT thông báo cho PIC về khách có PETC trên chuyến bay\n- TV hướng dẫn khách để PETC vào đúng vị trí quy định. Lồng phải đặt ở sàn máy\nbay, trong gầm ghế phía trước chỗ ngồi của khách\n- Trước khi đóng cửa máy bay, TV chủ động đánh giá ảnh hưởng của PETC đến các\nhành khách khác\n- TV cần đặc biệt lưu ý không để PETC thoát khỏi lồng\n*** Tổ bay không được từ chối vận chuyển PETC đã được xác nhận dịch vụ, trừ\ntrường hợp PETC có biểu hiện hung dữ (cắn, sủa, làm khách khác bị thương …) gây\nảnh hưởng tới hành khách và phi hành đoàn", keywords: ["lưu", "TV", "TBDV 562", "chuyên", "TVT", "PIC", "bay", "TBDV", "cần", "PE"], category: "Dịch vụ & Phục vụ" },
-  { id: 79, question: "(CÂU 78) TV hãy cho biết Signature Drink đang được phục vụ trên hạng C của", answer: "VNA?\n* CÁT HỒNG PHAN THIẾT\nRhum – Campari – Nước cam\nVị đắng thanh cùng màu hồng cam của cocktail đưa ta đến với cái nắng gió của đồi\ncát hồng Phan Thiết. Tận hưởng cảm giác tươi mát với hương thơm quyến rũ hòa\nquyện từ Rum, Campari và Nước cam\n* ĐẤT PHƯƠNG NAM\nWhishky - Campari - Nước chanh - Nước đường\nMang trong mình vẻ đẹp độc đáo và cuốn hút lạ kỳ với những thắng cảnh đẹp nao\nlòng, Đất Phương Nam khiến ta cảm thấy bâng khuâng, dạt dào cảm xúc mỗi khi\nnhớ về. Không thể không trải nghiệm ly rượu pha có màu nâu đỏ, hương vị đậm đà,\nchút đắng ở hậu vị, pha trộn trên nền rượu Whisky, Campari thêm chút chanh, đường,\ngợi nhớ vùng đất với nhịp sống mộc mạc, bình dị và những con người nồng hậu.\n\n* MIỀN ĐẠI NGÀN\nVang đỏ - Rhum – Nước cam – Nước táo\nLy cocktail này là sự kết hợp giữa vị chát nhẹ nhàng của Vang đỏ, vị thơm ngọt của\nrượu Rum và vị đậm đà của nước cam, nước táo. Cùng cảm nhận vẻ đẹp miền đại\nngàn Tây Bắc vào mùa mận chín khi thưởng thức ly rượu đặc biệt từ độ cao 10.000m", keywords: ["drink", "TV", "MI", "PHAN", "PH", "THI", "đang", "signature", "NG", "VNA"], category: "Dịch vụ & Phục vụ" },
-  { id: 80, question: "(CÂU 79) TV hãy cho biết tên các loại cocktail có nền là Rượu Vang / Vang Sủi", answer: "Tăm đang được phục vụ trên hạng C/Y của VNA?\n* WINE COOLER\nWhite wine - 7 up - chanh lát\n* SPRITZER\nWhite wine – soda\n* MIỀN ĐẠI NGÀN\nVang đỏ - Rhum – Nước cam – Nước táo\nLy cocktail này là sự kết hợp giữa vị chát nhẹ nhàng của Vang đỏ, vị thơm ngọt của\nrượu Rum và vị đậm đà của nước cam, nước táo. Cùng cảm nhận vẻ đẹp miền đại\nngàn Tây Bắc vào mùa mận chín khi thưởng thức ly rượu đặc biệt từ độ cao 10.000m\n* HẢI ĐẢO YÊU THƯƠNG\nWhite wine - Ginger Ale – Blue Curacao – Chanh lát\nTận hưởng cảm giác tươi mát, nhẹ nhàng từ sự hoà quyện của rượu vang trắng,\ngingle ale và blu curacao như những tia nắng vàng rực rỡ, những dải bọt biển trắng\nxoá, những vùng biển xanh mênh mông nơi miền hải đảo Việt Nam", keywords: ["TH", "TV", "SPRITZER", "loại", "MI", "tên", "COOLER", "WINE", "NG", "VNA"], category: "Dịch vụ & Phục vụ" },
-  { id: 81, question: "(CÂU 80) TV hãy cho biết tên các loại cocktail có nền là Campari đang được", answer: "phục vụ trên hạng C/Y của VNA?\n* GARIBALDI\nCampari - Nước cam - Cam trang trí\n* TROPICAL DAWN\nCampari - Gin - Nước cam - Cam trang trí\n* GENOA\nCampari - Vodka - Nước cam - Chanh lát\n\n* CÁT HỒNG PHAN THIẾT\nCampari - Rum - Nước cam - Cam trang trí\nVị đắng thanh cùng màu hồng cam của cocktail đưa ta đến với cái nắng gió của đồi\ncát hồng Phan Thiết. Tận hưởng cảm giác tươi mát với hương thơm quyến rũ hoà\nquyện từ Rum, Capari, nước cam\n* HELLO VIỆT NAM\nCampari - Nước cam – Sprite - Cam trang trí\nChào đón tất cả du khách đồng hành cùng VNA đến Việt Nam\n* ĐẤT PHƯƠNG NAM\nWhisky - Campari - Nước chanh - Nước đường - Chanh lát\nLy rượu pha có màu nâu đỏ, hương vị đậm đà, chát đắng ở hậu vị, pha trộn trên nền\nWhisky, Campari thêm chút chanh, đường gợi nhớ vùng đất Phương Nam với nhịp\nsống mộc mạc bình dị và những con người nồng hậu, chất phác, nghĩa tình\n* SÔNG HỒNG\nWhisky – Dry Martini - Nước cam – Cam & Cherry\nGợi nhớ đến hình ảnh dòng sông Hồng ở miền Bắc VN trong lòng mọi người", keywords: ["VI", "loại", "TV", "PHAN", "PH", "THI", "GENOA", "HELLO", "tên", "VN"], category: "Dịch vụ & Phục vụ" },
-  { id: 82, question: "(CÂU 81) TV hay cho biết nguyên tắc trang trí cocktail Y?", answer: "* Tea color: no garnish\n* Yellow and orange: orange & cherry\n* Colorless: lemon / oliu\n* Campari base: orange", keywords: ["trang", "TV", "nguyên", "tắc"], category: "Dịch vụ & Phục vụ" },
-  { id: 83, question: "(CÂU 82) TV hãy cho biết cách phục vụ và chăm sóc bà mẹ có trẻ em đi cùng", answer: "trên chuyến bay?\nBoarding:\n* TV chủ động quan sát giúp đỡ bà mẹ với em bé vào chỗ ngồi và sắp xếp hành lý\nxách tay đúng vị trí quy định\n* Giới thiệu tên bản thân là TVphục vụ trực tiếp khu vực này → TVluôn sẵn sàng\ntrợ giúp bất cứ thời điểm nào trên chuyến bay\n* Nếu khách có đặt dịch vụ nôi → thông báo dịch vụ nôi sẽ được lắp sau khi máy\nbay cất cánh và thu lại khi máy bay giảm độ cao để hạ cánh\n* Hướng dẫn nhà vệ sinh gần nhất có bàn thay tã và cách sử dụng\nTrên chuyến bay:\n* Chủ động đi lại và chăm sóc khách\n* Trợ giúp khách pha sữa hoặc chuẩn bị đồ ăn cho trẻ\n* Nếu khách có suất ăn BBML / CHML → TV sẽ phục vụ trước khách thường hoặc\nvào thời điểm mà mẹ trẻ yêu cầu\nKhi máy bay giảm độ cao:\n* Thu lại nôi\n* Giúp khách dọn dép rác xung quanh ghế\n* Thông báo nhiệt độ tại điểm đến và trợ giúp khách lấy áo ấm cho trẻ\nSau khi máy bay đáp:\n* Trợ giúp khách về hành lý và di chuyển xuống máy bay", keywords: ["TV", "CHML", "phục", "chăm", "BBML", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 84, question: "(CÂU 83) TV phải lưu ý gì khi phục vụ khách tội phạm? PHM – 7.6.3.3", answer: "TV không phục vụ khách và người đi cùng (nếu có) các chất uống có cồn và các loại\ndụng cụ có thể được sử dụng như vũ khí gây nguy hiểm cho các hành khách khác và\nphi hành đoàn", keywords: ["tội", "lưu", "TV", "PHM", "khách", "phục"], category: "Dịch vụ & Phục vụ" },
-  { id: 85, question: "(CÂU 84) TV hãy trình bày nguyên tắc xử lý tình huống bất thường?", answer: "TCPV 6.1\n* Luôn giữ bình tĩnh, thể hiện thái độ tích cực\n* Nhận biết sự hiện diện của khách hàng bằng cách lịch sự chào hỏi, tạo cho họ cảm\ngiác thoải mái, gọi khách bằng tên và chứng tỏ cho họ thấy bạn rất quan tâm đến\ntrạng thái và vấn đề của họ\n\n* Lắng nghe họ một cách chủ động, tạo cơ hội để họ bộc phát những bực tức, trút sự\ntức giận\n* Đặt câu hỏi để cho khách hàng thấy rằng bạn hiểu họ muốn gì , thể hiện bạn đang\nquan tâm đến vấn đề gì của họ . Do đó bạn phải lắng nghe và hiểu những vấn đề mà\nhọ yêu cầu sự đáp ứng của bạn hay của công ty\n* Biểu hiện sự cảm thông với hành khách bằng cách: “Tôi hiểu được ý của ông/bà”,\n“Tôi cảm nhận được sự khó xử như thế nào”\n* Duy trì sự bình tĩnh và tôn trọng, đề xuất giúp đỡ: “Tôi có thể giúp ..” khi cần thiết\n* Giải thích và nhắc lại để cho họ thấy chắc chắn rằng bạn đã hiểu vấn đề. Đây chính\nlà bước chuyển tiếp để bắt tay vào hành động giải quyết vấn đề\n* Nếu hướng giải quyết mà hành khách đề nghị chúng ta không thể đáp ứng , phải\ngợi ý những sự lựa chọn hướng giải quyết khác. Nếu không có hướng giải quyết nào\ncó thể chấp nhận , xin lỗi về sự bất lợi mà hành khách phải chịu đựng.", keywords: ["TV", "tắc", "bày", "TCPV 6.1", "trình", "TCPV", "nguyên", "hãy", "tình"], category: "Dịch vụ & Phục vụ" },
-  { id: 86, question: "(CÂU 85) Vì sao TV phải xưng hô với khách bằng tên và chức danh?", answer: "* TV phải xưng hô với khách bằng họ, tên và chức danh → thể hiện sự kính trọng\nvới người đối tượng giao tiếp. Cho thấy bản thân là người lịch sự, biết cư xử\n* Tần suất:\nHạng C: ít nhất 4 lần/chuyến\n- TVT / TVC giới thiệu tên bản thân và tên khách: 1 lần\n- Gọi tên khách khi phục vụ: 2 lần\n- Gọi tên khách cuối chuyến bay: 1 lần\nHạng PE và Y: chào và gọi tên khách tại cửa máy bay (50% ở PE / 30-40 % ở Y)", keywords: ["TV", "xưng", "sao", "TVT", "TVC", "PE", "khách", "bằng"], category: "Dịch vụ & Phục vụ" },
-  { id: 87, question: "(CÂU 86) TVT sẽ lưu ý nhắc nhở gì trong buổi briefing khi tổ TV lưu trú tại", answer: "nước ngoài?\n* Quy định hải quan và hành lý tổ bay\n* Nhắc lại quy định ăn ở, lưu trú tại nước ngoài và giờ có mặt để briefing cho chặng\nbay về", keywords: ["lưu", "TV", "tvt", "TVT", "nhắc", "buổi", "nhở"], category: "Dịch vụ & Phục vụ" },
-  { id: 88, question: "(CÂU 87) TVT sẽ nhận những giấy tờ gì đầu chuyến bay?", answer: "* GD – Danh sách tổ bay\n* PM - Danh sách hành khách\n* Loadsheet – Bảng cân bằng trọng tải\n* Passenger Special Information – Thông tin đặc biệt hành khách\n* Cargo Manifest – Tài liệu hàng hoá\n* Các giấy tờ từ TCT hoặc các phòng ban khác liên quan đến chuyến bay", keywords: ["TCT", "tvt", "PM", "TVT", "GD", "nhận", "đầu", "giấy", "chuyến"], category: "Dịch vụ & Phục vụ" },
-  { id: 89, question: "(CÂU 88) Khi boarding, những kỹ năng nào TV phải thực hiện ngay tại vị trí", answer: "đứng chào đón khách?\n* Chào đón và gọi tên hành khách tại cửa máy bay\n* Kiểm tra thẻ boarding pass\n* Giúp đỡ khách tìm ghế và sắp xếp hành lý\n* Giám sát và ổn định khu vực phụ trách.\n* Quan sát, hỗ trợ giúp đỡ cất hành lý với khách cao tuổi, trẻ em, bà mẹ đi cùng trẻ\nem, phụ nữa có thai, khách có vấn đề về sức khoẻ.\n* Xử lý các tình huống phát sinh trong suốt quá trình boarding.\n* Tiếp viên nhận diện và yêu cầu NVMĐ xử lý các trường hợp hành lý xách tay vượt\nquá số lượng, kích thước, trọng lượng theo quy định; viết báo cáo chuyến bay, ghi\nnhận thông tin cụ thể sau chuyến bay theo quy định.", keywords: ["boarding", "TV", "NVM", "năng"], category: "Dịch vụ & Phục vụ" },
-  { id: 90, question: "(CÂU 89) Tiêu chuẩn khoang khách trước khi Boarding - TCPV 3.2.1", answer: "* Thảm sàn khoang khách, lối đi, ghế ngồi: sạch sẽ, khô ráo, không có mùi khó\nchịu\n* Ghế ngồi và khu vực ghế ngồi, hộc, bàn ăn:\n- Sạch sẽ, ngay ngắn, dây an toàn bắt chéo\n- Lưng ghế dựng thẳng; bàn ăn sạch sẽ, cài chốt; tay/chân ghế hạ xuống\n- Lót đầu ghế sạch, phẳng, ngay ngắn.\n- Chức năng điều khiển ghế, IFE hoạt động tốt, đúng vị trí.\n- Đèn xanh lá cây trên vách ghế hạng C sáng (ghế đúng vị trí) (mb A350, B787)\n- Các trường hợp hỏng hóc, phải được ghi nhận và báo cáo TVT\n* Túi ghế phía trước: Đủ các danh mục theo thứ tự khi nhìn trực diện: túi nôn,\nSafety card, Heritage, Heritage Fashion, quyển hàng miễn thuế (có BHMT),\nquyển chương trình giải trí (có CTGT). Tai nghe cài sẵn (hạng PE, Y chuyến\nbay quốc tế đường dài xuất phát từ VN).\n* Hộc tủ: Sạch, gọn, không có vật lạ, sắp xếp ngăn nắp. Nguyên tắc sắp xếp hốc\ntủ: nặng phía dưới, nhẹ ở trên, đồ thường lấy ra sẽ để ở phía ngoài/ trên, dễ lấy.\n* Tủ treo áo: Sạch sẽ, thơm, ngăn nắp. Đầy đủ mắc áo và tag treo áo (1 tag/ mắc\náo)\n* Ngăn đựng hành lý: Sạch sẽ, trống, không vết bẩn, không có vật dụng lạ. Chốt\ncài sử dụng tốt\n* Nhiệt độ khoang khách:\n- Trước khi khách lên: 22°C (mùa hè), 25°C (mùa đông)\n- Trong chuyến bay: 24-25°C (Quốc tế ngắn / Nội địa), 23-24°C (Quốc tế trung/dài)\n* Van điều áp: được mở sẵn\n* Chăn/gối\n- Sạch sẽ, xếp gọn gàng, đúng vị trí quy định, hướng logo ra ngoài.\n- Hạng C (B787/A350: để tại hộc phía trước, chăn phía dưới, gối phía trên\n* Tấm che cửa sổ: Mở trước chuyến bay, khi cất và hạ cánh.\n* Rèm ngăn cách: Cột gọn gàng trước khi khách lên và trong lúc cất/ hạ cánh.\nKéo kín, ngay ngắn trong chuyến bay.\n* Đèn khoang khách:\nA321 → FULL\nA350 → MANUAL\nB787 → BOARDING / DEPLANE\n* Hệ thống màn hình khoang khách\nHoạt động tốt, cài chốt (nếu có). Những màn hình không sáng phải được ghi\nnhận và báo cáo TVT. TV tắt màn hình cá nhân nếu khách ngủ\n* Giá để tạp chí: Tạp chí được xếp đẹp mắt trên giá sao cho hành khách thấy\ntựa đề", keywords: ["chuẩn", "TCPV 3.2.1", "tiêu", "TV", "DEPLANE", "TVT", "khoang", "BHMT", "trước", "FULL"], category: "Dịch vụ & Phục vụ" },
-  { id: 91, question: "(CÂU 90) Trong lúc mời welcome drink, khách yêu cầu một tách trà nóng, TV", answer: "sẽ làm gì?\n* Vẫn phục vụ theo yêu cầu của khách - nếu trên chuyến bay phục vụ trà\n* Khi boarding xong, khách chưa uống hết trà → TV xin phép khách tạm thu tách\nđể đảm bảo an toàn bay khi cất cánh và mời khách một tách trà mới sau khi bay bằng", keywords: ["drink", "TV", "mời", "welcome", "lúc", "khách"], category: "Dịch vụ & Phục vụ" },
-  { id: 92, question: "(CÂU 91) Nếu có khách đem hành lý quá khổ lên máy bay, TV ngay cửa", answer: "boarding sẽ làm gì?\n\n* Nếu hành lý quá khổ đã được dán tag hành lý: thông báo với khách để bên ngoài\nmáy bay, sẽ có nhân viên mặt đất chuyển xuống khoang hàng → nhắc khách lấy các\nđồ giá trị & Pin dự phòng\n* Trong trường hợp chưa có tag hành lý: TV thông báo với khách về việc hành lý\ncủa khách không thể mang được lên máy bay vì quá khổ, thông báo với nhân viên\nmặt đất ngoài tàu để hỗ trợ hành khách gửi hành lý.", keywords: ["khổ", "TV", "nếu", "đem", "khách", "hành", "quá"], category: "Dịch vụ & Phục vụ" },
-  { id: 93, question: "(CÂU 92) Khi cất hành lý cho khách ngoài tầm nhìn của khách, TV phải thông", answer: "báo với khách hàng như thế nào?\nTV thông báo với khách về vị trí của hành lý, nhắc khách bỏ các vật dụng có giá trị\nvà khoá hành lý của mình.", keywords: ["TV", "ngoài", "khách", "hành", "cất"], category: "Dịch vụ & Phục vụ" },
-  { id: 94, question: "(CÂU 93) TV hãy cho biết cách thức phục vụ phomai và trái cây bằng tay?", answer: "TCPV 4.1.6\nNếu khách C >=10 (khai thác bằng A350/B787) → TV mời bằng xe\nNếu khách C <10 → TV mời bằng tay\n* Chuẩn bị tối đa 2 đĩa 18cm + cutlery để trên khay 2/3\n* Đặt đĩa giữa bàn, gần khách, bộ cutlery bên tay phải của khách\n* Giới thiệu các loại phô mai, trái cây và gắp trực tiếp vào dĩa theo yêu cầu\n* Mời khách dùng rượu vang, champagne", keywords: ["TV", "thức", "TCPV", "TCPV 4.1.6", "phục", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 95, question: "(CÂU 94) TV hãy cho biết cách thức phục vụ bánh ngọt và kem bằng tay?", answer: "TCPV 4.1.6\n* TV sắp xếp trên khay 1/1: Bánh ngọt, kem & sốt, chocolate, napkin\n* Mang khay ra mời khách\n* Giới thiệu và mời khách lựa chọn\n* Đặt món khách lựa chọn đầu tiên ở giữa bàn\n* Đặt napkin bên tay trái, cạnh món tráng miệng\n* Nếu khách yêu cầu thêm, đặt bên trái món khách yêu cầu đầu tiên\n* Mời trà/cafe và đặt bên tay phải", keywords: ["TV", "thức", "TCPV", "TCPV 4.1.6", "phục", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 96, question: "(CÂU 95) TV hãy cho biết cách thức phục vụ Cognac và Liqueur?", answer: "TCPV 4.1.6\n* Phục vụ Cognac bằng ly brandy\n* Phục vụ Liqueur bằng ly rượu mạnh", keywords: ["TV", "thức", "TCPV", "TCPV 4.1.6", "phục", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 97, question: "(CÂU 96) TV hãy cho biết cách thức phục vụ Trà/Cà phê hạng C?", answer: "TCPV 4.1.6\n* Sử dụng đĩa saucer khi phục vụ ngoài khay ăn\n* Tráng nóng tách trà\n* Cho tép trà vào bình, đợi trà thôi đủ độ đậm, rót trà vào tách\n* Lượng trà/cafe cách miệng tách nhỏ 1cm, cách tách lớn (mug) 3cm hoặc 2/3 ly\n* Tách đặt trên đĩa saucer. Muỗng đặt bên phải quai tách, đường sữa để bên trái\n* Đặt tách trên khay 2/3 và mang ra mời khách cùng đường/sữa/chanh\n→ Đảm bảo độ nóng: 70°C", keywords: ["TV", "thức", "TCPV", "TCPV 4.1.6", "phục", "hãy", "cách"], category: "Dịch vụ & Phục vụ" },
-  { id: 98, question: "(CÂU 97) Khi tiếp nhận máy bay, theo quy định TVT có phải kiểm tra bảng điện", answer: "& handset không và kiểm tra chức năng gì?\n* Bảng điện: Cabin status, Water / Waste, Cabin Lighting, Cabin Temperature, Seat\nSetting.\n* Handset: kiểm tra âm lượng (PA), liên lạc trong khoang khách (Interphone), các\nphím vẫn hoạt động tốt.", keywords: ["PA", "bay", "TVT", "nhận", "tiếp", "máy", "theo"], category: "Dịch vụ & Phục vụ" },
-  { id: 99, question: "(CÂU 98) TV làm gì khi có khách transit trên máy bay? PHM 2.3.6.3", answer: "* TV thực hiện đếm khách còn lại trên tàu\n* Tổng số khách transit xuống máy bay & số khách còn lại trên tàu phải trùng với\nsố khách transit ghi trong danh sách hành khách gửi theo chuyến bay", keywords: ["TV", "PHM 2.3.6.3", "PHM", "làm", "transit", "máy", "khách"], category: "Dịch vụ & Phục vụ" },
-  { id: 100, question: "(CÂU 99) TV làm gì khi có khách cần sự trợ giúp y tế trên chuyến bay?", answer: "* TV kêu gọi sự hỗ trợ từ các TV khác để xử lý tình huống\n* Chủ động hỏi thăm tình trạng sức khoẻ hiện tại của khách (tiền sử bệnh, thuốc\nmang theo, có người nhà đi cùng hay không …)\n* Báo cáo TVT để tìm phương án giải quyết.\n* Đọc PA tìm bác sĩ trên chuyến bay.\n* Cung cấp kịp thời thông tin về khách bệnh cho TVT: tình trạng khách bị bệnh, tình\ntrạng khách xung quanh, có mở FAK không, loại thuốc khách sử dụng, bao nhiêu\nbình oxy sử dụng …\n* Cung cấp thông tin kịp thời cho PIC\n\n* Chăm sóc hành khách trong suốt chuyến bay\n* Di chuyển các hành khách xung quanh nếu cần thiết cho khách bị bệnh được thoải\nmái nghỉ ngơi\n* Hỗ trợ bác sĩ nếu có bác sĩ trên chuyến bay bằng các thiết bị y tế có sẵn\n* Hỏi khách cần Trợ giúp y tế tại sân bay hoặc dịch vụ Xe lăn để xuống máy bay\nhay không?\n* Cuối chuyến trợ giúp hành lý và khách xuống máy bay\n* TVT điền các form liên quan và viết báo cáo chuyến bay", keywords: ["PA", "TV", "TVT", "PIC", "làm", "cần", "khách", "trợ", "FAK", "giúp"], category: "Dịch vụ & Phục vụ" },
-  { id: 101, question: "(CÂU 100) TV cho biết 4 hạng mục giá trị", answer: "* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng\nđến với bạn.\n* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được\nsử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh\nhoạt, dễ tiếp cận và dễ lựa chọn.\n* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.\nĐây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt\nhuyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.\n* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp\nvới khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.", keywords: ["trị", "TV", "mục", "hạng", "giá"], category: "Dịch vụ & Phục vụ" },
-  { id: 102, question: "(CÂU 101) TV cho biết 6 cấp độ dịch vụ", answer: "1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về\ndịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao\ngiờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền\ntin xấu với những người khác.\n2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không\nvui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có\nthể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ\nkhông bao giờ quay trở lại với loại hình dịch vụ này nữa.\n3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có\ngì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ\nkhi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường\nđược coi là chấp nhận được.\n\n4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng\nmong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch\nvụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.\n5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món\nquà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ\nnghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ\nthường xuyên và họ cũng rất vui khi kể lại cho bạn bè.\n6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến\nkhách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một\ncách tự hào.\nDỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất\nsắc có nghĩa là:\n* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.\n* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.", keywords: ["TV", "dịch", "cấp", "CH", "SU"], category: "Dịch vụ & Phục vụ" },
-  { id: 103, question: "(CÂU 102) TV cho biết 6 nhu cầu khách hàng", answer: "* Flight/bio safety & security\n* Timeliness\n* Cost\n* Services and Quality\n* Prompt action\n* Appreciation and status", keywords: ["TV", "nhu", "khách", "hàng", "cầu"], category: "Dịch vụ & Phục vụ" },
-  { id: 104, question: "(CÂU 103) TV cho biết 5 giá trị cốt lõi", answer: "* Đặt CON NGƯỜI làm ưu tiên hàng đầu (Put PEOPLE first)\n* Hành động với sự CHÍNH TRỰC (Act with INTERGRITY)\n* Theo đuổi sự XUẤT SẮC (Pursue EXCELLENCE)\n* Hướng tới sự QUAN TÂM (CARE for people)\n* Duy trì và phát huy BẢN SẮC VĂN HOÁ VIỆT (Foster Vietnamese CULTURE)", keywords: ["CH", "XU", "cốt", "NG", "PEOPLE", "HO", "CON", "CARE", "trị", "TV"], category: "Dịch vụ & Phục vụ" },
-  { id: 105, question: "(CÂU 104) TV cho biết 5 nguyên tắc hành động", answer: "1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với\nđồng nghiệp và đối tác.\n2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho\nnhững hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch\nvụ một cách an toàn, an ninh và nhất quán.\n3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và\ncởi mở trong các mối quan hệ.\n4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản\nthân và luôn nỗ lực hướng tới sự xuất sắc.\n5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan\ntrọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,\nchia sẻ và giúp đỡ người khác trong công việc và cuộc sống.", keywords: ["TH", "TV", "tắc", "nguyên", "hành", "động"], category: "Dịch vụ & Phục vụ" },
-  { id: 106, question: "(CÂU 105) TV cho biết Tầm nhìn dịch vụ của VNA", answer: "* Tầm nhìn dịch vụ là bức tranh tương lai về chất lượng dịch vụ mà Vietnam\nAirlines mong muốn đạt được bằng các chương trình hành động của mình.\n* Bức tranh tương lai về chất lượng dịch vụ mà Vietnam Airlines mong muốn đạt\nđược là mang đến cho khách hàng dịch vụ NGẠC NHIÊN trên cơ sở đảm bảo\nổn định chất lượng dịch vụ như MONG MUỐN của cá nhân hành khách; đồng\nthời đạt tiêu chuẩn chất lượng dịch vụ 5 sao.\n* Khẩu hiệu Tầm nhìn dịch vụ lôi cuốn: “Vạn dặm nâng niu” – Lời cam kết\nmang lại trải nghiệm bay trọn vẹn trong hành trình bền vững\n* Khẩu hiệu 2025 “ Đột phá tư duy - Mạnh mẽ hành động - Vững cánh vươn\nxa”", keywords: ["TV", "dịch", "NHI", "nhìn", "tầm", "MU", "NG", "VNA", "MONG"], category: "Dịch vụ & Phục vụ" },
-  { id: 107, question: "(CÂU 106) Hành khách phản ánh bảng hướng dẫn An toàn trong túi ghế không", answer: "đúng với chủng loại máy bay – Bộ XLTH\nFIX:\n* Nhận thông tin từ hành khách, xin lỗi và xin phép thu hồi bảng hướng dẫn AT\n* Mời thay thế bảng hướng dẫn an toàn khác đúng với chủng loại máy bay đang khai\nthác\n* Kiểm tra ngẫu nhiên các ghế khác\n* Thay thế ngay nếu có sự sai sót\n* Kiểm tra ngẫu nhiên thêm 1 vài ghế xem có tờ hướng dẫn an toàn đúng với chủng\nloại tàu đang khai thác\n\n* Ngay lập tức lấy đúng tờ khai khác và phục vụ cho hành khách. Kiểm tra kĩ trước\nkhi mời\n* Cảm ơn hành khách đã nhắc nhở\n* Báo cáo TVT và chia sẻ thông tin cho tổ TV\nCARE:\n* Quay lại trò chuyện với khách\n* Chia sẻ thêm thông tin về chủng loại tàu bay\n* TV giới thiệu chương trình giải trí\n* TV mời thêm sản phẩm dịch vụ\nADD:\n* Quan sát, chăm sóc hành khách suốt chuyến bay, tìm hiểu sở thích\n* Cá nhân hoá hành khách bằng cách hỏi thăm về mức độ hài lòng\n* Đáp ứng nhu cầu của hành khách ở mức độ “Đáng ngạc nhiên”", keywords: ["TV", "XLTH", "AT", "FIX", "TVT", "hướng", "phản", "ADD", "khách", "hành"], category: "Xử lý tình huống" },
-  { id: 108, question: "(CÂU 107) Khách yêu cầu sử dụng phòng vệ sinh khi MB chuẩn bị cất/ hạ cánh", answer: "- Bộ XLTH\nFIX:\n* TV cần nhanh chóng hỏi thăm và tìm hiểu nhu cầu của khách.\n* Giải thích cho khách hiểu rằng MB đang chuẩn bị cất/ hạ cánh, khách có thể vui\nlòng sử dụng ngay sau khi MB cất/ hạ cánh, tất cả là vì sự an toàn của hành khách\n(nhấn mạnh vào sự an toàn của bản thân họ).\n* Lưu ý: TV căn cứ vào tình huống cụ thể trên CB để xử lý cho phù hợp và đảm bảo\nan toàn cho HK\n* TV quay lại sau khi cất/ hạ cánh để hỗ trợ khách.\n* Chia sẻ thông tin cho đồng nghiệp khi phục vụ bữa ăn và thời điểm chăm sóc\n(smalltalk) lưu ý những biểu hiện liên quan tới sức khoẻ của hành khách (nếu có) để\nhỗ trợ\n* Quan sát mức độ hài lòng của khách sau khi đã thực hiện giải pháp\n* Khách hài lòng: báo cáo cấp trên.\n* Khách không hài lòng hoặc TV chưa xử lý ngay được: chuyển gặp cấp trên/ TVT\nđể hỗ trợ.\n* Báo cáo tình huống và hướng giải quyết + tình hình của khách hiện tại cho TVT.\n* TVT thu xếp thời gian ra tương tác và trò chuyện với khách (nếu cần)\n\n* Lưu ý: Thông báo cho TVT/ TV làm việc cùng biết sự việc đã xảy ra tránh phát\nsinh vấn đề làm khách không hài lòng\nCARE:\n* Kiểm tra mức độ hài lòng của khách sau khi xử lý.\n* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng.\n* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách có thể mời một loại thức\nuống mà khách yêu thích hoặc quan tâm.\nADD:\n* Quan sát, lắng nghe để lưu lại sở thích của khách\n* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.", keywords: ["CB", "dụng", "TV", "XLTH", "sinh", "FIX", "TVT", "MB", "ADD", "khách"], category: "Xử lý tình huống" },
-  { id: 109, question: "(CÂU 108) Bỏ sót khách khi phục vụ - Bộ XLTH", answer: "FIX:\n* TV lập tức xin lỗi khách vì đã có sơ suất không phục vụ khách bữa ăn và để khách\nphải đợi.\n* Xác định vấn đề/mức độ lỗi 1\n* Nhanh chóng kiểm tra các lựa chọn thức ăn, giới thiệu với khách, nhận yêu cầu\ncủa khách về thức ăn, thức uống, nhanh chóng phục vụ\n* Nhanh chóng phục vụ suất ăn đúng yêu cầu của khách.\n* Báo cáo TVT và đồng nghiệp để nắm tình hình khách, tiếp tục quan tâm chú ý\nchăm sóc hành khách.\n* TVT báo cáo cabinbook\nCARE:\n* Kiểm tra mức độ hài lòng của khách sau khi xử lý.\n* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng. (Mời khách dùng thêm\ntrà, cà phê. Hướng dẫn khách khai form. Khách muốn xem giải trí: phục vụ giải trí/\ngiới thiệu/ mở chương trình khách yêu thích. Khách muốn ngủ: ngả lưng ghế, kiểm\ntra nhiệt độ...)\n* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách\n* Sau khi khách dùng bữa, TV phụ trách khu vực ghế khách xin phép thu dọn, xin\nlỗi khách.\nADD:\n* TVT xin lỗi khách một lần nữa và cảm ơn sự thông cảm của khách.\n* Quan sát, lắng nghe để lưu lại sở thích của khách\n\n* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”. Thông báo\ncho tổ TV chuyến bay nối chuyến để tránh xảy ra tình huống tương tự", keywords: ["TV", "XLTH", "FIX", "TVT", "xlth", "sót", "ADD", "khách", "phục", "CARE"], category: "Xử lý tình huống" },
-  { id: 110, question: "(CÂU 109) TV làm đổ thức ăn/thức uống vào người khách - Bộ XLTH", answer: "FIX:\n* Ngay lập tức xin lỗi khách.\n* Kiểm tra xem tư trang của khách có bị ảnh hưởng hay không\n* Hỗ trợ làm sạch vết bẩn.\n* Đổi chỗ cho khách.\n* Ghi nhận sự việc trong Biên bản vụ việc để ĐTV chi trả chi phí giặt ủi\n* TV báo cáo ngay cho TVT\n* TVT xin lỗi khách\n* TVT báo cáo trên Cabin book (sự việc, xử lý của TV, cảm xúc của khách)\nCARE:\n* Quan tâm chăm sóc khách suốt thời gian còn lại của chuyến bay\n* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng\n* Hỗ trợ lấy hành lý và xuống máy bay\nADD:\n* Quan sát biết khách thích rượu pha, mời/ hướng dẫn khách pha 1 ly thức uống\nđiểm nhấn.\n* Chuyển thông tin khách và sự việc cho nhân viên mặt đất/tổ TV nối chuyến tránh\nlập lại lỗi tương tự và chủ động quan tâm chăm sóc khách.\n* Bồi thường gắn kết (trường hợp TV làm đổ nước vào người khách): Viết phiếu ghi\nnhận thông tin phục hồi và bảo đảm dịch vụ.", keywords: ["người", "TV", "XLTH", "FIX", "TVT", "thức", "vào", "làm", "ADD", "uống"], category: "Xử lý tình huống" },
-  { id: 111, question: "(CÂU 110) Khách đã đặt suất ăn đặc biệt nhưng không được cấp lên CB/ hoặc", answer: "khách không kịp đặt trước theo quy định - Bộ XLTH\nFIX:\n* Lắng nghe, chia sẻ, thấu hiểu cảm thông.\n* Nhận các thông tin về khách\n* TV kiểm tra lại với TVT xem suất ăn đặc biệt của khách đã được cấp lên chuyến\nbay chưa.\n* Nếu không có suất ăn khách đặt trên chuyến bay: TVT báo ASOC để hỗ trợ cấp\nsuất ăn phục vụ cho khách nếu kịp.\n\n* Nếu không kịp đặt suất ăn: giới thiệu với khách thành phần bữa ăn được cấp lên\ntrên CB phù hợp để khách có thể chọn thay thế cho SĂĐB.\n* Xem các thành phần của suất ăn hạng C (để riêng các loại rau thit cá…) để sắp xếp\nmời khách\n* Báo cáo lại TVT về tình huống và phương án thay thế suất ăn cho khách phù hợp.\n* TVT/TVT phụ trách khoang thông báo tới tất cả thành viên trong Tổ về tên & số\nghế của hành khách.\n* TVT xin lỗi khách (trường hợp khách đã đặt suất ăn đặc biệt nhưng không được\ncấp lên CB)\n* TVT báo cáo trên Cabinbook (tên, số ghế, loại suất ăn đặc biệt, xử lý của TV, thái\nđộ của khách)\nCARE:\n* Quan tâm, chăm sóc suốt thời gian còn lại của chuyến bay\n* Giới thiệu quy trình xác nhận lại SĂĐB trước CB\nADD:\n* Hỗ trợ khách đặt suất ăn đặc biệt trên các chặng bay nối chuyến. TVT lập Group\nviber bao gồm TVT, ASOC, VIAGS để hỗ trợ đặt SADB cho khách\n* Thể hiện sự quan tâm hơn nữa\n* Làm cho khách hàng thấy mình quan trọng đối với công ty\n* Tặng khách món quà nhỏ: túi daynight kit/ bút viết VNA.\n* Bồi thường gắn kết: ghi nhận phiếu thông tin phục hồi và đảm bảo nếu cần (trường\nhợp khách đã đặt suất ăn đặc biệt nhưng không được cấp lên CB)", keywords: ["CB", "đặt", "ASOC", "TV", "biệt", "XLTH", "SADB", "FIX", "TVT", "suất"], category: "Xử lý tình huống" },
-  { id: 112, question: "(CÂU 111) Khách hạng Y yêu cầu dịch vụ của hạng C (chăn, dép … vì lý do sức", answer: "khỏe) - Bộ XLTH\nFIX:\n* Đồng cảm, tìm hiểu tình trạng sức khỏe của hành khách\n* Thể hiện sự quan tâm\n* Mời chăn và dép hạng phổ thông cho khách\n* Đưa thông tin cho khách về chất lượng sản phẩm để khách yên tâm sử dụng\n* Đánh giá tình hình để quyêt định cho khách sử dụng các loại thuốc có trên máy\nbay.\n* Nếu khách bị lạnh: Điều chỉnh van gió - Lấy áo khoác cho khách - Điều chỉnh\nnhiệt độ - Mời khách thức uống ấm theo sở thích của khách\n\n* Nếu khách bị nóng (do bị sốt): Điều chỉnh van gió - Sử dụng khăn bông chườm\nlạnh cho khách (trên các chuyến bay quốc nội, có thể đề xuất dùng khăn bông hạng\nC) - Chăm sóc khách nghỉ ngơi.\n* Thường xuyên quan sát khách, thăm hỏi tình trạng sức khỏe của khách khi khách\ntỉnh giấc. Nếu tình trạng sức khỏe của khách không cải thiện, có biểu hiện xấu đi,\ntiếp viên trưởng sẽ thực hiện các bước giải quyết tiếp theo như kêu gọi sự hỗ trợ y\ntế trên chuyến bay cũng như tại điểm đến.\n* Báo cáo TVT - Chia sẻ thông tin với đồng nghiêp – TVT báo cáo tình trạng sức\nkhỏe và cách thức xử lý của tiếp viên với cơ trưởng.\nCARE:\n* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng: suốt chuyến bay thường\nxuyên quan sát khách để hỗ trợ khách ngay khi khách chưa gọi tiếp viên, nếu là\nchặng đường dài sẽ lấy lựa chọn món ăn trước, nếu khách đi 1 mình thì có thể giúp\nkhách đi toilet nếu khách gặp vấn đề về sức khỏe, giới thiệu chương trình giải trí nếu\nkhách không ngủ được, giới thiệu dịch vụ hạng C để cho những chuyến bay sau\nkhách có thể sẽ muốn có tair nghiêm khác biệt.\n* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách.\nADD:\n* Quan sát, lắng nghe để lưu lại sở thích của khách: Small talk và đưa thông tin về\nnhiệt độ tại điểm đến. Nếu là mùa đông, giúp khách chuẩn bị áo ấm, khăn mũ, chuẩn\nbị thuốc nếu khách vẫn cần sử dụng, gửi khách thêm nước suối, khăn ướt (nếu cần);\nnếu khách đi tiếp tục hành trình trên chuyến bay của VNA, sử dụng kênh liên lạc\nviber báo cáo nhanh tình trạng và hành trình của khách để hệ thống có sự hỗ trợ cần\nthiết cho khách. để lưu ý chăm sóc sức khỏe cho khách.\n* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.", keywords: ["dịch", "XLTH", "FIX", "TVT", "hạng", "ADD", "khách", "VNA", "yêu", "cầu"], category: "Xử lý tình huống" },
-  { id: 113, question: "(CÂU 112) Khách thẻ Platinum/ Million Miler (PLT/ MM) ngồi hạng Y muốn sử", answer: "dụng phòng vệ sinh hạng C - Bộ XLTH\nFIX:\n* Tiếp cận, đặt câu hỏi để tìm hiểu nhu cầu của khách.\n* Thể hiện sự đồng cảm\n* Trực tiếp hướng dẫn khách sử dụng phòng vệ sinh dưới khoang Y\n* Thông tin cho TV phụ trách khu vực khách ngồi thường xuyên kiểm tra phòng vệ\nsinh, đảm bảo sẵn sàng cho khách sử dụng.\n\n* Báo cáo TVT\nCARE:\n* Chủ động quan tâm các nhu cầu chính đáng của khách trong khả năng.\nADD:\n* Ghi nhớ nhu cầu của khách. Thể hiện sự quan tâm chăm sóc hơn nữa.\n* Làm cho khách hàng thấy mình quan trọng đối với công ty.", keywords: ["MM", "TV", "platinum", "XLTH", "thẻ", "FIX", "TVT", "PLT", "CARE", "million"], category: "Xử lý tình huống" },
-  { id: 114, question: "(CÂU 113) Trẻ em trên chuyến bay la khóc/nô đùa trong khoang khách, ảnh", answer: "hưởng đến sự nghỉ ngơi của các khách khác - Bộ XLTH\nFIX:\n* TV đến trả lời chuông gọi của khách tại ghế, giao tiếp mắt và nghe phản ánh của\nkhách.\n* Thể hiện sự đồng cảm, xin phép tìm hiểu nguyên nhân\n* Trường hợp các bé nô đùa, nói lớn tiếng trong khoang khách\n* Nhẹ nhàng nhắc nhở các bé giữ im lặng và hướng dẫn bé về chỗ ngồi\n* Trao đổi với người lớn đi cùng để chăm sóc em bé. Lưu ý người lớn giữ các bé\nngồi tại ghế và cài dây an toàn đề phòng máy bay bay vào khu vực thời tiết xấu có\nthể khiến các bé bị thương.\n* Mời các bé thức ăn, thức uống và đồ chơi. Giới thiệu chương trình giải trí phù\nhợp với lứa tuổi của các bé.\n* Trường hợp em bé quấy khóc → Tiếp cận ba mẹ tìm hiểu nguyên nhân bé khóc,\nxin phép được hỗ trợ.\n* Đề nghị đồng nghiệp hỗ trợ chăm sóc em bé (pha sữa, mời ăn uống, mời đồ chơi)\n* Trao đổi nguyên nhân với khách phản ánh, xin phép được hỗ trợ khách nghỉ ngơi\n(tai nghe, giới thiệu chương trình nhạc nhẹ, …). Cám ơn khách thông cảm.\n* Cùng đồng nghiệp tiếp tục hỗ trợ bố mẹ chăm sóc em bé\n* Báo cáo tiếp viên trưởng\n* Chia sẻ thông tin với tiếp viên làm việc cùng khoang\nCARE:\n* Kiểm tra mức độ hài lòng của khách sau khi xử lý\n* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng\n* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách\nADD:\n* Quan sát, lắng nghe để lưu lại sở thích của khách\n\n* Small talk để biết hành trình sau đó có thể hỗ trợ được gì cho khách", keywords: ["trẻ", "đùa", "TV", "XLTH", "khóc", "FIX", "bay", "ADD", "chuyến", "CARE"], category: "Xử lý tình huống" },
-  { id: 115, question: "(CÂU 114) Khách ngồi hạng C yêu cầu được nâng hạng người nhà đang ngồi", answer: "khoang hạng Y lên ngồi tại ghế trống bên cạnh - Bộ XLTH\nFIX:\n* Tiếp nhận yêu cầu của khách để hỏi ý kiến TVT về việc nâng hạng khách và thực\nhiện theo hướng dẫn của TVT.\n* TV cảm ơn khách đã yêu mến VNA nhưng TV không được phép nâng hạng ghế\ncho khách.\n* Xin thông tin số ghế của người nhà khách dưới khoang hạng Y và. Báo với\nkhách sẽ nói TV phục vụ chu đáo người nhà khách dưới khoang Y và cũng để chủ\nđộng mời người nhà lên tham quan ghế hạng C vào khoảng thời gian thích hợp\n* Tiếp viên chủ động gặp gỡ người nhà của hành khách ngay khi có thể.\n* Tiếp viên báo cáo TVT về yêu cầu của hành khách, chia sẻ thông tin với đồng\nnghiệp về cách giải quyết để cùng thống nhất giải pháp và quan tâm đến người nhà\ncủa khách hạng C.\n* TV xin phép TVT cho người nhà khách lên nói chuyện khoảng 5-10 phút sau khi\nphục vụ bữa ăn và trước khi các khách khác nghỉ ngơi.\nCARE:\n* Tiếp viên chủ động mời khách hạng C và người nhà dùng thức uống\n* Tiếp viên chủ động trao đổi, chia sẻ thông tin về việc các tiếp viên hạng Y sẽ chăm\nsóc người nhà của khách.\n* Tiếp viên chủ động giới thiệu các dịch vụ bổ trợ: nâng hạng dịch vụ giờ chót\n* Tiếp viên trò chuyện với hành khách để hiểu những giá trị khác khách cần tìm, chủ\nđộng cung cấp dịch vụ ngạc nhiên.\nADD:\n* Nếu khách nối chuyến, hoặc cần xuống gấp nhà ga hay đi cùng người nhà là hành\nkhách cao tuổi, tiếp viên chủ động đề nghị hỗ trợ người nhà của đổi chỗ lên vị trí\ngần cửa trước khi hạ cánh, hỗ trợ hành lý xách tay, cung cấp thông tin điểm đến như\nthời gian, nhiệt độ và các lưu ý ở nhà ga…\n* Cảm ơn khách và gia đình đã ủng hộ VNA\n* Chủ động thông báo thời tiết tại điểm đến cho hành khách\n* Chúc hành khách tiếp tục có những trải nghiệm thú vị/1 ngày nhiều niềm vui.", keywords: ["TV", "XLTH", "FIX", "TVT", "ngồi", "hạng", "ADD", "khách", "VNA", "yêu"], category: "Xử lý tình huống" },
-  { id: 116, question: "(CÂU 115) Khách bị bệnh/nôn/ ói/ cảm/ da mặt xanh xao/ mệt lả… và yêu cầu", answer: "trợ giúp y tế trên CB - Bộ XLTH\nFIX:\n* Nhanh chóng tiếp cận hành khách\n* Lắng nghe, ghi nhận tình trạng sức khỏe hành khách, hỏi thăm để biết thông tin\n(bệnh tiền sử, loại thuốc đang dùng, người đi cùng, hiện trạng sức khoẻ…)\n* Hỗ trợ trong khả năng (lấy thuốc, phục vụ thuốc có trên máy bay, phục vụ ăn uống\nđể lấy lại sức, cung cấp khăn, nước ấm, đổi chỗ ra vị trí rông rãi hơn...\n* Sơ cứu ngay nếu cần - Gọi trợ giúp y tế\n* Trường hợp khách cần trợ giúp y tế khẩn cấp: cơ trưởng quyết định máy bay phải\nđáp khẩn.\n* TV trong khu vực/ hoặc TV phát hiện khách có vấn đề về sức khỏe báo cáo với\nTVT\n* TVT báo cáo cơ trưởng (xin phép mở hộp thuốc, sử dụng bình Oxy, tình trạng\nkhách)\n* TVT lập BB về tình trạng sức khỏe bất thường của hành khách (có chữ ký của\nngười làm chứng), báo cáo Cabin book/E-report\nCARE:\n* TVT điều hành bao quát tổ TV, phân công TV phụ trách khu vực với sự hỗ trợ của\ncác TV khác theo dõi và chăm sóc hành khách trong suốt CB\n* TVT phải liên hệ bàn giao khách với NVMĐ, Đại diện hoặc y tế sân bay có trách\nnhiệm tiếp tục chăm sóc hỗ trợ xách giúp hành lí cho khách.\nADD:\n* TVT liên hệ với người nhà khách/ khách để hỏi thăm sức khỏe hành khách (hỏi ý\nkiến của Cán bộ liên đội chủ quản)\n* TVT/ TV gửi hoa chúc sức khỏe hành khách/ đến bệnh viện thăm hành khách", keywords: ["CB", "BB", "TV", "mặt", "XLTH", "FIX", "TVT", "bệnh", "nôn", "NVM"], category: "Xử lý tình huống" },
-  { id: 117, question: "(CÂU 116) Chuyến bay cất cánh trễ vì lý do kỹ thuật, đổi từ máy bay 2 lối đi sang", answer: "máy bay 1 lối đi do không có khí tài thay thế, khách rất khó chịu - Bộ XLTH\nFIX:\n* TV nhận diện và tiếp cận ngay khi nhận thấy khách muốn nói chuyện, khách biểu\nhiện không thoải mái\n* Ghi nhận ý kiến khách với thái độ nghiêm túc và cầu thị\n\n* Thể hiện sự đồng cảm với khách: - Em hoàn toàn đồng ý (em hiểu/ em hiểu được\ncảm giác …) + Giá trị khách hàng mong muốn.\n* Xin lỗi khách với cảm xúc chân thành\n* Mời khách về chỗ ngồi\n* Phục khách thức ăn/ thức uống đúng yêu cầu/ lựa chọn của khách\n* Báo cáo TVT & Chia sẻ thông tin với cả tổ TV\nCARE:\n* Hướng dẫn các tiện ích tại ghế ngồi cho khách.\n* Kiểm tra mức độ hài lòng của khách sau khi xử lý\n* Thường xuyên hỏi thăm khách hàng, quan tâm chăm sóc hơn, nhớ sở thích thói\nquen của khách\n* Tránh không lặp lại vấn đề khác/ tương tự với khách\n* Thể hiện sự thấu hiểu, đồng cảm và sẳn sàng hỗ trợ, giúp đỡ thêm\n* Cung cấp các dịch vụ khác biệt/ thay thế\nADD:\n* Thể hiện sự quan tâm chăm sóc hơn nữa\n* Tặng thêm dịch vụ đặc biệt/quà tặng là sản phẩm khách ưa thích, những vật dụng\ncó logo công ty…\n* Làm cho khách hàng thấy mình quan trọng đối với công ty, khách hàng là động\nlực để công ty phát triển…\n* Tặng Phiếu bồi thường gắn kết trong những tình huống khách có phản ứng gay gắt\nhoặc khách bị ảnh hưởng về lịch trình tiếp theo.", keywords: ["TV", "XLTH", "FIX", "TVT", "bay", "CARE", "thuật", "ADD", "trễ", "cánh"], category: "Xử lý tình huống" },
-  { id: 118, question: "(CÂU 117) Chuyến bay cất cánh bị trễ vì lý do kỹ thuật/ thời tiết, khách thông", answer: "báo với TV sợ bị trễ chuyến bay nối chuyến - Bộ XLTH\nFIX:\n* Tiếp cận khách ngay khi nhận biết thấy khách có nhu cầu\n* Lắng nghe trình bày của khách với sự thấu hiểu và thông cảm\n* Áp dụng mẫu câu: Em hiểu rằng + giá trị khách mong muốn\n* Xin lỗi khách chân thành\n* TV nhận thông tin về CB nối chuyến của khách (xem vé) - Hỏi xem khách có đi\ncùng ai không\n* Quay lại trả lời khách sau khi báo cáo TVT - TVT báo cáo cho NVMĐ biết thông\ntin để phối hợp giúp đỡ khách.\n\nCARE:\n* Chăm sóc, phục vụ khách chu đáo, nhiệt tình suốt chuyến bay\n* Mời khách xem chương trình giải trí, và thông tin bay trên Air show.\nADD:\n* Mời khách thức uống hạng C\n* Khi MB sắp hạ cánh, đổi chỗ khách lên hàng ghế phía trên (nếu còn chỗ) cùng\nhành lý xách tay của khách và mời khách xuống MB nhanh nhất có thể\n* Hỗ trợ hành lý cho khách\n* Cảm ơn và chúc khách có hành trình tiếp tốt đẹp", keywords: ["CB", "TV", "XLTH", "FIX", "TVT", "bay", "NVM", "CARE", "thuật", "ADD"], category: "Xử lý tình huống" },
-  { id: 119, question: "(CÂU 118) Khi khách phản ánh về việc đã bấm nút gọi TV nhưng không thấy", answer: "TV đến, TV xử lý tình huống như thế nào?\n* Xin lỗi hành khách về sự chậm trễ\n* Tìm hiểu ngay về nhu cầu của khách và sẵn lòng đáp ứng ngay yêu cầu của\nkhách.\n* Cám ơn khách đã chờ đợi và xin lỗi khách lần nữa\n* Thường xuyên chăm sóc khách trong suốt chuyến bay\n* Báo cáo với Trưởng khoang Y, TVT để Trưởng khoang Y, TVT ra hỏi thăm và\nxin lỗi khách\n* TVT de-briefing/coaching với TV trong khoang/tổ để không xảy ra tình huống\ntrên trong thời gian còn lại của CB", keywords: ["CB", "việc", "TV", "TVT", "phản", "khách", "ánh", "bấm"], category: "Xử lý tình huống" },
-  { id: 120, question: "(CÂU 119) TV xử lý như thế nào khi nhận khách phản ánh về việc khách đã", answer: "yêu cầu TV phục vụ suất ăn/đồ uống nhưng sau đó không thấy quay lại?\n* Xin lỗi khách với thái độ chân thành nhất về sự chậm trễ\n* Hỏi yêu cầu của khách và đáp ứng yêu cầu đó một cách nhanh chóng nhất, hỏi\nthêm các yêu cầu khác của khách\n* Chân thành xin lỗi khách và cảm ơn khách đã thông cảm\n* Thường xuyên quan sát, chăm sóc khách trong suốt chuyến bay, tìm cơ hội phục\nvụ tốt hơn để nổi bật lên chất lượng phục vụ\n* Báo cáo TVT, TVT ra hỏi thăm và xin lỗi khách\n* TVT de-briefing/coaching với TV trong khoang/tổ để không xảy ra tình huống\ntrên trong thời gian còn lại của chuyến bay", keywords: ["TVT", "nhận", "TV", "khách"], category: "Xử lý tình huống" },
-  { id: 121, question: "(CÂU 120) Trong trường hợp khách hạng Y đang tiến lên khoang hạng C để", answer: "dùng phòng vệ sinh trên khoang C, TV sẽ xử lý như thế nào?\n* Xin phép hướng dẫn cho khách phòng vệ sinh hạng Y gần nhất chỗ khách đứng.\nGiới thiệu tiện nghi bên trong và hỏi khách có cần trợ giúp gì không?\n* Nếu khách vẫn nhất định yêu cầu được sử dụng phòng vệ sinh hạng C: xin lỗi\nkhách phòng vệ sinh hạng C đang kẹt khách. Mời khách sử dụng phòng vệ sinh hạng\nY trước vì lý do khách không phải chờ đợi lâu\n* Nếu hành khách đã sử dụng phòng vệ sinh hạng C: TV đợi khách ra, xin phép giải\nthích về việc khách hạng C đang nghỉ ngơi, dùng bữa sẽ bất tiện cho việc khách đi\nlại và phải chờ đợi. + Hướng dẫn phòng vệ sinh hạng Y gần nhất cho hành khách\n* Cảm ơn sự hợp tác của khách", keywords: ["TV", "hợp", "đang", "hạng", "trường", "khách"], category: "Xử lý tình huống" },
-  { id: 122, question: "(CÂU 121) TV hãy cho biết các loại ly thuỷ tinh phục vụ trên khoang hạng C", answer: "của VNA? Training Edoc – Business Class – Dụng cụ phục vụ\n* Ly giải khát loại nhỏ (rót cách miệng 2cm)\n- Phục vụ thức uống có ga, nước trái cây, nước khoáng, nước tinh khiết, nước suối,\nsữa tươi ; Phục vụ bia ; Phục vụ rượu pha\n* Ly giải khát loại to (phục vụ như trên) → rót 2/3 ly và Welcome drink rót 1/2\n* Ly rượu vang loại nhỏ\n- Phục vụ vang trắng, đỏ, hồng (rót 1/2 ly)\n- Phục vụ nước suối, champagne (rót cách miệng 2cm)\n- Phục vụ vang mạnh, sake nóng/lạnh (rót 1/3 ly từ đáy hoặc 01 chai rượu 50ml)\n* Ly rượu vang loại to (phục vụ như trên) → rót 1/3 ly\n* Ly rượu mạnh: Phục vụ rượu mạnh uống thẳng, rượu mùi, sake nóng/lạnh (rót\n1/3 ly)\n* Ly rượu Brandy: Phục vụ Brandy uống thẳng, uống đúp (rót 1/3 ly từ đáy)\n* Ly rượu Champagne: Phục vụ rượu champagne (rót 1/3 ly)", keywords: ["TV", "loại", "thuỷ", "VNA", "hãy"], category: "Xử lý tình huống" },
-  { id: 123, question: "(CÂU 122) Khách yêu cầu thức uống nóng khi máy bay chuẩn bị cất/hạ cánh?", answer: "* Xin lỗi và giải thích lý do không thể phục vụ thức uống nóng\n* Giới thiệu khách các thức uống phù hợp có thể phục vụ vào thời điểm này (nước\ntinh khiết, nước trái cây, nước ngọt)\n* Phục vụ khách và cám ơn khách đã thông cảm. (Lưu ý thu ly đảm bảo an toàn\ntrên chuyến bay)", keywords: ["nóng", "thức", "khách", "uống", "yêu", "cầu"], category: "Xử lý tình huống" },
-  { id: 124, question: "(CÂU 123) Nhằm giảm thiểu tình trạng khách bị ngã cầu thang khi xuống tàu", answer: "bay, TV phải thực hiện các nội dung công việc gì?\n* Giám sát HLXT của khách khi boarding: TV nhận diện và yêu cầu nhân viên\nPVMÐ xử lý các truờng hợp hành lý xách tay vuợt quá số luợng, kích thuớc, trọng\nluợng theo qui định; viết báo cáo chuyến bay ghi nhận thông tin cụ thể sau chuyến\nbay theo qui định\n* Thời điểm chuẩn bị giảm độ cao: Khi thực hiện kiểm tra khoang khách, Tiếp viên\nnhận diện khách lớn tuổi, phụ nữ có thai, trẻ em đi một mình… & nhắc khách nếu\ncần sự hỗ trợ xuống máy bay, vui lòng ngồi chờ tại ghế khi máy bay đã hạ cánh\n* Phát thanh trên CB: TVT hoặc TV đuợc phân công thực hiện đọc bài phát thanh\n“Greeting After Landing - Chào tạm biệt” với nội dung nhắc khách cẩn trọng khi\nxuống máy bay bằng xe thang. Khi đứng chào tạm biệt khách, TV thực hiện: Nhắc\nkhách không nên sử dụng điện thoại và tập trung vào việc xuống cầu thang (nếu\nkhách đang dùng điện thoại), đề nghị khách nên sử dụng tay vịn cầu thang để an\ntoàn hơn (đặc biệt khi trời mưa)\n* Nhận diện và luu ý tất cả các khách có biểu hiện bên ngoài bất thuờng về sức\nkhỏe, khách nữ đi giày/ dép cao gót… nên bám vào tay vịn khi xuống cầu thang\n* Ðề nghị dừng xuống thang và gọi nhân viên mặt đất phối hợp trợ giúp đối với\ncác khách gặp khó khăn trong việc mang hành lý xách tay xuống cầu thang như:\nphụ nữ có thai đi một mình, khách bế trẻ nhỏ, khách là nguời cao tuổi\n* TV báo cáo TVT nếu không có nhân viên sẵn sàng tại chân cầu thang máy bay", keywords: ["CB", "TV", "thiểu", "TVT", "giảm", "nhằm", "trạng", "khách", "HLXT", "PVM"], category: "Xử lý tình huống" },
-  { id: 125, question: "(CÂU 124) TV cần xử lý như thế nào khi đang phục vụ khách thức uống có cồn", answer: "nhưng nhận thấy khách có dấu hiệu say rượu?\n* Lưu ý khách đã uống khá nhiều đồ uống có cồn với thái độ nhẹ nhàng lịch sự.\nThông báo với khách vì lý do đảm bảo sức khoẻ cho khách, TV không được phép\nphục vụ sau 1-2h, sau đó tạm ngưng hoặc dừng hẳn việc phục vụ thức uống có cồn.\nCảnh báo khách có thể gây bất tiện cho bản thân hành khách và cho những hành\nkhách xung quanh nếu khách say.\n* Mời hành khách thức ăn nhẹ như hạt rang, bánh mỳ, phomai và đồ uống không\ncó cồn để làm chậm quá trình hấp thụ cồn\n* Báo cáo TVT và thông báo với các TV khác về tình trạng của khách\n* Ðánh giá xác định mức độ say của hành khách để xử trí phù hợp\n* Thường xuyên chăm sóc khách trong suốt chuyến bay\n\n* Thực hiện theo hướng dẫn của TVT de-brf/coaching với TV trong khoang/tổ về\ntình huống trên trong thời gian còn lại của CB", keywords: ["CB", "TV", "TVT", "đang", "cần"], category: "Xử lý tình huống" },
-  { id: 126, question: "(CÂU 125) TV phục vụ sơ ý đẩy xe phục vụ đồ uống/ suất ăn đụng vào chân", answer: "khách, TV cần xử lý như thế nào?\n* Chân thành xin lỗi khách và lấy làm tiếc đã để xảy ra sự việc trên\n* Trước hết, TV cần kiểm tra xem hành khách bị thương tổn do sự va chạm, đánh\ngiá mức độ ảnh hưởng đến khách (ví dụ như đụng vào gây đau chân)\n* Trường hợp khách bị đau chân thì phải dùng biện pháp sơ cứu cho hành khách.\nHỏi thăm hành khách trong suốt chuyến bay xem khách đã cảm thấy đỡ chưa\n* Báo cáo TVT thông tin để lập biên bản vụ việc\n* Bản thân tiếp viên phải luôn xin lỗi về việc mình đã gây ra để mong hành khách\nthông cảm\n* Chia sẻ thông tin tới các tiếp viên trong tổ rút kinh nghiệm\n* Thường xuyên chăm sóc khách trong suốt chuyến bay\n* TVT trực tiếp hỏi thăm, xin lỗi khách và thực hiện viết báo cáo chuyến bay, biên\nbản sức khoẻ bất thường …", keywords: ["đẩy", "đụng", "TV", "TVT", "suất", "uống", "phục"], category: "Xử lý tình huống" },
-  { id: 127, question: "(CÂU 126) Ðể phục vụ khách xuống máy bay khi khai thác các tàu bay thân", answer: "rộng (B787-9, B787-10, A350) không sử dụng cửa L1, trên chuyến bay, TV\nthực hiện các công việc gì?\n* TVT chủ động xác nhận thông tin về bãi đỗ và cửa xuống máy bay từ tổ lái vào\nthời điểm lấy thông tin nhiệt độ, các thông tin điểm đến trước lúc máy bay giảm độ\ncao\n* Trường hợp vẫn chưa được cung cấp thông tin: TVT chủ động nhắc tổ lái cung\ncấp thông tin về bãi đậu vào giai đoạn \"Prepare for landing\" hoặc giai đoạn máy\nbay vào đến sân đỗ\n* Khi máy bay đã vào bãi đỗ, TVT thực hiện quan sát phía bên ngoài máy bay để\nchắc chắn về thông tin bãi đỗ, phương tiện sử dụng, vị trí cửa sẽ đưa khách xuống\nmáy bay\n* TVT triển khai TVB/ TVY hướng dẫn khách. TVT di chuyển xuống cửa L2 để\nkiểm soát và chào tạm biệt khách\n* TVC thông báo & hướng dẫn khách hạng C di chuyển về phía sau. TVC di\nchuyển xuống cuối khoang C để đứng chào và hỗ trợ khách\n\n* TVY thực hiện dừng khách Y để khách hạng C xuống máy bay trước tại cửa L2.\n+ Riêng đối với máy bay B787-10, tại cửa L2, TVY mời khách Y từ hàng 16-20\nxuống máy bay trước, sau đó đóng rèm, dừng khách hạng Y từ hàng 21 để mời\nkhách hạng C xuống máy bay. Sau đó TV mời khách Y từ hàng 21 xuống máy bay.\n\nQUY ĐỊNH PHỤC HỒI VÀ ĐẢM BẢO DỊCH VỤ BỒI THƯỜNG GẮN KẾT\n* PHỤC HỒI DỊCH VỤ: Là một quá trình ghi nhận, phát hiện và xử lý lỗi phát\nsinh thuộc trách nhiệm của VNA trong quá trình cung cấp DV đến khách hàng\n* ĐẢM BẢO DỊCH VỤ: Là sự cam kết của VNA đối với khách hàng về việc sẽ\nthực hiện các hoạt động phục hồi mỗi khi có xảy ra lỗi ở các mức độ khác nhau\n* MỤC ĐÍCH: Tạo ra trải nghiệm vui vẻ, thoải mái. Xoa dịu bực bội, khó chịu và\nlấy lại niềm tin của khách hàng. Gắn kết và thu hút thêm nhiều khách hàng mới\n* GIỚI HẠN:\n- Không áp dụng với khách nội bộ sử dụng vé ID, vé giảm\n- Không áp dụng trên các chuyến bay thuê chuyến\n** THỰC HIỆN\n- Căn cứ mức độ lỗi, TVT trao quyền cho TV cung cấp thêm giá trị cho khách hàng\n(bồi thường gắn kết)\n- TVT đề xuất để khách lựa chọn hình thức bồi thường phù hợp\n- TV điền phiếu “Ghi nhận thông tin phục hồi và đảm bảo dịch vụ”\n- Gửi khách 1 liên và thông báo xuất trình tại chi nhánh, phòng vé VNA để được hỗ\ntrợ\n- Bồi thường dặm thưởng sẽ được cộng vào tài khoản sau 5-7 ngày\n** LƯU Ý: Bồi thường gắn kết khác với MCO\n- Bồi thường gắn kết trên cơ sở tiết kiệm chi phí, tận dụng các phương tiện/sản phẩm\nsẵn có trên chuyến bay, thể hiện sự cầu thị\n- Công cụ bồi thường hạng Y < C (cùng mức độ lỗi)\n- TVT cần viết BCCB, lập biên bản vụ việc để theo dõi và cải tiến phù hợp\n** MỨC ĐỘ LỖI\n\nLỖI CỤ THỂ\n\n* Món ăn quá mặn/nhạt, vỏ\nghế rách, bẩn, bạc màu,\nthảm bẩn …\n* Thái độ của TV không\nthân thiện, chu đáo, nhiệt\ntình với khách\n* TV có thái độ không\nđúng mực, không tôn trọng\nkhách …\n* Suất ăn có mùi vị bất\nthường như ôi thiu, sản\nphẩm quá hạn sử dụng\nhoặc biến dạng …\n* Hệ thống giải trí hư hỏng,\nkhách có cảm xúc tiêu cực,\nleo thang\n* Suất ăn có vật lạ nguy\nhiểm, HTGT trên chuyến\nbay dài bị hỏng, TV làm đổ\nđồ ăn/thức uống nóng gây\nbỏng cho khách …\n* TV phục vụ suất ăn/đồ\nuống gây dị ứng với khách\ndù khách có thông báo\ntrước, gây nguy cơ đe doạ\ntính mạng của khách\n* Khách bị bỏng ở mức\nnghiêm trọng\n* Suất ăn có vật lạ gây\nnguy hiểm cho hành khách\n\nTHÁI ĐỘ CỦA KHÁCH SAU\nKHI TV KHẮC PHỤC LỖI\n\nKhách chưa hài lòng, gây ra sự\nbất tiện nhỏ cho khách hàng\n\nTV QUYẾT ĐỊNH\n\nLevel 1: Lỗi nhỏ\nKH đánh giá DV không\nđúng như tiêu chuẩn đã\ncam kết\n\nKhách hàng không hài lòng, gây\nra sự kích động các\ncảm xúc tiêu cực\n\nLevel 2: Lỗi vừa phải\nKH đánh giá DV không\nđúng như tiêu chuẩn đã\ncam kết\n\nKhách không hài lòng, chịu sự\ngián đoạn, sự thiệt hại\n\nLevel 3: Lỗi lớn\nKH đánh giá DV không\nđúng theo cam kết\n\nKhách hàng phải chịu thiệt hại Level 4: Lỗi nghiêm trọng\nlớn về thể chất, tinh thần,\nKH đánh giá DV không\ntài chính\nđúng theo cam kết\n\nNhóm khách hàng\n\nCông cụ bồi thường gắn kết\n\nKhách ưu tiên\n\nKhách phổ thông\n\nMức độ 1 - Lỗi nhỏ\nKhông thực hiện bồi thường, tạo thêm giá trị, tập trung vào việc xin lỗi khách hàng,\nquan tâm đến khách hàng\nMức độ 2 - Lỗi vừa phải\nDặm thưởng\n\n2000 dặm\n\n1000 dặm\n\nHành lý miễn cước\n\n01 kiện 23kg\n\nKhông áp dụng\n\nVoucher giảm giá\n\n10% discount\n\n5% discount\n\nMức độ 3 - Lỗi lớn\nDặm thưởng\n\n4000 dặm\n\n2000 dặm\n\nHành lý miễn cước\n\n01 kiện 32kg\n\n01 kiện 23kg\n\nVoucher giảm giá\n\n15% discount\n\n10% discount\n\nThẻ mời phòng khách\nBusiness\n\nÁp dụng\n\nÁp dụng\n\nNâng hạng dịch vụ\n\nÁp dụng\n\nKhông áp dụng\n\nMức độ 4 - Lỗi nghiêm trọng\nDặm thưởng\n\n6000 dặm\n\n4000 dặm\n\nHành lý miễn cước\n\n02 kiện 32kg\n\n02 kiện 23kg\n\nVoucher giảm giá\n\n20% discount\n\n15% discount\n\nThẻ mời phòng khách\nBusiness\n\nÁp dụng\n\nÁp dụng\n\nNâng hạng dịch vụ\n\nÁp dụng\n\nÁp dụng\n\nQUY TRÌNH THỰC HIỆN PHỤC HỒI VÀ ĐẢM BẢO DỊCH VỤ\n* Nhận diện lỗi: TV trực tiếp tiếp xúc với khách để xem phản ứng và cảm xúc của\nkhách\n* Đánh giá mức độ lỗi: TV dựa vào bảng “mức độ lỗi” để đánh giá\n* Thực hiện khắc phục: Nếu lỗi liên quan trang thiết bị nội thất → dùng MCO và\nkhông dùng bồi thường gắn kết\n4/ Cung cấp thêm giá trị mới cho khách → bồi thường gắn kết\n- TV dựa vào bảng “công cụ bồi thường” để cung cấp thêm giá trị cho khách hàng\n- TVT có thể áp dụng công cụ thấp hơn mức tối đa (VD cộng 1000 dặm thì có thể\noffer mức thấp hơn)\n- TVT đề xuất 1 trong các công cụ bồi thường (VD chọn 1 hình thức là cộng dặm)\n→ lưu ý cộng dặm thưởng chỉ áp dụng cho khách là hội viên Bông Sen Vàng\n- TVT có thể nâng hạng dịch vụ cho khách ngay trên chuyến bay (nếu cho phép)\n* Điền phiếu xử lý: TVT điền đầy đủ thông tin yêu cầu\n- TVT giao khách liên số 01 (xuất trình tại các chi nhánh / phòng vé VNA)\n- TVT giữ liên số 02 nộp về ĐTV + ghi BCCB\n\nTIÊU CHUẨN TRANG THIẾT BỊ NỘI THẤT – IFE\nBỒI THƯỜNG MCO (Miscellaneous Charge Order)\n* Hướng dẫn bồi thường cho hành khách sử dụng thiết bị nội thất có hỏng hóc\n- Là khách đi trên các chuyến bay do TCTHK khai thác\n- Khách được xếp chỗ vào vị trí áp dụng “bồi thường cho hành khách”\n- Khách không thuộc phạm vi sử dụng vé ID của TCTHK\n* Phương thức bồi thường\nBồi thường bằng Chứng từ thanh toán dịch vụ vận chuyển hàng không đa mục đích\n(MCO). TCTHK có thể linh hoạt thanh toán bằng tiền mặt hoặc chuyển khoản để\nbồi thường cho khách (giá trị = 2/3 MCO)\n* Cách thức bồi thường cho lỗi phát sinh trên chuyến bay (dành cho TVHK)\n- TV trên chuyến bay tổng hợp những hỏng hóc mà Điều kiện xếp khách áp dụng là\n“bồi thường cho hành khách”\n- TV xác nhận những hành khách sẽ được ghi nhận vào “Phiếu ghi nhận thông tin\nvề hành khách được bồi thường”\n\n- TV điền đầy đủ thông tin của hành khách vào “Phiếu ghi nhận thông tin về hành\nkhách được bồi thường” → đưa khách 1 liên vào thông báo gửi cho đại diện VNA\ntại sân bay đến để nhận bồi thường hoặc đến bất kì chi nhánh nào của VNA để nhận\nbồi thường trong vòng 30 ngày sau chuyến bay\n\nCÁC LỖI ĐƯỢC BỒI THƯỜNG (Phụ lục C)\nSTT\n\nVỊ TRÍ\n\n1\n\nHạng C\n\nChức năng ngả/dựng lưng ghế\n\n2\n\nHạng C\n\nChức năng duỗi chân của ghế\n\nKhông hoạt động\n\n3\n\nHạng PE\n\nChức năng ngả/dựng lưng ghế\n\nKhông hoạt động\n\n4\n\nHạng C\n\nMàn hình cá nhân\n\nKhông hoạt động / không xem\nđược\n\n5\n\nHạng C\n\nThiết bị điều khiển giải trí cá nhân\nPCU đối với màn hình không có\nMất, không hoạt động\nchức năng cảm ứng\n\n6\n\nHạng C\n\nHệ thống âm thanh\n\nKhông hoạt động\n\n7\n\nHạng C\n\nMàn hình chung trên máy bay\nkhông có Inseat Video\n\nKhông hoạt động\n\n8\n\nHạng PE\n\nMàn hình cá nhân\n\nKhông hoạt động / không xem\nđược\n\n9\n\nHạng PE\n\nThiết bị điều khiển giải trí cá nhân\nPCU đối với màn hình không có\nMất, không hoạt động\nchức năng cảm ứng\n\n10\n\nHạng PE\n\nHệ thống âm thanh\n\n11\n\nHạng C\n\nTRANG THIẾT BỊ\n\nToilet trên các chuyến bay từ\n2-4 tiếng\n\nMÔ TẢ\nKhông hoạt động hoặc chức\nnăng ngả không hoạt động\ntheo đúng thiết kế\n\nKhông hoạt động\n* Bồn cầu vỡ, tắc hoặc không\nấn được nút xả bồn cầu\n* Vòi cấp nước hỏng\n* Thoát nước chậu rửa hỏng,\ntắc\n* Cửa / Đèn toilet hỏng\n\n12\n\nHạng Y\n(FT >9h)\n\nChức năng ngả/dựng lưng ghế\n\nKhông hoạt động\n\nMỨC BỒI THƯỜNG\nChuyến bay quốc tế (hạng C)\nMức 1: 300 USD\n\nMức 2: 200 USD\n\nĐường bay Châu Âu\n\nĐường bay HKG\n\nĐường bay Mỹ\nĐường bay Úc\nĐường bay Nhật\nĐường bay Hàn\n\nĐường bay Đài Loan\nĐường bay China\nĐường bay SIN\nĐường bay KUL\nĐường bay CGK\nĐường bay MNL\nCác đường bay khác\n\nMức 3: 100 USD\nĐường bay\nXuyên Đông\nDương\n\nMức 4: 50 USD\nÁp dụng trong\ntrường hợp hỏng\ntoilet hạng C\n\nChuyến bay quốc nội (hạng C)\nMức 1\n800.000 VND\n\nMức 2\n600.000 VND\n\nMức 3\n400.000 VND\n\nMức 4\n200.000 VND\n\nHAN –\nSGN/VCA/PQC HAN\n\nHAN/SGN –\nHUI/DAD/CXR/UIH/VCL\n– HAN/SGN\nSGN – VDO/VDH/VII –\nSGN\n\nCác chặng bay\nkhác\n\nÁp dụng trong\ntrường hợp hỏng\ntoilet hạng C\n\nSGN-HPH-SGN\n\nHAN –\nTBB/BMV/DLI/PXU HAN\n\n** HẠNG PE → mức bồi thường = 100 USD/khách (QUỐC TẾ)\n** HẠNG Y → mức bồi thường = 70 USD/khách (QUỐC TẾ)\n\nGIÁ TRỊ TIỀN MẶT BỒI THƯỜNG (2/3 MCO)\n\nChuyến bay quốc tế\n\nChuyến bay quốc nội\n\nMCO\n\nTiền mặt / Chuyển\nkhoản\n\n300 USD\n200 USD\n100 USD\n70 USD\n50 USD\n\n200 USD\n135 USD\n70 USD\n50 USD\n35 USD\n\nMCO\n\nTiền mặt /\nChuyển khoản\n\n800.000 VND\n600.000 VND\n400.000 VND\n200.000 VND\n\n550.000 VND\n400.000 VND\n270.000 VND\n150.000 VND\n\nĐỊNH MỨC GHI PHIẾU BỒI THƯỜNG MCO\n* A350 / B787 → 20 PHIẾU (2 CHIỀU)\n* A321 → 10 PHIẾU (2 CHIỀU)\n* ATR72 → 05 PHIẾU (2 CHIỀU)", keywords: ["TCTHK", "DV", "PCU", "CH", "PH", "ID", "TBB", "MNL", "PE", "NG"], category: "Xử lý tình huống" },
-  { id: 128, question: "Phục hồi dịch vụ là gì?", answer: "Là một quá trình ghi nhận, phát hiện và xử lý lỗi phát sinh thuộc trách nhiệm của VNA trong quá trình cung cấp dịch vụ đến khách hàng", keywords: ["phục hồi", "dịch vụ", "lỗi", "VNA"], category: "Phục hồi & Bồi thường" },
-  { id: 129, question: "Đảm bảo dịch vụ là gì?", answer: "Là sự cam kết của VNA đối với khách hàng về việc sẽ thực hiện các hoạt động phục hồi mỗi khi có xảy ra lỗi ở các mức độ khác nhau", keywords: ["đảm bảo", "cam kết", "phục hồi", "mức độ"], category: "Phục hồi & Bồi thường" },
-  { id: 130, question: "Mục đích của Phục hồi và Đảm bảo dịch vụ?", answer: "- Tạo ra trải nghiệm vui vẻ, thoải mái\\n- Xoa dịu bực bội, khó chịu và lấy lại niềm tin của khách hàng\\n- Gắn kết và thu hút thêm nhiều khách hàng mới", keywords: ["mục đích", "trải nghiệm", "gắn kết", "niềm tin"], category: "Phục hồi & Bồi thường" },
-  { id: 131, question: "Giới hạn áp dụng Phục hồi và Đảm bảo dịch vụ?", answer: "- Không áp dụng với khách nội bộ sử dụng vé ID, vé giảm\\n- Không áp dụng trên các chuyến bay thuê chuyến", keywords: ["giới hạn", "vé ID", "thuê chuyến", "không áp dụng"], category: "Phục hồi & Bồi thường" },
-  { id: 132, question: "Quy trình thực hiện bồi thường gắn kết?", answer: "- Căn cứ mức độ lỗi, TVT trao quyền cho TV cung cấp thêm giá trị cho khách hàng (bồi thường gắn kết)\\n- TVT đề xuất để khách lựa chọn hình thức bồi thường phù hợp\\n- TV điền phiếu \"Ghi nhận thông tin phục hồi và đảm bảo dịch vụ\"\\n- Gửi khách 1 liên và thông báo xuất trình tại chi nhánh, phòng vé VNA để được hỗ trợ\\n- Bồi thường dặm thưởng sẽ được cộng vào tài khoản sau 5-7 ngày", keywords: ["quy trình", "bồi thường", "phiếu", "dặm thưởng"], category: "Phục hồi & Bồi thường" },
-  { id: 133, question: "Lưu ý về bồi thường gắn kết?", answer: "- Bồi thường gắn kết khác với MCO\\n- Bồi thường gắn kết trên cơ sở tiết kiệm chi phí, tận dụng các phương tiện/sản phẩm sẵn có trên chuyến bay, thể hiện sự cầu thị\\n- Công cụ bồi thường hạng Y < C (cùng mức độ lỗi)\\n- TVT cần viết BCCB, lập biên bản vụ việc để theo dõi và cải tiến phù hợp", keywords: ["MCO", "gắn kết", "tiết kiệm", "BCCB"], category: "Phục hồi & Bồi thường" },
-  { id: 134, question: "Mức độ lỗi Level 1 (Lỗi nhỏ) – Lỗi cụ thể và bồi thường?", answer: "Lỗi cụ thể:\\n- Món ăn quá mặn/nhạt, vỏ ghế rách, bẩn, bạc màu, thảm bẩn\\n- Thái độ của TV không thân thiện, chu đáo, nhiệt tình với khách\\nThái độ khách: Khách chưa hài lòng, gây ra sự bất tiện nhỏ cho khách hàng\\nBồi thường: Không thực hiện bồi thường, tạo thêm giá trị, tập trung vào việc xin lỗi khách hàng, quan tâm đến khách hàng", keywords: ["Level 1", "lỗi nhỏ", "xin lỗi", "không bồi thường"], category: "Phục hồi & Bồi thường" },
-  { id: 135, question: "Mức độ lỗi Level 2 (Lỗi vừa phải) – Lỗi cụ thể và bồi thường?", answer: "Lỗi cụ thể:\\n- TV có thái độ không đúng mực, không tôn trọng khách\\n- Suất ăn có mùi vị bất thường như ôi thiu, sản phẩm quá hạn sử dụng hoặc biến dạng\\n- Hệ thống giải trí hư hỏng, khách có cảm xúc tiêu cực, leo thang\\nThái độ khách: Khách hàng không hài lòng, gây ra sự kích động các cảm xúc tiêu cực\\nBồi thường khách ưu tiên: 2000 dặm | 01 kiện 23kg | 10% discount\\nBồi thường khách phổ thông: 1000 dặm | Không áp dụng hành lý | 5% discount", keywords: ["Level 2", "lỗi vừa", "dặm", "discount", "2000", "1000"], category: "Phục hồi & Bồi thường" },
-  { id: 136, question: "Mức độ lỗi Level 3 (Lỗi lớn) – Lỗi cụ thể và bồi thường?", answer: "Lỗi cụ thể:\\n- Suất ăn có vật lạ nguy hiểm\\n- HTGT trên chuyến bay dài bị hỏng\\n- TV làm đổ đồ ăn/thức uống nóng gây bỏng cho khách\\nThái độ khách: Khách không hài lòng, chịu sự gián đoạn, sự thiệt hại\\nBồi thường khách ưu tiên: 4000 dặm | 01 kiện 32kg | 15% discount | Thẻ mời phòng khách Business | Nâng hạng dịch vụ\\nBồi thường khách phổ thông: 2000 dặm | 01 kiện 23kg | 10% discount | Thẻ mời phòng khách Business | Không nâng hạng", keywords: ["Level 3", "lỗi lớn", "4000", "2000", "nâng hạng", "phòng khách"], category: "Phục hồi & Bồi thường" },
-  { id: 137, question: "Mức độ lỗi Level 4 (Lỗi nghiêm trọng) – Lỗi cụ thể và bồi thường?", answer: "Lỗi cụ thể:\\n- TV phục vụ suất ăn/đồ uống gây dị ứng với khách dù khách có thông báo trước, gây nguy cơ đe doạ tính mạng của khách\\n- Khách bị bỏng ở mức nghiêm trọng\\n- Suất ăn có vật lạ gây nguy hiểm cho hành khách\\nThái độ khách: Khách hàng phải chịu thiệt hại lớn về thể chất, tinh thần, tài chính\\nBồi thường khách ưu tiên: 6000 dặm | 02 kiện 32kg | 20% discount | Thẻ mời phòng khách Business | Nâng hạng dịch vụ\\nBồi thường khách phổ thông: 4000 dặm | 02 kiện 23kg | 15% discount | Thẻ mời phòng khách Business | Nâng hạng dịch vụ", keywords: ["Level 4", "nghiêm trọng", "6000", "4000", "dị ứng", "bỏng"], category: "Phục hồi & Bồi thường" },
-  { id: 138, question: "Quy trình thực hiện phục hồi và đảm bảo dịch vụ gồm mấy bước?", answer: "1. Nhận diện lỗi: TV trực tiếp tiếp xúc với khách để xem phản ứng và cảm xúc của khách\\n2. Đánh giá mức độ lỗi: TV dựa vào bảng \"mức độ lỗi\" để đánh giá\\n3. Thực hiện khắc phục: Nếu lỗi liên quan trang thiết bị nội thất → dùng MCO và không dùng bồi thường gắn kết\\n4. Cung cấp thêm giá trị mới cho khách → bồi thường gắn kết\\n- TV dựa vào bảng \"công cụ bồi thường\" để cung cấp thêm giá trị cho khách hàng\\n- TVT có thể áp dụng công cụ thấp hơn mức tối đa\\n- TVT đề xuất 1 trong các công cụ bồi thường\\n- Lưu ý cộng dặm thưởng chỉ áp dụng cho khách là hội viên Bông Sen Vàng\\n- TVT có thể nâng hạng dịch vụ cho khách ngay trên chuyến bay (nếu cho phép)", keywords: ["quy trình", "nhận diện", "đánh giá", "khắc phục", "giá trị"], category: "Phục hồi & Bồi thường" },
-  { id: 139, question: "Bồi thường MCO là gì?", answer: "MCO (Miscellaneous Charge Order) - Bồi thường cho hành khách sử dụng thiết bị nội thất có hỏng hóc\\n- Là khách đi trên các chuyến bay do TCTHK khai thác\\n- Khách được xếp chỗ vào vị trí áp dụng \"bồi thường cho hành khách\"\\n- Khách không thuộc phạm vi sử dụng vé ID của TCTHK\\nPhương thức: Bồi thường bằng Chứng từ thanh toán dịch vụ vận chuyển hàng không đa mục đích (MCO). TCTHK có thể linh hoạt thanh toán bằng tiền mặt hoặc chuyển khoản (giá trị = 2/3 MCO)", keywords: ["MCO", "bồi thường", "hỏng hóc", "nội thất", "tiền mặt"], category: "Phục hồi & Bồi thường" },
-  { id: 140, question: "Các lỗi trang thiết bị được bồi thường MCO?", answer: "1. Hạng C - Chức năng ngả/dựng lưng ghế: Không hoạt động\\n2. Hạng C - Chức năng duỗi chân của ghế: Không hoạt động\\n3. Hạng PE - Chức năng ngả/dựng lưng ghế: Không hoạt động\\n4. Hạng C - Màn hình cá nhân: Không hoạt động / không xem được\\n5. Hạng C - Thiết bị điều khiển giải trí PCU (màn hình không cảm ứng): Mất, không hoạt động\\n6. Hạng C - Hệ thống âm thanh: Không hoạt động\\n7. Hạng C - Màn hình chung trên máy bay không có Inseat Video: Không hoạt động\\n8. Hạng PE - Màn hình cá nhân: Không hoạt động / không xem được\\n9. Hạng PE - PCU: Mất, không hoạt động\\n10. Hạng PE - Hệ thống âm thanh: Không hoạt động\\n11. Hạng C - Toilet trên chuyến bay 2-4 tiếng: Bồn cầu vỡ/tắc, vòi nước hỏng, thoát nước hỏng, cửa/đèn hỏng\\n12. Hạng Y (FT >9h) - Chức năng ngả/dựng lưng ghế: Không hoạt động", keywords: ["MCO", "lỗi", "ghế", "màn hình", "toilet", "PCU", "âm thanh"], category: "Phục hồi & Bồi thường" },
-  { id: 141, question: "Mức bồi thường MCO chuyến bay quốc tế hạng C?", answer: "Mức 1 - 300 USD: Đường bay Châu Âu, Mỹ, Úc, Nhật, Hàn\\nMức 2 - 200 USD: Đường bay HKG, Đài Loan, China, SIN, KUL, CGK, MNL, các đường bay khác\\nMức 3 - 100 USD: Đường bay Xuyên Đông Dương\\nMức 4 - 50 USD: Áp dụng trong trường hợp hỏng toilet hạng C\\n\\nHạng PE: 100 USD/khách\\nHạng Y (FT >9h): 70 USD/khách", keywords: ["MCO", "quốc tế", "300 USD", "200 USD", "100 USD", "50 USD", "70 USD"], category: "Phục hồi & Bồi thường" },
-  { id: 142, question: "Mức bồi thường MCO chuyến bay quốc nội hạng C?", answer: "Mức 1 - 800.000 VND: HAN–SGN/VCA/PQC, SGN-HPH-SGN\\nMức 2 - 600.000 VND: HAN/SGN–HUI/DAD/CXR/UIH/VCL–HAN/SGN, HAN–TBB/BMV/DLI/PXU–HAN\\nMức 3 - 400.000 VND: Các chặng bay khác\\nMức 4 - 200.000 VND: Áp dụng trong trường hợp hỏng toilet hạng C", keywords: ["MCO", "quốc nội", "800.000", "600.000", "400.000", "200.000", "VND"], category: "Phục hồi & Bồi thường" },
-  { id: 143, question: "Giá trị tiền mặt bồi thường MCO (2/3 MCO)?", answer: "Chuyến bay quốc tế:\\n- MCO 300 USD → Tiền mặt 200 USD\\n- MCO 200 USD → Tiền mặt 135 USD\\n- MCO 100 USD → Tiền mặt 70 USD\\n- MCO 70 USD → Tiền mặt 50 USD\\n- MCO 50 USD → Tiền mặt 35 USD\\n\\nChuyến bay quốc nội:\\n- MCO 800.000 VND → Tiền mặt 550.000 VND\\n- MCO 600.000 VND → Tiền mặt 400.000 VND\\n- MCO 400.000 VND → Tiền mặt 270.000 VND\\n- MCO 200.000 VND → Tiền mặt 150.000 VND", keywords: ["MCO", "tiền mặt", "2/3", "chuyển khoản", "giá trị"], category: "Phục hồi & Bồi thường" },
-  { id: 144, question: "Định mức ghi phiếu bồi thường MCO theo loại tàu bay?", answer: "- A350 / B787 → 20 phiếu (2 chiều)\\n- A321 → 10 phiếu (2 chiều)\\n- ATR72 → 05 phiếu (2 chiều)", keywords: ["MCO", "phiếu", "A350", "B787", "A321", "ATR72", "định mức"], category: "Phục hồi & Bồi thường" },
-  { id: 145, question: "Cách thức bồi thường MCO cho lỗi phát sinh trên chuyến bay?", answer: "- TV trên chuyến bay tổng hợp những hỏng hóc mà Điều kiện xếp khách áp dụng là \"bồi thường cho hành khách\"\\n- TV xác nhận những hành khách sẽ được ghi nhận vào \"Phiếu ghi nhận thông tin về hành khách được bồi thường\"\\n- TV điền đầy đủ thông tin của hành khách vào phiếu → đưa khách 1 liên và thông báo gửi cho đại diện VNA tại sân bay đến để nhận bồi thường hoặc đến bất kì chi nhánh nào của VNA để nhận bồi thường trong vòng 30 ngày sau chuyến bay", keywords: ["MCO", "phiếu", "bồi thường", "30 ngày", "hỏng hóc"], category: "Phục hồi & Bồi thường" }
+  { id: 1, question: `(AT.1) 1. To request a normal access to the flight deck, what shall the purser do
+in details? State out the correct phrase with the password for normal
+entry.
+2. What must crew member check and confirm with pilot in the flight
+deck:
+- before opening the flight deck door?
+- after entering or leaving the cockpit?`, answer: `CCOM 2.11.3
+* TVT phải kiểm tra và confirm với tổ lái rằng toàn bộ khi vực bên ngoài cửa cockpit
+clear trước khi yêu cầu vào buồng lái và trước khi rời khỏi buồng lái
+* Cửa phải được đóng và khoá ngay khi thành viên tổ bay vào hoặc ra khỏi buồng
+lái
+* Để vào buồng lái, TVT sẽ gọi lên cockpit qua interphone, sau đó sẽ đọc password
+đã được thống nhất từ trước mà PIC đã thông báo.
+“This is …. (password). Please unlock the door”`, keywords: ["request", "normal", "access", "deck", "purser", "details", "State", "out", "correct", "phrase"], category: "An toàn – An ninh" },
+  { id: 2, question: `(AT.2) 1. When a disabled passenger happens to seat in an exit row (flight is
+totally full of booking), what shall the cabin crew do?
+2. What kind of safety information must be included in the pre-flight
+safety demonstration announcement to cabin passengers?`, answer: `CCOM 2.13.1.1 f) + PHM 2.1.15 + VAR 13.035
+* Đổi chỗ hành khách này sang một ghế khác không phải ghế tại cửa thoát hiểm, sau
+đó báo cáo TVT
+* Trường hợp không còn chỗ ngồi xa cửa thoát hiểm, và nếu cần phải cung cấp chỗ
+ngồi cho hành khách phải di chuyển khỏi chỗ ngồi tại hàng ghế ở lối thoát hiểm, TV
+phải di chuyển một hành khách khác mà sẵn lòng và có khả năng đảm nhận nhiệm
+vụ thoát hiểm, vào chỗ ngồi tại hàng ghế ở lối thoát hiểm`, keywords: ["disabled", "passenger", "happens", "seat", "exit", "row", "totally", "full", "booking", "kind"], category: "An toàn – An ninh" },
+  { id: 3, question: `(AT.3) 1. What kinds of PEDs are permitted to be used during flight at and
+above 10,000 feet? List out at least 3 items.
+2. In which phase of flight the Portable Electronic Devices (PEDs) are
+not allowed to be charged?
+3. In which time the mobile phone can’t be used / can be used when pax
+are on board?`, answer: `flights? CCOM 2.20.1
+* Đồng hồ điện tử truyền thống, không bao gồm điện thoại di động hoặc bất kỳ thiết
+bị thu/truyền nào có chức năng như đồng hồ điện tử.
+* Máy ghi âm di động truyền thống, ngoại trừ điện thoại di động hoặc bất kỳ thiết bị
+thu/truyền nào có chức năng như máy ghi âm di động.
+* Máy trợ thính
+* Máy hỗ trợ nhịp tim
+* Máy cạo râu chạy bằng điện
+Quy định PEDs:
+- Tất cả PEDs phải chuyển sang chế độ FLIGHT MODE và SILENT MODE khi sử
+dụng
+- PEDs kích thước lớn (hoăc trọng lượng >1.3 kg) phải cất lên overhead hoặc dưới
+gầm ghế (nếu < 1.3kg và nhỏ thì khách có thể cất gọn vào trong túi ghế phía trước
+trong quá trình cất hạ cánh)
+- Nếu nguồn điện từ 50-60Hz 110-220V hoặc USB được trang bị trên máy bay thì
+được cắm sạc
+→ Tất cả PEDs không được cắm sạc trong quá trình taxi, cất hạ cánh và hoạt động
+bay dưới 10.000ft
+** Pin sạc dự phòng - Power Bank (CCOM 2.20 & TBAT 358A)
+- Cần được lấy ra khỏi HLXT và để nơi dễ quan sát như túi ghế phía trước hoặc bên
+cạnh hành khách
+- Không để trên overhead locker hoặc những nơi khó giám sát, khó phát hiện nếu
+phát hiện khói/cháy từ pin
+- Không được sạc từ cổng USB của máy bay; Không được dùng để sạc các thiết bị
+điện tử khác trong suốt chuyến bay`, keywords: ["kinds", "PED", "permitted", "used", "during", "above", "feet", "List", "out", "least"], category: "An toàn – An ninh" },
+  { id: 4, question: `(AT.4) Transportation of Deportee passengers on VNA flights:
+1. Where shall Deportee passengers be allocated?
+2. What is the handling procedure of Deportee passengers in the cabin
+in details (when you receive the special information from ground staff)?`, answer: `CCOM 2.12.4
+* Chỗ ngồi của khách bị trục xuất phải bố trí ở phía sau cabin, cách xa lối thoát hiểm;
+* Hành khách bị trục xuất và người hộ tống phải lên trước và xuống sau những hành
+khách khác;
+* PIC phải được thông báo về người bị trục xuất thông qua mẫu “Thông tin đặc biệt
+cho phi hành đoàn”
+* Hành khách bị trục xuất và người hộ tống (nếu có) không được phục vụ các loại
+đồ uống có cồn và các dụng cụ có thể dùng làm vũ khí gây nguy hiểm cho hành
+khách khác.
+* Tại điểm đến, TV bàn giao người bị trục xuất (trong trường hợp người bị trục xuất
+không có người đi cùng) cùng với hộ chiếu và mẫu “Lệnh của người bị trục xuất”
+cho đại diện`, keywords: ["Transportation", "Deportee", "passengers", "VNA", "flights", "Where", "allocated", "handling", "procedure", "details"], category: "An toàn – An ninh" },
+  { id: 5, question: `(AT.5) a) How to perform the pre-flight check the life raft (extra raft) of A
+321?
+b) What is the capacity of life raft?
+c) How to launch the life raft (extra raft) of A 321?
+d) If we operate with the A 321- config 16/168, 4 cabin crew due to 01
+cabin crew is sick in PQC.
+The sector: PQC-SGN (This is the over water flight).
+Can we operate with 4 cabin crew in this sector? Explain?`, answer: `CCOM 5.6.4
+* Pre-flight check:
+Kiểm tra đúng vị trí và số lượng
+Đồng hồ áp suất ở vị trí “FULL” mode hoặc 3-3.5 mbar
+* Capacity: 25 - 38 người
+* Launching Ratf:
+-Attach the retaining line to a metal section. A clip on the line provides quick
+connection.
+-Attach the retaining line to a metal section of the aircraft.
+-Inflate by pulling firmly on the inflation handle, pulling from the end of the line,
+followed by the second firm pull to ensure inflation of both chambers.
+-Disconnect the retaining line or cut it with knife provided.
+
+A/C Type
+Long-range overwater Flights
+
+Other Flights
+
+B787
+
+8
+
+A350
+
+8
+8/195
+
+6
+
+5
+
+16/162
+16/168
+
+5
+
+4
+
+A320
+
+5
+
+4
+
+ATR 72
+
+N/A
+
+2
+
+A321
+
+____________________________________________________
+
+
+
+AN TOÀN KHAI THÁC (FOM)`, keywords: ["perform", "pre", "check", "life", "raft", "extra", "capacity", "launch", "operate", "with"], category: "An toàn – An ninh" },
+  { id: 6, question: `(AT.6) For Emergency Locator Transmitters KANNAD 406AS
+1.How to perform the pre-flight check
+2. How to operate in two cases (on land/water)?`, answer: `* Pre-flight check:
+Kiểm tra số lượng và vị trí - Lấy ra khỏi giá đỡ - Công tắc ở vị trí ARM
+* Operation:
+On water: - Tháo dây buộc với móc treo - Nối móc treo với thuyền phao – Dựng
+antenna thẳng đứng - Bật công tắc sang ON – Để ELT xuống nước
+On land: Tìm vị trí không có obstruction (cây) - Chọn vị trí cao nhất để phát tín hiệu
+- Bật công tắc sang ON - Đặt ELT thẳng đứng`, keywords: ["Emergency", "Locator", "Transmitters", "KANNAD", "AS", "perform", "pre", "check", "operate", "two"], category: "An toàn – An ninh" },
+  { id: 7, question: `(AT.7) Upon hearing "Cabin crew, cabin system check”, what systems do
+cabin crew have to check? (On B787/A321/A350/ATR72)`, answer: `cabin crew have to check? CCOM 3.5.3
+* Cabin Interphone System
+
+
+* Emergency Lighting System (không áp dụng B787)
+* Passenger call system
+* Lavatory system (hệ thống chữa cháy tự động – smoke detector – pax call)
+→ Hệ thống chữa cháy tự động của B787: check indicator dots màu TRẮNG
+* Water/waste system`, keywords: ["Upon", "hearing", "system", "check", "systems", "have", "B787", "A321", "A350", "ATR72"], category: "An toàn – An ninh" },
+  { id: 8, question: `(AT.8) As the chief purser of the flight, state the steps of security check
+procedure before boarding?`, answer: `cabin crew do? CCOM 3.6.2
+* TV đến khu vực làm việc được phân công chờ khẩu lệnh của TVT đọc đối với
+từng mục trong tờ “Danh mục kiểm tra an ninh tàu bay”
+* TVT đọc từng mục theo thứ tự từ trên xuống dưới
+* TV lắng nghe khẩu lệnh của TVT và thực hiện kiểm tra an ninh tại khu vực trách
+nhiệm. TV sẽ “thumb-up” cho TVT biết sau khi kiểm tra xong từng mục (với tàu
+A321/A320 thì TV thumb-up cho TVT - với tàu A350/B787 thì TV bên phải thumbup cho TV bên trái, sau đó TV bên trái thumb-up cho TVT)
+* TVT sau khi đọc xong danh mục kiểm tra An ninh tàu bay, sẽ làm kiểm tra an ninh
+tại khu vực trách nhiệm của mình
+* Sau khi hoàn tất kiểm tra an ninh, TVT sẽ thông báo “Security check completed”
+* TVT báo cho PIC “Captain, security check completed”
+Trong quá trình kiểm tra an ninh, nếu phát hiện vật nghi vấn, TV sẽ:
+* KHÔNG chạm, di chuyển vật nghi vấn
+* KHÔNG đổ nước hoặc đặt vật khác lên vật nghi vấn
+* KHÔNG sử dụng các thiết bị phát sóng gần vật nghi vấn
+* KHÔNG tạo ra âm thanh, thay đổi nhiệt độ hoặc rung chấn
+* Ghi nhớ đặc điểm và đánh dấu khu vực đó bằng găng tay hoặc cà vạt
+* Báo ngay cho PIC và nhà chức trách sân bay để ứng phó kịp thời`, keywords: ["chief", "purser", "state", "steps", "security", "check", "procedure", "boarding", "CCOM", "TV"], category: "An toàn – An ninh" },
+  { id: 9, question: `(AT.9) 1. When the boarding completed, what shall Purser do before closing
+the aircraft door for departure?
+2. State the correct phrases of the report to the CAPT before closing the
+aircraft door. (Example: 200 pax).
+3. During flight there is a pax asking for medicine due to fever..What
+does the purser do?`, answer: `Quy trình thực hiện Disarm bao gồm 2 TV: Một TV đọc checklist và TV còn lại sẽ
+tiến hành thực hiện các bước. Sau khi thực hiện Disarm cửa, TV sẽ thông báo cho
+TVT qua Interphone
+* TAKE THE SAFETY PIN FROM STOWAGE
+* OPEN COVER
+* DISARM SLIDE
+
+
+* INSTALL THE SAFETY PIN
+* CLOSE COVER
+* DISARM PROCEDURE COMPLETED`, keywords: ["boarding", "completed", "Purser", "closing", "aircraft", "door", "departure", "State", "correct", "phrases"], category: "An toàn – An ninh" },
+  { id: 10, question: `(AT.10) A350 - Upon hearing the command “Cabin crew, disarm all slides and
+cross-check”, what shall cabin crew do in details?`, answer: `Quy trình thực hiện Disarm bao gồm 2 TV: Một TV đọc checklist và TV còn lại sẽ
+tiến hành thực hiện các bước. Sau khi thực hiện Disarm cửa, TV sẽ thông báo cho
+TVT qua Interphone
+* TAKE THE SAFETY PIN FROM STOWAGE
+* OPEN COVER
+* DISARM SLIDE
+
+
+* INSTALL THE SAFETY PIN
+* CLOSE COVER
+* DISARM PROCEDURE COMPLETED`, keywords: ["A350", "Upon", "hearing", "command", "disarm", "all", "slides", "cross", "check", "details"], category: "An toàn – An ninh" },
+  { id: 11, question: `(AT.11) A321 Upon hearing the command “Cabin crew, disarm all slides and
+cross-check”, what should cabin crew do in details?`, answer: `Quy trình thực hiện Disarm bao gồm 2 TV: Một TV đọc check list và TV còn lại sẽ
+tiến hành thực hiện các bước. Sau khi thực hiện Disarm cửa, TV sẽ thông báo cho
+TVT qua Interphone
+* PULL ARMING LEVER
+* INSTALL SAFETY PIN
+* CHECK INDICATOR GREEN
+* DISARM PROCEDURE COMPLETED`, keywords: ["A321", "Upon", "hearing", "command", "disarm", "all", "slides", "cross", "check", "should"], category: "An toàn – An ninh" },
+  { id: 12, question: `(AT.12) Upon hearing the command "Cabin crew, check cabin and galleys for
+takeoff/ landing”, what shall cabin crew check in details?`, answer: `take off/ landing”, what shall cabin crew check? CCOM 3.11.1.2
+CHECK CABIN & HÀNH KHÁCH:
+* Hành khách cài dây an toàn, dựng thẳng lưng ghế, gấp bàn ăn, mở tấm che cửa
+sổ, hạ tay ghế và đóng chỗ để chân.
+* Hành khách phải tuân thủ các quy định về việc sử dụng PEDs
+* Infant phải ngồi ở hàng ghế có đủ mặt nạ
+* Infant được cài dây an toàn dành riêng và được cài đúng cách. Nôi được lắp
+sau khi cất cánh & FSB OFF và thu lại trước khi máy bay bắt đầu giảm độ cao
+
+
+
+để hạ cánh.
+* Hành lý xách tay của khách phải được để trong ngăn đựng hành lý phía trên
+hoặc để gọn hoàn toàn dưới gầm ghế phía trước.
+* Màn hình giải trí trong khoang khách phải được đóng lại
+* Các lối thoát hiểm không được có vật cản
+* Rèm phải được đóng và secure gọn
+* Dây an toàn tại các ghế không sử dụng phải được secure và không gây ảnh
+hưởng đến lối thoát hiểm
+* Toilet không có người và được khóa lại
+* Trong quá trình cất hạ cánh vào ban đêm, đèn phải được giảm sáng ở mức
+thấp nhất để đảm bảo tâm nhìn trong bóng tối của hành khách và TV.
+CHECK GALLEY:
+* Tất cả xe đẩy để đúng vị trí, đạp phanh, cài chốt khoá lại
+* Xe đẩy không được sử dụng cần được xếp gọn và gắn tag để nhận diện và thay
+thế
+* Xếp gọn xe đẩy khi không sử dụng trong suốt chuyến bay
+* Các thiết bị bếp rời (containers, hộc chứa, …) cần được secure vào đúng vị trí
+* Tủ, máy pha cà phê được secure.`, keywords: ["Upon", "hearing", "command", "check", "galleys", "takeoff", "landing", "details", "take", "off"], category: "An toàn – An ninh" },
+  { id: 13, question: `(AT.13) 1. State the cabin door opening procedure for international flights
+[cabin door opened by cabin crew]? [FOR A321/A350]
+2. Which skills should be used during opening the aircraft door?
+3. What must crew member check the boarding bridge or stairway
+before disembarking passengers?`, answer: `GIÁO TRÌNH ANHK BAN ĐẦU TVHK 6.2.1
+* Trước khi tiếp nhận hành khách, hành lý, hàng hóa, bưu gửi, đồ phục vụ lên tàu
+bay và sau khi hành khách, hành lý, hàng hóa, bưu gửi xuống hết khỏi tàu bay.
+* Khi có hành khách bỏ chuyến tại điểm khởi hành
+* Khi khách rời khỏi tàu bay tại điểm quá cảnh, nối chuyến, tạm dừng.`, keywords: ["State", "door", "opening", "procedure", "international", "flights", "opened", "A321", "A350", "Which"], category: "An toàn – An ninh" },
+  { id: 14, question: `(AT.14) 1. State the cabin door opening procedure for international flights
+[cabin door opened by cabin crew]? [FOR B787]
+2. Which skills should be used during opening the aircraft door?
+3. What must crew member check the boarding bridge or stairway
+before disembarking passengers?`, answer: `Quy trình thực hiện Disarm bao gồm 2 TV: Một TV đọc check list và TV còn lại sẽ
+tiến hành thực hiện các bước. Sau khi thực hiện Disarm cửa, TV sẽ thông báo cho
+TVT qua Interphone
+* OPEN COVER
+* DISARM SLIDE
+* CHECK INDICATOR ILLUMINATED
+* CLOSE COVER
+* DISARM PROCEDURE COMPLETED`, keywords: ["State", "door", "opening", "procedure", "international", "flights", "opened", "B787", "Which", "skills"], category: "An toàn – An ninh" },
+  { id: 15, question: `(AT.15) Theo quyđịnh, Tổ TV phải thực hiện kiểm tra an ninh tàu bayvào những
+thời điểm nào, trong tình huống bất thường/khai thác nào?`, answer: `GIÁO TRÌNH ANHK BAN ĐẦU TVHK 6.2.1
+* Trước khi tiếp nhận hành khách, hành lý, hàng hóa, bưu gửi, đồ phục vụ lên tàu
+bay và sau khi hành khách, hành lý, hàng hóa, bưu gửi xuống hết khỏi tàu bay.
+* Khi có hành khách bỏ chuyến tại điểm khởi hành
+* Khi khách rời khỏi tàu bay tại điểm quá cảnh, nối chuyến, tạm dừng.`, keywords: ["quyđịnh", "TV", "thực", "hiện", "kiểm", "tra", "ninh", "tàu", "bayvào", "điểm"], category: "An toàn – An ninh" },
+  { id: 16, question: `(AT.16) 1.Những đối tượng nào là hành khách tiềm ẩn uy hiếp an ninh hàng
+không?
+2.Khi nào tổ tiếp viên được khống chế hành khách gây rối?
+3. Sau khi khống chế khách gây rối, tổ bay quản lý khách gây rối như
+thế nào?`, answer: `* Người bị tâm thần.
+* Người bị từ chối nhập cảnh không tự nguyện về nước
+* Người bị dẫn độ, bị can, phạm nhân.
+
+GIÁO TRÌNH ANHK BAN ĐẦU TVHK 7.6.1
+Hành khách gây rối – là hành khách cố ý không chấp hành quy định về An toàn, An
+ninh hàng không, trật tự công cộng tại cảng hàng không, sân bay, trên tàu bay hoặc
+có hành vi tung tin, cung cấp thông tin sai uy hiếp an toàn hàng không
+(theo chương trình ANHK – VNA ban hành lần 6)
+4 MỨC ĐỘ HÀNH KHÁCH GÂY RỐI:
+* Mức độ 1: Xử sự không đúng mực dưới dạng nghi ngờ hoặc có thái độ đe dọa
+* Mức độ 2: Hành vi sỉ nhục hoặc tấn công
+* Mức độ 3: Hành vi đe dọa tính mạng
+* Mức độ 4: Mưu toan hoặc thật sự cố gắng vi phạm kỷ luật hoặc xâm phạm buồng
+lái
+CÁCH XỬ LÝ:
+* Nhắc nhở nhằm chấm dứt hành vi gây rối, giám sát chặt chẽ đối tượng
+* Một thành viên tổ bay trực tiếp tiếp xúc với hành khách để kiềm chế các hành vi
+gây rối
+* Khi hành vi gây rối có chiều hướng gia tăng, TV báo cáo cơ trưởng hoặc TVT
+nhanh nhất, TVT báo ngay cho tổ lái bằng mật khẩu an ninh: “This is … please
+unlock the door”
+* Khi cần thiết, TV trực tiếp cảnh cáo với khách: “Tôi, tiếp viên yêu cầu hành khách
+ngừng hành vi…, nếu không tôi sẽ báo cáo TVT và cơ trưởng sẽ có biện pháp cứng
+rắng hơn.”
+* Nếu khách ngồi gần cửa thoát hiểm hoặc lối đi, TV cần chuyển chỗ ra xa và ngồi
+sát cửa sổ.
+* Khi hành vi gây rối tiếp tục leo thang có nguy cơ uy hiếp đến tính mạng hành
+khách khác hoặc an toàn của máy bay, Cơ trưởng phải trực tiếp cảnh cáo hành khách
+thông qua PA
+* TV không phục vụ đồ uống có cồn, dao muỗng nĩa bằng kim loại
+* TV chọn người trợ giúp (công an, bộ đội,…) để hỗ trợ khống chế hành khách
+* TV có thể khóa tay, sử dụng công cụ khác để khống chế khách gây rối khi khách
+có hành vi đe dọa tính mạng hành khách khác và phi hành đoàn.
+* TV có thể bắt giữ hành khách gây rối nếu đe dọa đến an toàn của máy bay
+
+
+* Cơ trưởng phải báo cho nhà chức trách sân bay đến để yêu cầu các lực lượng hỗ
+trợ an ninh sân bay, công an, cứu thương (nếu cần)
+* Tổ lái không được mở cửa buồng lái trong mọi người hợp
+* PIC hoăc thành viên tổ bay lập Biên bản VPHC trong lĩnh vực HKDD để bàn giao
+khách gây rối và Biên bản cho nhà chức trách tại sân bay đến sau khi máy bay hạ
+cánh`, keywords: ["đối", "tượng", "tiềm", "hiếp", "ninh", "hàng", "khống", "chế", "gây", "rối"], category: "An toàn – An ninh" },
+  { id: 17, question: `(AT.17) 1.What is definition of dangerous goods?
+2. How many classes are there in dangerous goods?
+3. List out 5 typical classes of DGs.
+4. If the the power bank gets fire on board, what shall cabin crew deal
+with the situation?`, answer: `incident/accident on board? In case of fire, and in case of spillage or leakage
+CCOM 8.2.1
+Trường hợp có lửa → quy trình chữa cháy 3 người (CabinCrew Fire Drill)
+Trường hợp đổ chất lỏng dễ bay hơi/ dễ cháy:
+- Báo PIC tắt các nguồn điện trong galley
+- Khoá cửa cockpit
+- Tổ bay sẽ xem xét việc hạ giảm độ cao máy bay đồng thời tăng độ cao của cabin
+(cabin attitude) để thiết lập hệ thống thông gió tối đa nhằm xua tan khói
+- Chuẩn bị bình Halon để sử dụng
+** Nếu gặp phải thùng chứa chất nguy hiểm có thể bị rò rỉ hoặc đổ tràn, TV nên tìm
+cách giảm thiểu tác động của sự cố tràn và bảo vệ khu vực xung quanh khỏi bị hư
+hại thêm.
+** Nếu không có bộ DGR Kit, TV lấy túi rác nhựa lớn, khăn giấy, găng tay chống
+nóng hoặc găng tay chịu nhiệt và tiến hành như sau:
+- Bảo vệ tay bằng cách đeo găng tay chống nóng hoặc găng tay chịu nhiệt và phải
+được bọc bằng túi nhựa nhỏ bên ngoài
+- Nếu có khói, TV đội smokehood và chuẩn bị sẵn bình Halon, đồng thời di chuyển
+hành khách ra khỏi khu vực, phát khăn ướt nếu cần thiết
+- Đặt vật bị rò rỉ vào trong một túi nhựa lớn, giữ ở vị trí để tránh rò rỉ thêm và chú ý
+không làm đổ đồ bên ngoài túi
+- Lau sạch mọi vết đổ bằng khăn giấy và đặt vào trong một túi nhựa khác;
+- Đặt túi này vào trong túi thứ hai, tháo găng tay/vỏ bọc nhựa và đặt vào bên trong
+túi thứ hai, cẩn thận để tránh tiếp xúc với da khi tháo găng tay
+- Dùng một đôi găng tay nhựa mới, đóng túi thứ nhất, loại bỏ không khí thừa rồi
+đóng túi thứ hai;
+
+
+
+- Đặt đồ đã đóng gói vào thùng rác nhà vệ sinh phía sau và khóa cửa nhà vệ sinh;
+- Bất kỳ đệm, lưng ghế, v.v. nào bị bẩn phải được loại bỏ, cho vào túi nhựa và cất
+vào nhà vệ sinh cùng với hàng hóa nguy hiểm;
+- Che phủ chỗ đổ tràn trên thảm/sàn nhà
+- Thông báo cho PIC về các bước đã thực hiện và kết quả
+
+List out at least 2 Dangerous goods in operator's property? 9 CLASSES OF
+DGR (Tài liệu training DGR 5.3.1)
+Hàng nguy hiểm: là vật phẩm hoặc vật chất có thể gây rủi ro đối với sức khỏe,
+an toàn, tài sản của con người hoặc môi trường, được nêu tại danh mục hàng nguy
+hiểm trong quy định về hàng hóa nguy hiểm của IATA hoặc được phân loại theo
+quy định.
+* Nhãn nguy hiểm:
+- Cảnh báo mối nguy hiểm liên quan hàng hoá bên trong kiện hàng
+- Mỗi loại/nhóm chỉ có 1 nhãn nhận dạng duy nhất, dán bên ngoài kiện hàng
+- Phải phù hợp với chi tiết kỹ thuật (size, hình dạng, màu sắc, ký hiệu, số
+loại/nhóm), và các nhãn có thể có chữ để thể hiện tính chất nguy hiểm
+- Nhãn có hình vuông xoay 1 góc 45 độ, minimum size 100x100 mm
+- Đúng mẫu quy định tại TI (technical instruction) và DGR
+* Nhãn phục vụ:
+Một số hàng nguy hiểm yêu cầu có nhãn phục vụ đặc biệt bên cạnh nhãn nguy
+hiểm vì chúng cần được phục vụ hoặc chất xếp
+→ Dangerous goods in operator's property: Đá khô, bình oxy, bình halon
+9 LOẠI HÀNG NGUY HIỂM
+LOẠI 1 – CHẤT NỔ (Explosives)
+* Nhóm 1.1: Vật phẩm hoặc chất có tính nguy hiểm nổ lớn
+* Nhóm 1.2: Vật phẩm hoặc chất có tính nguy hiểm nổ văng mảnh
+* Nhóm 1.3: Vật phẩm hoặc chất có tính nguy hiểm nổ nhỏ hoặc văng mảnh
+* Nhóm 1.4: Vật phẩm hoặc chất có tính nguy hiểm nổ không đáng kể
+* Nhóm 1.5: Vật phẩm hoặc chất kém nhạy có tính nguy hiểm nổ lớn
+* Nhóm 1.6: Vật phẩm hoặc chất rất kém nhạy và không có tính nguy hiểm nổ lớn
+
+
+
+LOẠI 2 – CHẤT KHÍ (Gases)
+* Nhóm 2.1: Chất khí dễ cháy
+* Nhóm 2.2: Chất khí không cháy không độc
+* Nhóm 2.3: Khí độc
+LOẠI 3 – CHẤT LỎNG DỄ CHÁY (Flammable Liquids)
+LOẠI 4 – CHẤT RẮN DỄ CHÁY (Flammable Solids)
+* Nhóm 4.1: Chất rắn dễ cháy
+* Nhóm 4.2: Chất có thể tự bốc cháy
+* Nhóm 4.3: Chất nguy hiểm khi gặp nước
+LOẠI 5 – CHẤT OXY HOÁ & PEROXIDE HỮU CƠ (Oxidizing Substances
+& Organic Peroxides)
+* Nhóm 5.1: Chất oxy hoá
+* Nhóm 5.2: Peroxide hữu cơ
+LOẠI 6 – CHẤT ĐỘC & CHẤT LÂY NHIỂM (Toxic, Infectious Substances)
+* Nhóm 6.1: Chất độc
+* Nhóm 6.2: Chất lây nhiễm
+LOẠI 7 – CHẤT PHÓNG XẠ (Radioactive Materials)
+LOẠI 8 – CHẤT ĂN MÒN (Corrossive)
+LOẠI 9 – CÁC LOẠI HÀNG NGUY HIỂM KHÁC (Micellaneous Dangerous
+Goods)`, keywords: ["definition", "dangerous", "goods", "many", "classes", "there", "List", "out", "typical", "DG"], category: "An toàn – An ninh" },
+  { id: 18, question: `(AT.18) 1. As the dangerous goods regulation, how many types of label of
+dangerous goods are there and state the name of each label?`, answer: `List out at least 2 Dangerous goods in operator's property? 9 CLASSES OF
+DGR (Tài liệu training DGR 5.3.1)
+Hàng nguy hiểm: là vật phẩm hoặc vật chất có thể gây rủi ro đối với sức khỏe,
+an toàn, tài sản của con người hoặc môi trường, được nêu tại danh mục hàng nguy
+hiểm trong quy định về hàng hóa nguy hiểm của IATA hoặc được phân loại theo
+quy định.
+* Nhãn nguy hiểm:
+- Cảnh báo mối nguy hiểm liên quan hàng hoá bên trong kiện hàng
+- Mỗi loại/nhóm chỉ có 1 nhãn nhận dạng duy nhất, dán bên ngoài kiện hàng
+- Phải phù hợp với chi tiết kỹ thuật (size, hình dạng, màu sắc, ký hiệu, số
+loại/nhóm), và các nhãn có thể có chữ để thể hiện tính chất nguy hiểm
+- Nhãn có hình vuông xoay 1 góc 45 độ, minimum size 100x100 mm
+- Đúng mẫu quy định tại TI (technical instruction) và DGR
+* Nhãn phục vụ:
+Một số hàng nguy hiểm yêu cầu có nhãn phục vụ đặc biệt bên cạnh nhãn nguy
+hiểm vì chúng cần được phục vụ hoặc chất xếp
+→ Dangerous goods in operator's property: Đá khô, bình oxy, bình halon
+9 LOẠI HÀNG NGUY HIỂM
+LOẠI 1 – CHẤT NỔ (Explosives)
+* Nhóm 1.1: Vật phẩm hoặc chất có tính nguy hiểm nổ lớn
+* Nhóm 1.2: Vật phẩm hoặc chất có tính nguy hiểm nổ văng mảnh
+* Nhóm 1.3: Vật phẩm hoặc chất có tính nguy hiểm nổ nhỏ hoặc văng mảnh
+* Nhóm 1.4: Vật phẩm hoặc chất có tính nguy hiểm nổ không đáng kể
+* Nhóm 1.5: Vật phẩm hoặc chất kém nhạy có tính nguy hiểm nổ lớn
+* Nhóm 1.6: Vật phẩm hoặc chất rất kém nhạy và không có tính nguy hiểm nổ lớn
+
+
+
+LOẠI 2 – CHẤT KHÍ (Gases)
+* Nhóm 2.1: Chất khí dễ cháy
+* Nhóm 2.2: Chất khí không cháy không độc
+* Nhóm 2.3: Khí độc
+LOẠI 3 – CHẤT LỎNG DỄ CHÁY (Flammable Liquids)
+LOẠI 4 – CHẤT RẮN DỄ CHÁY (Flammable Solids)
+* Nhóm 4.1: Chất rắn dễ cháy
+* Nhóm 4.2: Chất có thể tự bốc cháy
+* Nhóm 4.3: Chất nguy hiểm khi gặp nước
+LOẠI 5 – CHẤT OXY HOÁ & PEROXIDE HỮU CƠ (Oxidizing Substances
+& Organic Peroxides)
+* Nhóm 5.1: Chất oxy hoá
+* Nhóm 5.2: Peroxide hữu cơ
+LOẠI 6 – CHẤT ĐỘC & CHẤT LÂY NHIỂM (Toxic, Infectious Substances)
+* Nhóm 6.1: Chất độc
+* Nhóm 6.2: Chất lây nhiễm
+LOẠI 7 – CHẤT PHÓNG XẠ (Radioactive Materials)
+LOẠI 8 – CHẤT ĂN MÒN (Corrossive)
+LOẠI 9 – CÁC LOẠI HÀNG NGUY HIỂM KHÁC (Micellaneous Dangerous
+Goods)`, keywords: ["dangerous", "goods", "regulation", "many", "types", "label", "there", "state", "name", "each"], category: "An toàn – An ninh" },
+  { id: 19, question: `(AT.19) State the refueling procedure when passengers remain on board based
+on safety notice 100 / date effected 14/2/2026.`, answer: `(CCOM 3.20)
+* Tất cả các thành viên phi hành đoàn, hành khách, nhân viên cần được thông báo
+về quá trình nạp dầu sẽ được diễn ra và hoàn tất. Số lượng TV còn lại trên tàu sẽ
+bằng số cửa thoát hiểm chính. Các TV này sẽ đứng tại khu vực cửa phụ trách trong
+khi quá trình nạp dầu diễn ra. Ít nhất có 1 TV đủ tiêu chuẩn và được đào tạo về quy
+trình thoát hiểm khẩn cấp.
+* TVT sẽ đọc phát thanh để thông báo về thời điểm bắt đầu và kết thúc quá trình nạp
+dầu. Hành khách phải được hướng dẫn tháo dây an toàn, không hút thuốc, không sử
+dụng các vật liệu có thể gây ra cháy nổ và tắt các thiết bị điện tử.
+* Ngoài ra:
+- Tín hiệu: FSB OFF - NO SMOKING ON - EXIT SIGN ON
+- Hành khách: cần được hướng dẫn tháo dây an toàn, không hút thuốc, tắt các thiết
+bị điện tử
+- Lối thoát hiểm trên máy bay cần thông thoáng không có vật cản
+- Lối thoát hiểm dưới mặt đất cần thông thoáng không có vật cản
+- Cửa phía trước mở và được gắn với ống lồng hoặc thang
+- Cửa 4R ở chế độ ARMED cho đến khi hoàn tất nạp dầu
+- Các cửa khác để ở chế độ DISARMED và sẽ được ARMED trong trường hợp thoát
+hiểm khẩn cấp
+- Dịch vụ mặt đất: vệ sinh, cung ứng kết thúc trước khi quá trình nạp dầu khi có hành
+khách trên tàu diễn ra
+- Khi phát hiện có dấu hiệu cháy, khói => phải dừng ngay quá trình nạp dầu.
+
+
+
+* Thông tin liên lạc 2 chiều sẽ được thiết lập thông qua hệ thống liên lạc nội bộ của
+tàu bay giữa nhân viên giám sát mặt đất và các cá nhân được qualified trên tàu.
+* Note: TV phải luôn cảnh giác trong quá trình nạp dầu. Nếu phát hiện bất thường
+hoặc tình huống khẩn cấp cần báo ngay tổ lái bằng nút EMER hoặc ** (B787) trên
+Interphone`, keywords: ["State", "refueling", "procedure", "passengers", "remain", "board", "based", "safety", "notice", "date"], category: "An toàn – An ninh" },
+  { id: 20, question: `(AT.20) State the fire -fighting procedure for lithium battery fire.`, answer: `Trường hợp: PED overheat (quá nóng) và không có khói/lửa
+* Xác định PED (nguyên nhân gây overheat, mùi khét và hỏi khách trong khu vực)
+* Hướng dẫn hành khách tắt PED ngay lập tức
+* Ngắt nguồn điện (power)
+- Tháo thiết bị ra khỏi nguồn (power supply) (nếu an toàn)
+- Tắt nguồn điện tại ghế
+- Đảm bảo nguồn điện & thiết bị phải được tắt trong suốt quá trình bay còn lại (không
+có gắng tháo pin ra khỏi thiết bị)
+* Hướng dẫn khách để thiết bị ở vị trí dễ quan sát
+* Nếu có khói/lửa → xử lý theo trường hợp PED có khói/cháy
+* Sau khi đáp, TVT ghi các báo cáo liên quan
+Trường hợp: PED bị rớt/kẹt dưới ghế hạng C (tàu A350/B787)
+* Thông báo cho PIC và các thành viên khác trong tổ
+* Lấy thông tin từ khách
+* Sử dụng thiết bị bảo vệ (găng tay chống nóng) để lấy PED (đổi chỗ khách nếu còn
+ghế trống, không điều khiển các chức năng của ghế và không di chuyển ghế trong
+quá trình lấy PED)
+* Nếu có khói/lửa → xử lý theo trường hợp PED có khói/cháy
+* Sau khi đáp, thông báo cho thợ máy nơi PED bị rớt/kẹt để hỗ trợ tìm kiếm và TVT
+ghi các báo cáo liên quan
+Trường hợp: Pin/PED có khói/cháy
+
+
+* Xác định nguồn cháy (để đảm bảo an toàn, không nên mở hành lý có chứa Pin/PED
+đang cháy/khói)
+* Áp dụng quy trình chữa cháy Cabin Crew Fire Drill
+* Ngắt nguồn điện (power)
+- Tháo thiết bị ra khỏi nguồn (power supply) (nếu an toàn)
+- Tắt nguồn điện tại ghế
+- Đảm bảo nguồn điện & thiết bị phải được tắt trong suốt quá trình bay còn lại (không
+có gắng tháo pin ra khỏi thiết bị)
+* Nhúng chìm Pin/PED vào nước / chất lỏng không bắt lửa
+* Giám sát thường xuyên để tránh Pin/PED bắt lửa lại
+* Khi Pin/PED được làm mát (sau khoảng 10-15 phút) → TV lấy container, đổ đầy
+nước vào trong, lấy găng tay chống nóng và đặt Pin/PED vào trong container đã
+ngập nước, secure container để tránh bị tràn chất lỏng ra ngoài
+* Giám sát thiết bị và khu vực xung quanh trong khoảng thời gian còn lại
+* Sau khi hạ cánh → thông báo cho thợ máy nơi để Pin/PED và những thông tin cần
+thiết, TVT ghi các báo cáo liên quan
+Trường hợp: Pin/PED có khói/cháy trên overhead
+* Áp dụng quy trình chữa cháy Cabin Crew Fire Drill
+* Nếu tìm / tiếp cận được thiết bị → chữa cháy và làm các bước tiếp theo
+* Nếu khói từ overhead và chưa tìm / tiếp cận được thiết bị → di dời các hành lý
+khác và tiếp cận gần với hành lý có chứa Pin/PED đang cháy
+* Xác định Pin/PED đang cháy/khói (để đảm bảo an toàn, không nên mở hành lý có
+chứa Pin/PED đang cháy/khói)
+* Nhúng chìm Pin/PED vào nước / chất lỏng không bắt lửa
+* Khi Pin/PED được làm mát (sau khoảng 10-15 phút) → TV lấy container, đổ đầy
+nước vào trong, lấy găng tay chống nóng và đặt Pin/PED vào trong container đã
+ngập nước, secure container để tránh bị tràn chất lỏng ra ngoài
+* Giám sát thiết bị và khu vực xung quanh trong khoảng thời gian còn lại
+* Sau khi hạ cánh → thông báo cho thợ máy nơi để Pin/PED và những thông tin cần
+thiết, TVT ghi các báo cáo liên quan`, keywords: ["State", "fire", "fighting", "procedure", "lithium", "battery", "Trường", "hợp", "PED", "overheat"], category: "An toàn – An ninh" },
+  { id: 21, question: `(AT.21) 1. State the pre-flight check of Portable Oxygen Bottle (POB) of B787.
+2. State the differences for the pre-flight check of adult's lifevest and
+spare lifevest / lifevest for infant?`, answer: `bottle Tranning Edoc 3.1.2.1 vs CCOM 5.2.3
+* Pre-flight check:
+Số lượng và vị trí - Lấy bình ra khỏi giá đỡ - Van ON/OFF ở vị trí OFF - Đồng hồ
+áp suất chỉ 1500-1850 PSI - Mặt nạ gắn với bình oxy - Đặt lại vị trí ban đầu và tránh
+cài chốt lên ống dẫn oxy
+* Operation: Lấy mặt nạ ra khỏi túi - Vặn van sang vị trí ON (Đèn LED sẽ sáng) Đặt mặt nạ lên mũi và miệng
+* Duration: 180 phút và ở chế độ 4 lít`, keywords: ["State", "pre", "check", "Portable", "Oxygen", "Bottle", "POB", "B787.", "differences", "adult"], category: "An toàn – An ninh" },
+  { id: 22, question: `(AT.22) State the pre-flight check of Smoke Hood (Scott PBE) of A321 Neo`, answer: `PBE? CCOM 5.4.4
+* Pre-flight check:
+Số lượng và vị trí - Lấy hộp ra khỏi gía đỡ - Kiểm tra còn seal – Indicator màu
+VÀNG - Hộp không bị tác động - Đặt lại vị trí ban đầu
+* Operation:
+Mở hộp và lấy mặt nạ ra khỏi túi bạc – Đội smoke hood lên đầu đảm bảo túi thở ở
+phía trước ngực - Đảm bảo vòng đệm cổ (neck seal) không có vật cản (tóc, cổ áo …)
+và dây đai đầu (head harness) được kéo xuống hết - Đặt mặt nạ sát với mũi và miệng
+& kéo sợi dây đen để kích hoạt oxy - Thắt dây đeo quanh eo
+* Duration: 20 phút`, keywords: ["State", "pre", "check", "Smoke", "Hood", "Scott", "PBE", "A321", "Neo", "CCOM"], category: "An toàn – An ninh" },
+  { id: 23, question: `(AT.23) What kinds of safety information must be provided to special assist
+passengers (blind pax, deaf pax, handicapped pax) during personal
+safety briefing before take-off?`, answer: `CCOM 2.13.1.1 f) + PHM 2.1.15 + VAR 13.035
+* Đổi chỗ hành khách này sang một ghế khác không phải ghế tại cửa thoát hiểm, sau
+đó báo cáo TVT
+* Trường hợp không còn chỗ ngồi xa cửa thoát hiểm, và nếu cần phải cung cấp chỗ
+ngồi cho hành khách phải di chuyển khỏi chỗ ngồi tại hàng ghế ở lối thoát hiểm, TV
+phải di chuyển một hành khách khác mà sẵn lòng và có khả năng đảm nhận nhiệm
+vụ thoát hiểm, vào chỗ ngồi tại hàng ghế ở lối thoát hiểm`, keywords: ["kinds", "safety", "information", "provided", "special", "assist", "passengers", "blind", "pax", "deaf"], category: "An toàn – An ninh" },
+  { id: 24, question: `(AT.24) In which cases shall the aircraft safety equipment and cabin system
+check be conducted by the cabin crew?
+Who can conduct the preflight safety equipment and system check in
+the cabin?`, answer: `A/C Type
+Long-range overwater Flights
+
+Other Flights
+
+B787
+
+8
+
+A350
+
+8
+8/195
+
+6
+
+5
+
+16/162
+16/168
+
+5
+
+4
+
+A320
+
+5
+
+4
+
+ATR 72
+
+N/A
+
+2
+
+A321
+
+____________________________________________________
+
+
+
+AN TOÀN KHAI THÁC (FOM)`, keywords: ["which", "cases", "aircraft", "safety", "equipment", "system", "check", "conducted", "can", "conduct"], category: "An toàn – An ninh" },
+  { id: 25, question: `(KT1) Thời gian bay được tính như thế nào?
+Tiếp viên Nguyễn Văn A bay SGN-CXR-SGN, giờ khởi hành tại SGN
+là 10:50, giờ đóng chèn tại CXR lúc 12:00, sau đó baychuyển sân CXR-
+SGN bằng vé từ 15:00 - 16:10, thời gian bay được tính từ thời điểm nào
+đến thời điểm nào?`, answer: `→ Flight Time: là tổng thời gian được tính từ khi máy bay bắt đầu chuyển động khỏi
+nơi đỗ để cất cánh cho đến khi dừng lại tại điểm kết thúc chuyến bay và các động cơ
+đều tắt.
+** Maximum FT: 100h/28 ngày liên tiếp và 1000h/12 tháng liên tiếp
+** Flight Time tối đa được tính dựa trên 2 yếu tố: Giờ có mặt nhận nhiệm vụ và số
+lần cất hạ cánh
+
+
+
+VD: Tiếp viên Nguyễn Văn A bay SGN-CXR-SGN khởi hành tại SGN 10:50, đến
+CXR lúc 12h00, sau đó bay chuyển sân CXR-SGN bằng vé từ 15:00 - 16:10, thời
+gian bay được tính từ thời điểm nào đến thời điểm nào?
+→ Thời gian bay được tính từ 10:50 – 12:00`, keywords: ["bay", "tính", "thế", "Nguyễn", "Văn", "SGN", "CXR", "giờ", "khởi", "đóng"], category: "Khai thác (FOM)" },
+  { id: 26, question: `(KT2) Hãygiải thích vắn tắt thời gian làmnhiệmvụ bayđược tính như thế nào?
+Nếu TV được chuyển sân ngay trước chuyến bay làm nhiệm vụ thì thời
+gian làm nhiệm vụ bay được tính như thế nào?`, answer: `→ Flight Duty Period: là tổng thời gian từ khi một thành viên tổ bay có mặt nhận
+nhiệm vụ bay cho đến khi hoàn thành chuyến bay cuối mà người đó là thành viên
+làm việc trên chuyến bay đó (FDP = 1h trước EDT + 15 phút sau khi máy bay đóng
+chèn)
+→ FDP bao gồm những khoảng thời gian nào:
+• Thời gian bay (Flight Time)
+• Trước chuyến bay (1 giờ trước EDT) và sau chuyến bay (15 phút sau khi máy
+bay đóng chèn)
+• Thời gian transit nếu không được cung cấp chỗ nghỉ phù hợp
+• Thời gian di chuyển deadhead trước chuyến bay làm nhiệm vụ (FDP sẽ được
+tính từ lúc bắt đầu chuyến bay deadhead)
+• Trực dự bị nếu nếu không được cung cấp chỗ nghỉ phù hợp
+Tổng thời gian làm nhiệm vụ bay ngắn hơn thời gian làm nhiệm vụ
+FLIGHT TIME < FLIGHT DUTY PERIOD < DUTY PERIOD`, keywords: ["Hãygiải", "thích", "vắn", "tắt", "làmnhiệmvụ", "bayđược", "tính", "thế", "TV", "chuyển"], category: "Khai thác (FOM)" },
+  { id: 27, question: `(KT3) Khái niệm thời gian dự bị được hiểu như thế nào, có mấy loại trực dự
+bị?
+Cho biết cách tính thời gian làm nhiệm vụ của các loại trực dự bị?`, answer: `* Di chuyển deadhead không được tính là 1 sector
+* Thời gian di chuyển deadhead được tính là Duty Period (DP)
+* Di chuyển deadhead sau khi reporting và trước khi operating được xem là FDP`, keywords: ["Khái", "niệm", "hiểu", "thế", "mấy", "loại", "trực", "cách", "tính", "làm"], category: "Khai thác (FOM)" },
+  { id: 28, question: `(KT4) Theo quy định, khoảng thời gian làm nhiệm vụ cộng dồn của thành viên
+tổ bay không được vượt quá các giới hạn nào (7 ngày, 14 ngày, 28 ngày
+liên tục bất kỳ)?`, answer: `→ Tổng thời gian bay không được vượt quá 100 giờ trong 28 ngày liên tục`, keywords: ["quy", "định", "khoảng", "làm", "cộng", "dồn", "thành", "bay", "vượt", "quá"], category: "Khai thác (FOM)" },
+  { id: 29, question: `(KT5) Thời gian bay tối đa theo giới hạn 12 tháng liên tục bất kỳ, giới hạn 28
+ngày liên tục bất kỳ, của từng thành viên tổ bay làm nhiệm vụ trên
+chuyến bay như thế nào?
+Tiếp viên Nguyễn Văn A bay SGN-CXR bằng tàu A321 khởi hành
+09:00, đến CXR 10:10, sau đó chuyển sân CXR-SGN bằng vé FOC về
+tại SGN lúc 13:00, thời gian làm nhiệm vụ bay tính như thế nào?`, answer: `→ Tổng thời gian bay không được vượt quá 100 giờ trong 28 ngày liên tục
+
+tại SGN 12:30 sau đó bay tiếp SGN-DAD 14:00 đáp tại DAD 15:00, 19:00 chuyển
+sân về FOC đáp tại SGN lúc 20:00, thời gian nghỉ phục hồi theo quy định là bao lâu?
+→ TV cần nghỉ 12h`, keywords: ["bay", "tối", "giới", "hạn", "tháng", "liên", "tục", "bất", "ngày", "từng"], category: "Khai thác (FOM)" },
+  { id: 30, question: `(KT6) Khái niệm “Thời gian làm nhiệm vụ bay” được hiểu như thế nào?
+Thời gian có mặt làm nhiệm vụ bay (giờ địa phương-trong trạng thái
+thích nghi) là từ 15h30-15h59, với số lần cất hạ cánh là 4, thì khoảng
+thời gian làm nhiệm vụ bay của tổ tiếp viên được giới hạn là bao nhiêu?`, answer: `thái thích nghi) từ 14:00 – 14:29, với số lần cất hạ cánh 4, thì khoảng thời gian làm
+nhiệm vụ bay của tổ tiếp viên được giới hạn?
+→ 11:30`, keywords: ["Khái", "niệm", "làm", "bay", "hiểu", "thế", "mặt", "giờ", "địa", "phương"], category: "Khai thác (FOM)" },
+  { id: 31, question: `(KT7) Khái niệm “Thời gian làm nhiệm vụ bay” được hiểu như thế nào?
+Thời gian có mặt làm nhiệm vụ bay (giờ địa phương-trong trạng thái
+thích nghi) là từ 06h00-13h29, với số lần cất hạ cánh là 1 hoặc 2, thì
+Khoảng thời gian làm nhiệm vụ bay của tổ tiếp viên được giới hạn là
+bao nhiêu?`, answer: `thái thích nghi) từ 05:00 - 05:14, với số lần cất hạ cánh 4, thì khoảng thời gian làm
+nhiệm vụ bay của tổ tiếp viên được giới hạn?
+→ 11:00
+CÂU 17 Thời gian có mặt làm nhiệm vụ của tổ TV (giờ địa phương - trong trạng
+thái thích nghi) từ 05:15 - 05:29, với số lần cất hạ cánh là 1 hoặc 2, thì khoảng thời
+gian làm nhiệm vụ bay của tổ tiếp viên được giới hạn?
+→ 12:15`, keywords: ["Khái", "niệm", "làm", "bay", "hiểu", "thế", "mặt", "giờ", "địa", "phương"], category: "Khai thác (FOM)" },
+  { id: 32, question: `(KT8) Khái niệm “Thời gian làm nhiệm vụ bay” được hiểu như thế nào?
+Thời gian có mặt làm nhiệm vụ bay (giờ địa phương-trong trạng thái
+thích nghi) là từ 14h00-14h29, với số lần cất hạ cánh là 4, thì Khoảng
+thời gian làm nhiệm vụ bay tối đa của tổ tiếp viên được giới hạn là bao
+nhiêu?`, answer: `thái thích nghi) từ 14:00 – 14:29, với số lần cất hạ cánh 4, thì khoảng thời gian làm
+nhiệm vụ bay của tổ tiếp viên được giới hạn?
+→ 11:30`, keywords: ["Khái", "niệm", "làm", "bay", "hiểu", "thế", "mặt", "giờ", "địa", "phương"], category: "Khai thác (FOM)" },
+  { id: 33, question: `(KT9) Khái niệm “Thời gian làm nhiệm vụ bay” được hiểu như thế nào?
+Thời gian có mặt làm nhiệm vụ bay (giờ địa phương-trong trạng thái
+thích nghi) là từ 17h00-04h59, với số lần cất hạ cánh là 1 hoặc 2, thì
+Khoảng thời gian làm nhiệm vụ bay của tổ tiếp viên được giới hạn là
+bao nhiêu?`, answer: `thái thích nghi) từ 17:00 - 04:59, với số lần cất hạ cánh là 1 hoặc 2, thì khoảng thời
+gian làm nhiệm vụ bay của tổ tiếp viên được giới hạn?
+→ 11:00`, keywords: ["Khái", "niệm", "làm", "bay", "hiểu", "thế", "mặt", "giờ", "địa", "phương"], category: "Khai thác (FOM)" },
+  { id: 34, question: `(KT10) Thời gian làm nhiệm vụ là gì?
+Tiếp viên Nguyễn Văn A bay CDG-HAN đáp tại HAN lúc 06:30,
+chuyển sân bằng vé khách HAN-SGN từ 09h30-11h30. Quãng thời gian
+09h30-11h30 được tính là thời gian gì?`, answer: `→ Duty Period: là tổng thời gian từ khi thành viên tổ bay được Nhà khai thác yêu
+cầu có mặt làm nhiệm vụ và kết thúc khi thành viên tổ bay không phải làm bất kỳ
+nhiệm vụ nào nữa
+** Maximum Duty Period: 60 giờ/7 ngày liên tiếp & 110 giờ/14 ngày liên tiếp &
+190 giờ/28 ngày liên tiếp
+
+sân vé khách HAN-SGN cất cánh 09h30. Quãng thời gian 07:00-08:30 được tính là
+gì?
+→ Là thời gian làm nhiệm vụ`, keywords: ["làm", "Nguyễn", "Văn", "bay", "CDG", "HAN", "đáp", "lúc", "chuyển", "sân"], category: "Khai thác (FOM)" },
+  { id: 35, question: `(KT11) Thời gian bay tối đa cho 01 nhiệm vụ bay được quy định căn cứ theo
+những yếu tố nào?
+Tiếp viên Nguyễn Văn A baySGN-CXR-SGN khai thác bằng tàu A321,
+khởi hành 09h00- đáp tại SGN 12h30, sau đó bay tiếp SGN-DAD 14:00
+đáp tại DAD 15:00, 19:00 chuyển sân vé FOC đáp tại SGN lúc 20:00,
+TV có bị vượt thời gian bay tối đa không?`, answer: `→ Tổng thời gian bay không được vượt quá 100 giờ trong 28 ngày liên tục`, keywords: ["bay", "tối", "quy", "định", "căn", "yếu", "Nguyễn", "Văn", "baySGN", "CXR"], category: "Khai thác (FOM)" },
+  { id: 36, question: `(KT12) Theo quyđịnh, thời gian chuyển sân trước chuyến bay(có thời gian nghỉ
+ít hơn 10h) được cộng dồn vào nhóm thời gian nào?
+Tiếp viên Nguyễn Văn A chuyển sân SGN-HAN khởi hành 14h đáp 16h
+để bay HAN-BKK-HAN khởi hành 18h cùng ngày. Quãng thời gian
+16h15-18h được tính là thời gian gì?`, answer: `để bay HAN-BKK-HAN cất cánh 18:00 cùng ngày. Quãng thời gian 16:15-18:00
+được tính là
+→ Thời gian làm nhiệm vụ bay
+
+để bay HAN-BKK-HAN cất cánh 18:00 cùng ngày. Quãng thời gian 14:00-18:00
+được coi là …
+→ Thời gian làm nhiệm vụ bay`, keywords: ["quyđịnh", "chuyển", "sân", "trước", "bay", "nghỉ", "hơn", "cộng", "dồn", "vào"], category: "Khai thác (FOM)" },
+  { id: 37, question: `(KT13) Tiếp viên NguyễnVăn A chuyển sân trên VN214 chặng SGN-HAN khởi
+hành 14h đáp 16h để bay 1 chuyến khác khởi hành 18h cùng ngày.
+Quãng thời gian 14h-16h được tính là thời gian gì?
+Tiếp viên B tham gia phục vụ chuyến bay khai thác bằng tàu A321,
+VN214 chặng SGN-HAN khởi hành 14h đáp 16h, thời gian làm nhiệm
+vụ bay và thời gian bay được tính như thế nào?`, answer: `hành 14:00 đáp 16:00, các khoảng thời gian làm nhiệm vụ ,nhiệm vụ bay và thời
+gian bay được tính như thế nào?
+→ Đối với TV A các khoảng thời gian được tính như sau:
+• Duty Period: 12h30-16h15
+• Flight Duty Period: 13h00-16h15
+
+
+• Flight Time: từ 14h-16h00`, keywords: ["NguyễnVăn", "chuyển", "sân", "VN214", "chặng", "SGN", "HAN", "khởi", "đáp", "bay"], category: "Khai thác (FOM)" },
+  { id: 38, question: `(KT14) Theo quy định FOM/CCOM tiếp viên phải giám định lại sức khoẻ trong
+các trường hợp nào?
+Theo quy định tại căn cứ chính, khi bị ốm, tiếp viên có lịch bay, dự bị
+phải thông báo đến OCC bao lâu trước giờ khởi hành, trước giờ trực dự
+bị?
+Ngoài căn cứ chính, khi bị ốm, TV có lịch bay phải thông báo đến OCC
+bao lâu trước giờ khởi hành?`, answer: `* TV báo ốm tối thiểu 4h trước EDT (main base) và 1h trước thời gian Standby.
+* Nếu ngoài mainbase, TV phải báo ốm tối thiểu 12h trước EDT
+* TV sẽ đi giám định lại sức khoẻ nếu:
+- Baoom >= 3 lần / 30 ngày liên tục
+- Baoom >20 ngày / lần báo ốm
+____________________________________________________`, keywords: ["quy", "định", "FOM", "CCOM", "giám", "lại", "sức", "khoẻ", "trường", "hợp"], category: "Khai thác (FOM)" },
+  { id: 39, question: `(KT15) Một Tiếp viên trước khi nhận nhiệm vụ bay mới tại căn cứ chính, ngoài
+căn cứ chính cần một khoảng thời gian nghỉ ngơi bao lâu?
+Điều kiện nghỉ ngơi gồm những yếu tố gì?`, answer: `→ Ít nhất phải bằng thời gian đã làm nhiệm vụ ngay trước đó nhưng không được ít
+hơn 12 giờ (main base) và 10h (ngoài main base)
+
+→ Phải bằng với thời gian làm nhiệm vụ trước đó hoặc không nhỏ hơn 10 giờ, chọn
+giá trị lớn hơn. Khoảng thời gian nghỉ ngơi này phải bao gồm 08 giờ ngủ cộng thêm
+với thời gian di chuyển và thời gian cho nhu cầu sinh lý cá nhân khác`, keywords: ["trước", "nhận", "bay", "mới", "căn", "chính", "ngoài", "cần", "khoảng", "nghỉ"], category: "Khai thác (FOM)" },
+  { id: 40, question: `(KT16) Thời gian nghỉ phục hồi giữa 2 nhiệm vụ bay được quy định như thế
+nào?
+Tiếp viên Nguyễn Văn A bay SGN-DAD-SGN tàu A321, khởi hành
+09h00, đáp tại SGN 12h30, sau đó bay tiếp SGN-DAD 14:00 đáp tại
+DAD 15:00, 19:00 chuyển sân về FOC về đáp tại SGN lúc 20:00, thời
+gian nghỉ phục hồi theo quy định là bao lâu?`, answer: `là bao lâu
+→ 36 giờ liên tục bao gồm 02 đêm địa phương. Định kỳ 02 lần mỗi tháng, khoảng
+thời gian nghỉ ngơi hồi phục phải được tăng lên để bao gồm 02 ngày theo giờ địa
+phương.
+(Phải có ít nhất 2 FOM đôi / tháng)`, keywords: ["nghỉ", "hồi", "giữa", "bay", "quy", "định", "thế", "Nguyễn", "Văn", "SGN"], category: "Khai thác (FOM)" },
+  { id: 41, question: `(KT17) Tiếp viên Nguyễn Văn A có lịch trực RA từ 05h00-15h00. Đến 08h tiếp
+viên nhận tin nhắn đi bay SGN-HPH-SGN khai thác tàu A321, cất cánh
+11h50. Vì lý do thời tiết, chặng bay HPH-SGN delay và đóng chèn tại
+SGN lúc 21h cùng ngày. Theo anh/chị, FDP của Tv được tính từ thời
+điểm nào, FDP có giá trị là bao nhiêu và có vượt quá giới hạn quy định
+hay không?`, answer: `viên nhận tin nhắn đi bay SGN-HPH-SGN cất cánh 11:50. Khoảng thời gian làm
+nhiệm vụ bay của TV Nguyễn Văn A được tính từ …
+→ 1h trước giờ cất cánh (10:50)`, keywords: ["Nguyễn", "Văn", "lịch", "trực", "RA", "nhận", "tin", "nhắn", "bay", "SGN"], category: "Khai thác (FOM)" },
+  { id: 42, question: `(KT18) Số lượng tiếp viên tối thiểu trên những chuyến bay chở khách của Hãng
+sẽ được bố trí theo nguyên tắc nào?`, answer: `A/C Type
+Long-range overwater Flights
+
+Other Flights
+
+B787
+
+8
+
+A350
+
+8
+8/195
+
+6
+
+5
+
+16/162
+16/168
+
+5
+
+4
+
+A320
+
+5
+
+4
+
+ATR 72
+
+N/A
+
+2
+
+A321
+
+____________________________________________________
+
+
+
+AN TOÀN KHAI THÁC (FOM)`, keywords: ["lượng", "tối", "thiểu", "bay", "chở", "Hãng", "trí", "nguyên", "tắc", "Type"], category: "Khai thác (FOM)" },
+  { id: 43, question: `(KT19) Theo FOM, để đổi lịch cho nhau, hai tiếp viên phải thỏa mãn những
+điều kiện nào?`, answer: `- Theo tình hình khai thác
+- Theo nguyện vọng của TV
+- Theo mức độ cần thiết`, keywords: ["FOM", "đổi", "lịch", "nhau", "hai", "thỏa", "mãn", "điều", "kiện", "tình"], category: "Khai thác (FOM)" },
+  { id: 44, question: `(KT20) Số lượng tiếp viên tối thiểu cần cho khai thác đối với chuyến baythương
+mại trên từng loại máy bay dưới dây là bao nhiêu
+- A350
+- B787
+- A321 (có config ghế 08C/195Y)
+- A321 (có config ghế 16C/162Y hoặc 16C/168Y)`, answer: `A/C Type
+Long-range overwater Flights
+
+Other Flights
+
+B787
+
+8
+
+A350
+
+8
+8/195
+
+6
+
+5
+
+16/162
+16/168
+
+5
+
+4
+
+A320
+
+5
+
+4
+
+ATR 72
+
+N/A
+
+2
+
+A321
+
+____________________________________________________
+
+
+
+AN TOÀN KHAI THÁC (FOM)`, keywords: ["lượng", "tối", "thiểu", "cần", "khai", "thác", "đối", "baythương", "mại", "từng"], category: "Khai thác (FOM)" },
+  { id: 45, question: `(KT21) Khi bố trí tổ tiếp viên tăng cường, cách tính thời gian baycho từng thành
+viên tổ tiếp viên làm nhiệm vụ được tính như thế nào?
+Khi làm nhiệm vụ bay bao gồm 2 lần làm nhiệm vụ, có khoảng thời gian
+nghỉ xen giữa dưới 3 tiếng và đã được thông báo trước cho tổ bay: theo
+anh chị, trong tình huống này thì thời gian làm nhiệm vụ bay tối đa có
+thể tăng thêm bao nhiêu?`, answer: `viên tổ tiếp viên làm nhiệm vụ …
+→ Thời gian bay của mỗi tiếp viên = (Thời gian bay của chặng bay x số tiếp viên
+cần thiết cho chuyến bay) / tổng số tiếp viên làm nhiệm vụ`, keywords: ["trí", "tăng", "cường", "cách", "tính", "baycho", "từng", "thành", "làm", "thế"], category: "Khai thác (FOM)" },
+  { id: 46, question: `(KT22) Theo anh/chị, khái niệm nghỉ xen giữa (split duty) trong khoảng thời
+gian làm nhiệm vụ bay được quy định như thế nào?
+Khi làm nhiệm vụ bay bao gồm 2 lần làm nhiệm vụ, có khoảng thời gian
+nghỉ xen giữa từ 3 tiếng – 6 tiếng 59 phút và đã được thông báo trước
+cho tổ bay: anh chị hãy cho biết thời gian làm nhiệm vụ bay tối đa có
+thể tăng thêm bao nhiêu?`, answer: `Là một khoảng thời gian làm hai nhiệm vụ bay bị ngắt quãng bằng một khoảng
+nghỉ xen giữa
+* Thời gian nghỉ dưới mặt đất phải tối thiểu là 3 giờ liên tục
+* Split duty không được tính vào thời gian nghỉ trên chuyến bay (in-flight rest)
+* Thời gian nghỉ dưới mặt đất được tính đầy đủ như FDP
+* Thời gian nghỉ không bao gồm thời gian cho nhiệm vụ sau, trước chuyến bay (15
+phút sau khi đóng chèn, 1 tiếng trước giờ cất cánh ) và thời gian di chuyển. Tổng
+thời gian trên không dưới 30 phút
+* FDP sẽ được kéo dài nếu split duty ≥ 3h theo công thức sau:
+Max planned FDP = Max FDP trong bảng 7.2 + 50% Break Time`, keywords: ["anh", "chị", "khái", "niệm", "nghỉ", "xen", "giữa", "split", "duty", "khoảng"], category: "Khai thác (FOM)" },
+  { id: 47, question: `(KT23) Theo anh/chị, khái niệm nghỉ xen giữa (split duty) trong khoảng thời
+gian làm nhiệm vụ bay được quy định như thế nào?
+Khi làm nhiệm vụ bay bao gồm 2 lần làm nhiệm vụ, có khoảng thời gian
+nghỉ xen giữa từ 7 tiếng – 09 tiếng 59 phút và đã được thông báo trước
+cho tổ bay: anh chị hãy cho biết thời gian làm nhiệm vụ bay tối đa có
+thể tăng thêm bao nhiêu?`, answer: `Là một khoảng thời gian làm hai nhiệm vụ bay bị ngắt quãng bằng một khoảng
+nghỉ xen giữa
+* Thời gian nghỉ dưới mặt đất phải tối thiểu là 3 giờ liên tục
+* Split duty không được tính vào thời gian nghỉ trên chuyến bay (in-flight rest)
+* Thời gian nghỉ dưới mặt đất được tính đầy đủ như FDP
+* Thời gian nghỉ không bao gồm thời gian cho nhiệm vụ sau, trước chuyến bay (15
+phút sau khi đóng chèn, 1 tiếng trước giờ cất cánh ) và thời gian di chuyển. Tổng
+thời gian trên không dưới 30 phút
+* FDP sẽ được kéo dài nếu split duty ≥ 3h theo công thức sau:
+Max planned FDP = Max FDP trong bảng 7.2 + 50% Break Time`, keywords: ["anh", "chị", "khái", "niệm", "nghỉ", "xen", "giữa", "split", "duty", "khoảng"], category: "Khai thác (FOM)" },
+  { id: 48, question: `(KT24) Theo anh/chị, khái niệm nghỉ xen giữa (split duty) trong khoảng thời
+gian làm nhiệm vụ bay được quy định như thế nào?
+Khi làm nhiệm vụ bay bao gồm 2 lần làm nhiệm vụ, có khoảng thời gian
+nghỉ xen giữa tối thiểu từ 8 tiếng nghỉ trong khung giờ từ 20h00-08h00+
+giờ địa phương, đồng thời thành viên tổ bay được bố trí nơi nghỉ phù
+hợp: anh chị hãy cho biết thời gian làm nhiệm vụ bay tối đa có thể tăng
+thêm bao nhiêu?`, answer: `Là một khoảng thời gian làm hai nhiệm vụ bay bị ngắt quãng bằng một khoảng
+nghỉ xen giữa
+* Thời gian nghỉ dưới mặt đất phải tối thiểu là 3 giờ liên tục
+* Split duty không được tính vào thời gian nghỉ trên chuyến bay (in-flight rest)
+* Thời gian nghỉ dưới mặt đất được tính đầy đủ như FDP
+* Thời gian nghỉ không bao gồm thời gian cho nhiệm vụ sau, trước chuyến bay (15
+phút sau khi đóng chèn, 1 tiếng trước giờ cất cánh ) và thời gian di chuyển. Tổng
+thời gian trên không dưới 30 phút
+* FDP sẽ được kéo dài nếu split duty ≥ 3h theo công thức sau:
+Max planned FDP = Max FDP trong bảng 7.2 + 50% Break Time`, keywords: ["anh", "chị", "khái", "niệm", "nghỉ", "xen", "giữa", "split", "duty", "khoảng"], category: "Khai thác (FOM)" },
+  { id: 49, question: `(DV1.1) Khi khách phản ánh về việc đã bấm nút gọi TV nhưng không thấy TV
+đến, TV xử lý tình huống như thế nào?`, answer: `đúng với chủng loại máy bay – Bộ XLTH
+FIX:
+* Nhận thông tin từ hành khách, xin lỗi và xin phép thu hồi bảng hướng dẫn AT
+* Mời thay thế bảng hướng dẫn an toàn khác đúng với chủng loại máy bay đang khai
+thác
+* Kiểm tra ngẫu nhiên các ghế khác
+* Thay thế ngay nếu có sự sai sót
+* Kiểm tra ngẫu nhiên thêm 1 vài ghế xem có tờ hướng dẫn an toàn đúng với chủng
+loại tàu đang khai thác
+
+
+
+* Ngay lập tức lấy đúng tờ khai khác và phục vụ cho hành khách. Kiểm tra kĩ trước
+khi mời
+* Cảm ơn hành khách đã nhắc nhở
+* Báo cáo TVT và chia sẻ thông tin cho tổ TV
+CARE:
+* Quay lại trò chuyện với khách
+* Chia sẻ thêm thông tin về chủng loại tàu bay
+* TV giới thiệu chương trình giải trí
+* TV mời thêm sản phẩm dịch vụ
+ADD:
+* Quan sát, chăm sóc hành khách suốt chuyến bay, tìm hiểu sở thích
+* Cá nhân hoá hành khách bằng cách hỏi thăm về mức độ hài lòng
+* Đáp ứng nhu cầu của hành khách ở mức độ “Đáng ngạc nhiên”`, keywords: ["phản", "ánh", "việc", "bấm", "nút", "gọi", "TV", "nhưng", "thấy", "tình"], category: "Dịch vụ & CSKH" },
+  { id: 50, question: `(DV1.2) TV xử lý như thế nào khi khách phản ánh về việc khách đã yêu cầu
+TV phục vụ SA/ĐU nhưng sau đó không thấy quay lại?`, answer: `- Bộ XLTH
+FIX:
+* TV cần nhanh chóng hỏi thăm và tìm hiểu nhu cầu của khách.
+* Giải thích cho khách hiểu rằng MB đang chuẩn bị cất/ hạ cánh, khách có thể vui
+lòng sử dụng ngay sau khi MB cất/ hạ cánh, tất cả là vì sự an toàn của hành khách
+(nhấn mạnh vào sự an toàn của bản thân họ).
+* Lưu ý: TV căn cứ vào tình huống cụ thể trên CB để xử lý cho phù hợp và đảm bảo
+an toàn cho HK
+* TV quay lại sau khi cất/ hạ cánh để hỗ trợ khách.
+* Chia sẻ thông tin cho đồng nghiệp khi phục vụ bữa ăn và thời điểm chăm sóc
+(smalltalk) lưu ý những biểu hiện liên quan tới sức khoẻ của hành khách (nếu có) để
+hỗ trợ
+* Quan sát mức độ hài lòng của khách sau khi đã thực hiện giải pháp
+* Khách hài lòng: báo cáo cấp trên.
+* Khách không hài lòng hoặc TV chưa xử lý ngay được: chuyển gặp cấp trên/ TVT
+để hỗ trợ.
+* Báo cáo tình huống và hướng giải quyết + tình hình của khách hiện tại cho TVT.
+* TVT thu xếp thời gian ra tương tác và trò chuyện với khách (nếu cần)
+
+
+
+* Lưu ý: Thông báo cho TVT/ TV làm việc cùng biết sự việc đã xảy ra tránh phát
+sinh vấn đề làm khách không hài lòng
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý.
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng.
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách có thể mời một loại thức
+uống mà khách yêu thích hoặc quan tâm.
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.`, keywords: ["TV", "thế", "phản", "ánh", "việc", "yêu", "cầu", "SA", "nhưng", "sau"], category: "Dịch vụ & CSKH" },
+  { id: 51, question: `(DV1.3) Trường hợp khách yêu cầu suất ăn đặc biệt nhưng kháchchưađặttrước
+c/bay, TV cần xử lý như thế nào?`, answer: `FIX:
+* TV lập tức xin lỗi khách vì đã có sơ suất không phục vụ khách bữa ăn và để khách
+phải đợi.
+* Xác định vấn đề/mức độ lỗi 1
+* Nhanh chóng kiểm tra các lựa chọn thức ăn, giới thiệu với khách, nhận yêu cầu
+của khách về thức ăn, thức uống, nhanh chóng phục vụ
+* Nhanh chóng phục vụ suất ăn đúng yêu cầu của khách.
+* Báo cáo TVT và đồng nghiệp để nắm tình hình khách, tiếp tục quan tâm chú ý
+chăm sóc hành khách.
+* TVT báo cáo cabinbook
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý.
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng. (Mời khách dùng thêm
+trà, cà phê. Hướng dẫn khách khai form. Khách muốn xem giải trí: phục vụ giải trí/
+giới thiệu/ mở chương trình khách yêu thích. Khách muốn ngủ: ngả lưng ghế, kiểm
+tra nhiệt độ...)
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách
+* Sau khi khách dùng bữa, TV phụ trách khu vực ghế khách xin phép thu dọn, xin
+lỗi khách.
+ADD:
+* TVT xin lỗi khách một lần nữa và cảm ơn sự thông cảm của khách.
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+
+
+
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”. Thông báo
+cho tổ TV chuyến bay nối chuyến để tránh xảy ra tình huống tương tự`, keywords: ["Trường", "hợp", "yêu", "cầu", "suất", "đặc", "biệt", "nhưng", "kháchchưađặttrước", "bay"], category: "Dịch vụ & CSKH" },
+  { id: 52, question: `(DV1.4) TV cần xử lý như thế nào khi thấy trẻ em trên CB la khóc/ đi lại trong
+khoang khách... ảnh hưởng đến sự nghỉ ngơi của các khách khác.`, answer: `FIX:
+* Ngay lập tức xin lỗi khách.
+* Kiểm tra xem tư trang của khách có bị ảnh hưởng hay không
+* Hỗ trợ làm sạch vết bẩn.
+* Đổi chỗ cho khách.
+* Ghi nhận sự việc trong Biên bản vụ việc để ĐTV chi trả chi phí giặt ủi
+* TV báo cáo ngay cho TVT
+* TVT xin lỗi khách
+* TVT báo cáo trên Cabin book (sự việc, xử lý của TV, cảm xúc của khách)
+CARE:
+* Quan tâm chăm sóc khách suốt thời gian còn lại của chuyến bay
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng
+* Hỗ trợ lấy hành lý và xuống máy bay
+ADD:
+* Quan sát biết khách thích rượu pha, mời/ hướng dẫn khách pha 1 ly thức uống
+điểm nhấn.
+* Chuyển thông tin khách và sự việc cho nhân viên mặt đất/tổ TV nối chuyến tránh
+lập lại lỗi tương tự và chủ động quan tâm chăm sóc khách.
+* Bồi thường gắn kết (trường hợp TV làm đổ nước vào người khách): Viết phiếu ghi
+nhận thông tin phục hồi và bảo đảm dịch vụ.`, keywords: ["TV", "cần", "thế", "thấy", "trẻ", "CB", "khóc", "lại", "khoang", "ảnh"], category: "Dịch vụ & CSKH" },
+  { id: 53, question: `(DV1.5) Tại sân bay nước ngoài, khi nhận máy bay, nếu xảy ra trường hợp bất
+thường về giao nhận giữa 2 tổ, TVT phải làm gì?`, answer: `khách không kịp đặt trước theo quy định - Bộ XLTH
+FIX:
+* Lắng nghe, chia sẻ, thấu hiểu cảm thông.
+* Nhận các thông tin về khách
+* TV kiểm tra lại với TVT xem suất ăn đặc biệt của khách đã được cấp lên chuyến
+bay chưa.
+* Nếu không có suất ăn khách đặt trên chuyến bay: TVT báo ASOC để hỗ trợ cấp
+suất ăn phục vụ cho khách nếu kịp.
+
+
+
+* Nếu không kịp đặt suất ăn: giới thiệu với khách thành phần bữa ăn được cấp lên
+trên CB phù hợp để khách có thể chọn thay thế cho SĂĐB.
+* Xem các thành phần của suất ăn hạng C (để riêng các loại rau thit cá…) để sắp xếp
+mời khách
+* Báo cáo lại TVT về tình huống và phương án thay thế suất ăn cho khách phù hợp.
+* TVT/TVT phụ trách khoang thông báo tới tất cả thành viên trong Tổ về tên & số
+ghế của hành khách.
+* TVT xin lỗi khách (trường hợp khách đã đặt suất ăn đặc biệt nhưng không được
+cấp lên CB)
+* TVT báo cáo trên Cabinbook (tên, số ghế, loại suất ăn đặc biệt, xử lý của TV, thái
+độ của khách)
+CARE:
+* Quan tâm, chăm sóc suốt thời gian còn lại của chuyến bay
+* Giới thiệu quy trình xác nhận lại SĂĐB trước CB
+ADD:
+* Hỗ trợ khách đặt suất ăn đặc biệt trên các chặng bay nối chuyến. TVT lập Group
+viber bao gồm TVT, ASOC, VIAGS để hỗ trợ đặt SADB cho khách
+* Thể hiện sự quan tâm hơn nữa
+* Làm cho khách hàng thấy mình quan trọng đối với công ty
+* Tặng khách món quà nhỏ: túi daynight kit/ bút viết VNA.
+* Bồi thường gắn kết: ghi nhận phiếu thông tin phục hồi và đảm bảo nếu cần (trường
+hợp khách đã đặt suất ăn đặc biệt nhưng không được cấp lên CB)`, keywords: ["sân", "bay", "nước", "ngoài", "nhận", "máy", "xảy", "trường", "hợp", "bất"], category: "Dịch vụ & CSKH" },
+  { id: 54, question: `(DV1.6) Nếu có hành khách than phiền với bạn về thái độ của nhân viên mặt
+đất thì bạn sẽ xử lý như thế nào?`, answer: `khỏe) - Bộ XLTH
+FIX:
+* Đồng cảm, tìm hiểu tình trạng sức khỏe của hành khách
+* Thể hiện sự quan tâm
+* Mời chăn và dép hạng phổ thông cho khách
+* Đưa thông tin cho khách về chất lượng sản phẩm để khách yên tâm sử dụng
+* Đánh giá tình hình để quyêt định cho khách sử dụng các loại thuốc có trên máy
+bay.
+* Nếu khách bị lạnh: Điều chỉnh van gió - Lấy áo khoác cho khách - Điều chỉnh
+nhiệt độ - Mời khách thức uống ấm theo sở thích của khách
+
+
+
+* Nếu khách bị nóng (do bị sốt): Điều chỉnh van gió - Sử dụng khăn bông chườm
+lạnh cho khách (trên các chuyến bay quốc nội, có thể đề xuất dùng khăn bông hạng
+C) - Chăm sóc khách nghỉ ngơi.
+* Thường xuyên quan sát khách, thăm hỏi tình trạng sức khỏe của khách khi khách
+tỉnh giấc. Nếu tình trạng sức khỏe của khách không cải thiện, có biểu hiện xấu đi,
+tiếp viên trưởng sẽ thực hiện các bước giải quyết tiếp theo như kêu gọi sự hỗ trợ y
+tế trên chuyến bay cũng như tại điểm đến.
+* Báo cáo TVT - Chia sẻ thông tin với đồng nghiêp – TVT báo cáo tình trạng sức
+khỏe và cách thức xử lý của tiếp viên với cơ trưởng.
+CARE:
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng: suốt chuyến bay thường
+xuyên quan sát khách để hỗ trợ khách ngay khi khách chưa gọi tiếp viên, nếu là
+chặng đường dài sẽ lấy lựa chọn món ăn trước, nếu khách đi 1 mình thì có thể giúp
+khách đi toilet nếu khách gặp vấn đề về sức khỏe, giới thiệu chương trình giải trí nếu
+khách không ngủ được, giới thiệu dịch vụ hạng C để cho những chuyến bay sau
+khách có thể sẽ muốn có tair nghiêm khác biệt.
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách.
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách: Small talk và đưa thông tin về
+nhiệt độ tại điểm đến. Nếu là mùa đông, giúp khách chuẩn bị áo ấm, khăn mũ, chuẩn
+bị thuốc nếu khách vẫn cần sử dụng, gửi khách thêm nước suối, khăn ướt (nếu cần);
+nếu khách đi tiếp tục hành trình trên chuyến bay của VNA, sử dụng kênh liên lạc
+viber báo cáo nhanh tình trạng và hành trình của khách để hệ thống có sự hỗ trợ cần
+thiết cho khách. để lưu ý chăm sóc sức khỏe cho khách.
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.`, keywords: ["than", "phiền", "thái", "nhân", "mặt", "đất", "thế", "khỏe", "XLTH", "FIX"], category: "Dịch vụ & CSKH" },
+  { id: 55, question: `(DV1.7) Trong khi bay bằng, khi đèn “fasten seatbelt” được bật sáng lần đầu
+tiên trong cabin báo hiệu nhiễu động nhẹ, TV cần lưu ý những gì?`, answer: `dụng phòng vệ sinh hạng C - Bộ XLTH
+FIX:
+* Tiếp cận, đặt câu hỏi để tìm hiểu nhu cầu của khách.
+* Thể hiện sự đồng cảm
+* Trực tiếp hướng dẫn khách sử dụng phòng vệ sinh dưới khoang Y
+* Thông tin cho TV phụ trách khu vực khách ngồi thường xuyên kiểm tra phòng vệ
+sinh, đảm bảo sẵn sàng cho khách sử dụng.
+
+
+
+* Báo cáo TVT
+CARE:
+* Chủ động quan tâm các nhu cầu chính đáng của khách trong khả năng.
+ADD:
+* Ghi nhớ nhu cầu của khách. Thể hiện sự quan tâm chăm sóc hơn nữa.
+* Làm cho khách hàng thấy mình quan trọng đối với công ty.`, keywords: ["bay", "bằng", "đèn", "fasten", "seatbelt", "bật", "sáng", "lần", "đầu", "tiên"], category: "Dịch vụ & CSKH" },
+  { id: 56, question: `(DV1.8) Hãy nêu quy trình kiểm tra, dọn vệ sinh và quy định về tần suất dọn
+phòng vệ sinh trên chuyến bay cho các hạng C, PE/Y?`, answer: `hưởng đến sự nghỉ ngơi của các khách khác - Bộ XLTH
+FIX:
+* TV đến trả lời chuông gọi của khách tại ghế, giao tiếp mắt và nghe phản ánh của
+khách.
+* Thể hiện sự đồng cảm, xin phép tìm hiểu nguyên nhân
+* Trường hợp các bé nô đùa, nói lớn tiếng trong khoang khách
+* Nhẹ nhàng nhắc nhở các bé giữ im lặng và hướng dẫn bé về chỗ ngồi
+* Trao đổi với người lớn đi cùng để chăm sóc em bé. Lưu ý người lớn giữ các bé
+ngồi tại ghế và cài dây an toàn đề phòng máy bay bay vào khu vực thời tiết xấu có
+thể khiến các bé bị thương.
+* Mời các bé thức ăn, thức uống và đồ chơi. Giới thiệu chương trình giải trí phù
+hợp với lứa tuổi của các bé.
+* Trường hợp em bé quấy khóc → Tiếp cận ba mẹ tìm hiểu nguyên nhân bé khóc,
+xin phép được hỗ trợ.
+* Đề nghị đồng nghiệp hỗ trợ chăm sóc em bé (pha sữa, mời ăn uống, mời đồ chơi)
+* Trao đổi nguyên nhân với khách phản ánh, xin phép được hỗ trợ khách nghỉ ngơi
+(tai nghe, giới thiệu chương trình nhạc nhẹ, …). Cám ơn khách thông cảm.
+* Cùng đồng nghiệp tiếp tục hỗ trợ bố mẹ chăm sóc em bé
+* Báo cáo tiếp viên trưởng
+* Chia sẻ thông tin với tiếp viên làm việc cùng khoang
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+
+
+
+* Small talk để biết hành trình sau đó có thể hỗ trợ được gì cho khách`, keywords: ["quy", "kiểm", "tra", "dọn", "sinh", "định", "tần", "suất", "phòng", "bay"], category: "Dịch vụ & CSKH" },
+  { id: 57, question: `(DV1.9) TV cho biết quy định bàn giao tài liệu chuyến bay giữa 2 tổ TV không
+gặp nhau tại các sân bay nước ngoài`, answer: `khoang hạng Y lên ngồi tại ghế trống bên cạnh - Bộ XLTH
+FIX:
+* Tiếp nhận yêu cầu của khách để hỏi ý kiến TVT về việc nâng hạng khách và thực
+hiện theo hướng dẫn của TVT.
+* TV cảm ơn khách đã yêu mến VNA nhưng TV không được phép nâng hạng ghế
+cho khách.
+* Xin thông tin số ghế của người nhà khách dưới khoang hạng Y và. Báo với
+khách sẽ nói TV phục vụ chu đáo người nhà khách dưới khoang Y và cũng để chủ
+động mời người nhà lên tham quan ghế hạng C vào khoảng thời gian thích hợp
+* Tiếp viên chủ động gặp gỡ người nhà của hành khách ngay khi có thể.
+* Tiếp viên báo cáo TVT về yêu cầu của hành khách, chia sẻ thông tin với đồng
+nghiệp về cách giải quyết để cùng thống nhất giải pháp và quan tâm đến người nhà
+của khách hạng C.
+* TV xin phép TVT cho người nhà khách lên nói chuyện khoảng 5-10 phút sau khi
+phục vụ bữa ăn và trước khi các khách khác nghỉ ngơi.
+CARE:
+* Tiếp viên chủ động mời khách hạng C và người nhà dùng thức uống
+* Tiếp viên chủ động trao đổi, chia sẻ thông tin về việc các tiếp viên hạng Y sẽ chăm
+sóc người nhà của khách.
+* Tiếp viên chủ động giới thiệu các dịch vụ bổ trợ: nâng hạng dịch vụ giờ chót
+* Tiếp viên trò chuyện với hành khách để hiểu những giá trị khác khách cần tìm, chủ
+động cung cấp dịch vụ ngạc nhiên.
+ADD:
+* Nếu khách nối chuyến, hoặc cần xuống gấp nhà ga hay đi cùng người nhà là hành
+khách cao tuổi, tiếp viên chủ động đề nghị hỗ trợ người nhà của đổi chỗ lên vị trí
+gần cửa trước khi hạ cánh, hỗ trợ hành lý xách tay, cung cấp thông tin điểm đến như
+thời gian, nhiệt độ và các lưu ý ở nhà ga…
+* Cảm ơn khách và gia đình đã ủng hộ VNA
+* Chủ động thông báo thời tiết tại điểm đến cho hành khách
+* Chúc hành khách tiếp tục có những trải nghiệm thú vị/1 ngày nhiều niềm vui.`, keywords: ["TV", "quy", "định", "bàn", "giao", "tài", "liệu", "bay", "giữa", "gặp"], category: "Dịch vụ & CSKH" },
+  { id: 58, question: `(DV1.10) Rượu Cognac làm từ nguyên liệu gì, nồng độ cồn là bao nhiêu, TV
+phục vụ khách như thế nào?`, answer: `* Cognac là một dạng của rượu brandy sản xuất tại vùng Cognac của Pháp, được
+chưng cất từ loại rượu vang sản sinh trong quá trình lên men nho quả, sau một thời
+gian ủ trong thùng gỗ sồi thơm Limousin (oak) (ít nhất 2 năm trước khi được đưa ra
+tiêu thụ)
+* Nồng độ cồn: 40%
+* Phân loại rượu Cognac:
+
+
+
+V.S (Very Special) hoặc ★★★(Three Stars) là loại rượu tương đối trẻ, tuổi ít nhất
+là 2 năm
+V.S.O.P (Very Superior Old Pale) hoặc Reserve có độ tuổi ít nhất 4 năm (VNA đang
+sử dụng trên hạng C)
+XO (Extra Old) hoặc Napoleon có độ tuổi ít nhất 6 năm
+* TV phục vụ rượu cognac bằng ly Brandy. Được mời dùng cùng với món tráng
+miệng. Nên uống ở dạng nguyên chất, không pha hoặc thêm đá. Rót hết 1 chai nhỏ
+vào ly ~25ml`, keywords: ["Rượu", "Cognac", "làm", "nguyên", "liệu", "nồng", "cồn", "nhiêu", "TV", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 59, question: `(DV1.11) TV hãy giới thiệu về rượu Sake: Nguồn gốc, xuất xứ, nguyên liệu,
+nồng độ cồn và trình bày cách thức phục vụ rượu Sake trên khoang
+hạng C?`, answer: `BOARDING
+* TV cần đi trước khách BLND để khách có thể dự đoán được những thay đổi về
+hướng đi và khi lên xuống cầu thang.
+* Khi chỉ đường và đưa khách về ghế ngồi, TV trợ giúp chỉ chiều (trái hoặc phải)
+theo hướng đi của khách và đặt tay khách lên tay ghế hoặc lưng ghế để khách tự vào
+ghế ngồi.
+* Hỗ trợ cất HLXT trước chuyến bay và trả lại hành lý sau khi hạ cánh.
+TRONG QUÁ TRÌNH PHỤC VỤ
+* Hạn chế hỏi những câu hỏi cần sự giúp đỡ về thị giác, đặc biệt khi phục vụ đồ ăn
+thức uống.
+* Giới thiệu các món trên khay, gọi tên hoặc chạm nhẹ vào tay khách và nói rõ những
+món được phục vụ trong khay. Lưu ý cho khách biết đồ uống nóng. Giới thiệu các
+dụng cụ có trong khay suất ăn hoặc xin phép khách mở bộ dao muỗng dĩa`, keywords: ["TV", "giới", "thiệu", "rượu", "Sake", "Nguồn", "gốc", "xuất", "nguyên", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 60, question: `(DV1.12) TV hãy giới thiệu những điểm chính khi giới thiệu rượu vang?`, answer: `TRONG QUÁ TRÌNH PHỤC VỤ
+* Giao tiếp với khách bằng ngôn ngữ biểu thị rõ ràng hoặc bằng chữ viết mà khách
+có thể nhìn thấy được vì nhiều khách không nghe được hoặc có khả năng nghe kém,
+chỉ có thể hiểu thông qua việc quan sát môi, vẻ mặt hoặc điệu bộ của người nói
+* Kiên nhẫn, phát âm rõ ràng và chỉ nói to khi cần thiết
+* Không phục vụ khách tai nghe`, keywords: ["TV", "giới", "thiệu", "điểm", "chính", "rượu", "vang", "QU", "TR", "ÌNH"], category: "Dịch vụ & CSKH" },
+  { id: 61, question: `(DV1.13) TV hãy cho biết các loại trà và dụng cụ phục vụ trà trên khoang hạng
+C của VNA đường bay Nhật?`, answer: `* UM (2-6 tuổi) → cần đặt dịch vụ TV đi cùng
+* UM (6-12 tuổi) → không cần đặt dịch vụ TV đi cùng. Trên chuyến bay, TV đi lại
+trợ giúp và chăm sóc UM khi có yêu cầu.
+* TV đi cùng UM sẽ ngồi tại vị trí đã được giữ chỗ trước, trực tiếp chăm sóc, trợ
+giúp riêng UM trong suốt chuyến bay.
+* UM ( không có dịch vụ TV đi cùng):
+- TVT nhận bàn giao UM đầu chuyến bay từ NVM, bàn giao cho TV phụ trách trợ
+giúp UM về chỗ ngồi.
+- Hướng dẫn UM: dây an toàn, áo phao, nút gọi TV, … các chức năng tại ghế ngồi,
+nhà vệ sinh gần nhất. Dặn UM cuối chuyến ngồi yên tại chỗ, và sẽ được hỗ trợ xuống
+máy bay sau các hành khách khác.
+Trong suốt quá trình bay, hỗ trợ và chăm sóc UM.
+Trước khi hạ cánh, TV nhắc UM một lần nữa, cuối chuyến ngồi yên tại chỗ, và sẽ
+được hỗ trợ xuống máy bay sau các hành khách khác
+Hỗ trợ hành lý và bàn giao UM cho NVMĐ`, keywords: ["TV", "loại", "trà", "dụng", "khoang", "hạng", "VNA", "đường", "bay", "Nhật"], category: "Dịch vụ & CSKH" },
+  { id: 62, question: `(DV1.14) TV hãynêu cách thức giới thiệu, chuẩn bị và phục vụ ngũ cốc vào bữa
+sáng trên khoang hạng C?`, answer: `* TV phục vụ khách WCHC di chuyển trong khoang khách của tàu bay nếu khách
+yêu cầu. Nếu WCHC có người đi cùng thì sẽ phối hợp với TV để hỗ trợ khách di
+chuyển
+* TV không lắp và phục vụ xe lăn khi cất/hạ cánh và turbulence
+* Sau khi tàu bay ổn định độ cao và bay bằng, nếu khách yêu cầu di chuyển, TV
+chuẩn bị xe lăn và hỗ trợ khách (di chuyển đến nhà vệ sinh)
+* Khi chuẩn bị hạ cánh, TV cất xe lăn vào đúng vị trí ban đầu`, keywords: ["TV", "hãynêu", "cách", "thức", "giới", "thiệu", "chuẩn", "ngũ", "cốc", "vào"], category: "Dịch vụ & CSKH" },
+  { id: 63, question: `(DV1.15) TV hãy nêu cách thức giới thiệu, chuẩn bị và phục vụ khách hạng C
+bánh đa cua ăn liền, mì ăn liền, phở ăn liền?`, answer: `Giao nhận đầu chuyến:
+* TV nhận bàn giao xe BHMT, check đúng số seal, ổ khoá 2 đầu, nhận chìa khoá và
+mở xe để kiểm đếm hàng hoá
+* Mở seal túi tiền của chặng mình: ĐI XÁM / VỀ CAM, sẽ có sẵn $50 trong túi
+* TV kiểm tra máy POS bán hàng & máy PAYOO thanh toán
+→ TV ký nhận phiếu bàn giao xe BHMT
+Các giấy tờ mà TV phải nộp về ĐTV:
+
+
+* Phiếu bàn giao xe BHMT
+* Phiếu liệt kê thiết bị, dụng cụ
+* Phiếu kê lượng tiền mặt
+Cách mở máy POS bán hàng:
+* Khởi động máy POS → Password mở máy: 1956 hoặc 1957
+* Đăng nhập: MSNV (6430) / Password: 12345678
+* Nhập thông tin chuyến bay
+* Kiểm đếm số lượng hàng hoá & túi tiền ($50 usd)
+* In liên báo cáo`, keywords: ["TV", "cách", "thức", "giới", "thiệu", "chuẩn", "hạng", "bánh", "cua", "liền"], category: "Dịch vụ & CSKH" },
+  { id: 64, question: `(DV1.16) TV hãy giới thiệu thông tin sản phẩm tấm trải ghế hạng C: thời điểm,
+nội dung, phương thức phục vụ khách?`, answer: `* Bánh mì Croissant, các loại Pastry sẽ được phục vụ trong bữa ăn sáng
+* Làm nóng lò 3 phút, nướng bánh mì ở Dryheat 3-5 phút
+* Nướng ngoài túi để giữ nguyên hình dáng khi phục vụ`, keywords: ["TV", "giới", "thiệu", "thông", "tin", "sản", "phẩm", "tấm", "trải", "ghế"], category: "Dịch vụ & CSKH" },
+  { id: 65, question: `(DV1.17) TV hãy cho biết cách thức phục vụ pho mai và trái cây bằng tay?
+- Trường hợp nào sẽ phục vụ bằng tay?
+- Phương thức phục vụ?`, answer: `(STANDARD SERVICE 3.4 & Training Edoc)
+* Làm nóng lò 3 phút, nướng bánh mì ở Dryheat 3-5 phút
+* Lấy các bánh mì ra khỏi túi trước khi nướng
+* Bánh mì tỏi & Bánh mì baguette → Dryheat 5-6 phút
+* Bánh mì Croissant / bánh mì chocolate / bánh mì tròn / bánh mì cuộn / Bánh ngọt
+Đan mạch → Dryheat 3-5 phút
+** Bánh mì không cần nướng: bánh mì hạt / bánh mì bột chua / bánh mì champion /
+bánh mì đen / bánh mì Clabatta / bánh mì nguyên cám / bánh mì vừng / bánh Muffin
+socola`, keywords: ["TV", "cách", "thức", "pho", "mai", "trái", "cây", "bằng", "tay", "Trường"], category: "Dịch vụ & CSKH" },
+  { id: 66, question: `(DV1.18) TV hãy nêu cách chuẩn bị và mời thực đơn thức ăn, danh mục thức
+uống?`, answer: `* Chuẩn bị thực đơn đúng tuyến đường bay, bữa ăn được phục vụ
+* Danh mục thức uống được kẹp vào giữa trang thực đơn phục vụ
+* Cầm tối đa 10 cuốn/lần (thực tế cấp 3 bộ/chặng bay)
+* Mở sẵn thực đơn có ngôn ngữ phù hợp với khách
+* Mời thực đơn: Giới thiệu menu food / drink list - Mời khách tham khảo, thông báo
+thời điểm nhận yêu cầu - Xác nhận lại SPML nếu khách có đặt`, keywords: ["TV", "cách", "chuẩn", "mời", "thực", "đơn", "thức", "danh", "mục", "uống"], category: "Dịch vụ & CSKH" },
+  { id: 67, question: `(DV1.19) Khi phục vụ khăn nóng hạng C, TV hãy nêu:
+- Chuẩn bị nướng khăn?
+- Chế độ, thời gian nướng khăn?
+- Dụng cụ và cách sắp xếp khi phục vụ khăn nóng?
+- Lưu ý khi phục vụ khăn nóng?`, answer: `* TV tiếp cận và tiếp nhận thông tin từ khách: số hiệu chuyến bay tiếp theo, giờ cất
+cánh, điểm đến, có khai thác bởi VNA hay không … → đưa thông tin đến TVT
+* TV hỗ trợ khách đổi chỗ lên hàng ghế phía trên theo hạng ghế của khách ngồi để
+khách xuống máy bay trước nếu còn chỗ trống
+* TVT thông báo cho NVMĐ / Đại diện VNA sau khi máy bay hạ cánh để hỗ trợ
+khách làm thủ tục`, keywords: ["khăn", "nóng", "hạng", "TV", "Chuẩn", "nướng", "Chế", "Dụng", "cách", "sắp"], category: "Dịch vụ & CSKH" },
+  { id: 68, question: `(DV1.20) TV hãy cho biết cách thức nướng và chuẩn bị phục vụ khách món phở
+trên khoang C?`, answer: `Thứ tự ưu tiên khi mời thức ăn với các khách trên cùng hàng ghế:
+* TV mời từ trong ra ngoài
+* Ưu tiên các hành khách là: người cao tuổi - người khuyết tật - trẻ em - phụ nữ
+Thứ tự thu khay: thu từ ngoài vào trong`, keywords: ["TV", "cách", "thức", "nướng", "chuẩn", "món", "phở", "khoang", "Thứ", "tiên"], category: "Dịch vụ & CSKH" },
+  { id: 69, question: `(DV1.21) TV hãy giới thiệu:
+- Các loại dụng cụ
+- Mực rót
+- Cách thức trình bày mời khách
+khi phục vụ trà, café hạng C trên chuyến bay VNA?`, answer: `quy định liên quan (trọng lượng tối đa, các lưu ý khi phục vụ, khách cần đặt
+nôi trước bao lâu) PHM 7.1.4 a)
+* Khách đặt dịch vụ BSCT ít nhất 24h trước EDT
+* Chấp nhận cho trẻ sơ sinh < 11kg và dưới 2 tuổi
+* Dịch vụ BSCT áp dụng trên nguyên tắc: khách nào đặt trước sẽ cung ứng trước và
+tuỳ thuộc vào số lượng nôi trên chuyến bay
+* Vị trí lắp nôi:
+- Đầu khoang C (A321)
+- Đầu khoang C/PE/Y (A350/B787)
+* Quy định:
+- Đầu chuyến bay, TV kiểm tra số lượng nôi / Kiểm tra chốt cài còn hoạt động tốt +
+nôi đảm bảo chắc chắn, vải không bị sờn hoặc các đường may không bị đứt
+- Nôi được lắp sau khi máy bay cất cánh và seatbelt sign OFF
+- Nôi được tháo khi máy bay bắt đầu giảm độ cao để hạ cánh và cất vào vị trí ban
+đầu theo quy định
+- Infant phải được bế ra khỏi nôi khi máy bay bay qua vùng thời tiết xấu và seatbelt
+sign ON`, keywords: ["TV", "giới", "thiệu", "loại", "dụng", "Mực", "rót", "Cách", "thức", "mời"], category: "Dịch vụ & CSKH" },
+  { id: 70, question: `(DV1.22) TV hãy cho biết các loại café, dụng cụ phục vụ café trên khoang hạng
+C của VNA? (đường bay ngắn, trung, dài)`, answer: `khoang khách lạnh thì TV cần làm gì? TCPV 3.2.1
+* Trước khi khách lên: 22ºC (mùa hè) / 25ºC (mùa đông)
+* Trong chuyến bay: 24-25ºC (nội địa + quốc tế ngắn) 23-24ºC (quốc tế dài/trung)
+→ Sai khi cất cánh, TVT quan sát và điều chỉnh nhiệt độ phù hợp
+
+
+
+Nếu khoang khách lạnh, TV báo cáo TVT điều chỉnh nhiệt độ trong khoang khách.
+TV hỏi thăm sức khoẻ của hành khách (nếu khách báo lạnh) + offer các bước để hỗ
+trợ khách (nước ấm, áo khoác, van khí, chăn).`, keywords: ["TV", "loại", "café", "dụng", "khoang", "hạng", "VNA", "đường", "bay", "ngắn"], category: "Dịch vụ & CSKH" },
+  { id: 71, question: `(DV1.23) TV hãy nêu tiêu chuẩn phục vụ khăn bông khách hạng C tại thời điểm
+đón khách?`, answer: `hạng Y? TCPV 3.1.20
+* Không phục vụ đồ uống nóng khi:
+- Turbulence và FSB ON
+- Bàn ăn không trong tình trạng tốt
+- Đèn cá nhân bị hỏng và thời điểm phục vụ, đèn trần trong khoang khách được tắt
+* TV giám sát và trợ giúp UM trong quá trình ăn uống
+* Trẻ em hoặc khách hạn chế năng lực hành vi → chỉ phục vụ khi có người thân đi
+cùng và người thân chịu trách nhiệm đảm bảo an toàn
+CHUẨN BỊ:
+* Mở ly mỳ/phở/bánh đa cua, thêm gia vị, bỏ gói dầu (nếu có)
+* Cho nước sôi 1/2 ly để ngập phần mỳ
+* Đậy nắp khoảng 3-5 phút cho mỳ nở ra, dùng đũa trộn đều
+* Cho nước suối nguội vào để giảm độ nóng của nước mỳ (mực nước cách miệng ly
+3cm, khoảng 2/3 ly mỳ) (nước sôi trên máy bay khoang 80ºC → sau khi cho nước
+nguội sẽ còn khoảng 50ºC)
+PHỤC VỤ:
+* Khi phục vụ, TV cần có tín hiệu để gây sự chú ý với khách hàng
+* Bật đèn cá nhân cho khách vào thời điểm phục vụ, đèn trần trong cabin tắt
+* Cảnh báo với khách về thức ăn nóng và lưu ý khách cẩn thận, đặc biệt với người
+cao tuổi và trẻ em
+* Đặt thức ăn ngay ngắn, vững chắc trên khay hoặc bàn ăn`, keywords: ["TV", "tiêu", "chuẩn", "khăn", "bông", "hạng", "điểm", "đón", "TCPV", "uống"], category: "Dịch vụ & CSKH" },
+  { id: 72, question: `(DV1.24) TV cho biết quy trình bàn giao xe hàng miễn thuế và giấy tờ kèm theo
+tại HAN/SGN cho nhân viên cung ứng?`, answer: `TRÀ:
+* Cho tép trà vào bình/tách (số lượng theo quy định)
+* Cho 3/4 nước nóng, để 3-5 phút
+* Lấy tép trà ra khỏi bình/tách
+
+
+
+* Cho 1/4 nước suối để nguội vào, nhiệt độ trà khoảng 70ºC (cách miệng bình 5cm,
+cách miệng tách nhỏ 1cm, tách lớn 3cm)
+CÀ PHÊ:
+* Cho cà phê vào bình/tách (số lượng theo quy định)
+* Cho 1 ít nước nóng, lắc nhẹ bình cho cafe tan, đổ thêm nước nóng → tổng lượng
+nước nóng khoảng 3/4
+* Cho 1/4 nước suối để nguội vào, nhiệt độ cafe khoảng 70ºC (cách miệng bình 5cm,
+cách miệng tách nhỏ 1cm, tách lớn 3cm)
+** Hạng C: pha cafe đậm nhạt theo yêu cầu của khách
+** Hạng Y (quốc nội): Pha hết 1 gói 30g cho 1 bình xanh / (quốc tế) pha hết 2/3 gói
+30g cho 1 bình xanh`, keywords: ["TV", "quy", "bàn", "giao", "hàng", "miễn", "thuế", "giấy", "kèm", "HAN"], category: "Dịch vụ & CSKH" },
+  { id: 73, question: `(DV1.25) Bạn hãy trình bày nội dung cam kết số 1 của TV. Nêu ý nghĩa của cam
+kết. Bạn đánh giá TV đang thực hiện cam kết này như thế nào. (cấp
+độ mấy, điểm mạnh, điểm cần cải thiện)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "TV.", "nghĩa", "đánh", "giá", "TV", "đang"], category: "Dịch vụ & CSKH" },
+  { id: 74, question: `(DV1.26) Bạn hãytrình bàynội dung camkết số2 của TV. Tại sao bạn là “người
+đầu tiên”. Bạn đánh giá TV đang thực hiện trên chuyến bay như thế
+nào. (cấp độ mấy, điểm mạnh, điểm cần cải thiện)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["hãytrình", "bàynội", "dung", "camkết", "TV.", "sao", "người", "đầu", "tiên", "đánh"], category: "Dịch vụ & CSKH" },
+  { id: 75, question: `(DV1.27) Bạn hãy trình bày nội dung cam kết số 3 của TV. Giải thích cụm từ “
+nhất quán”, “mong muốn” trong cam kết.
+Bạn đánh giá TV đang thực hiện cam kết này trên chuyến bay như thế
+nào (cấp độ mấy, điểm mạnh, điểm cần cải thiện)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "TV.", "Giải", "thích", "cụm", "nhất", "quán"], category: "Dịch vụ & CSKH" },
+  { id: 76, question: `(DV1.28) Bạn hãy trình bày nội dung cam kết số 4 của TV. Giải thích cụm từ
+“mang lại sự hài lòng thực sự” trong cam kết. Bạn đánh giá TV đang
+thực hiện cam kết nàytrên chuyến baynhư thế nào. (cấp độ mấy, điểm
+mạnh, điểm cần cải thiện)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "TV.", "Giải", "thích", "cụm", "mang", "lại"], category: "Dịch vụ & CSKH" },
+  { id: 77, question: `(DV1.29) Bạn hãy trình bày cam kết số 5 của TV. Giải thích cụm từ “giá trị dịch
+vụ” trong cam kết. Bạn đánh giá TV đang vận dụng thực hiện cam kết
+này trên chuyến bay như thế nào. (cấp độ mấy, điểm mạnh, điểm cần
+cải thiện)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["cam", "kết", "TV.", "Giải", "thích", "cụm", "giá", "trị", "đánh", "TV"], category: "Dịch vụ & CSKH" },
+  { id: 78, question: `(DV1.30) Bạn hãy trình bày 6 cấp độ dịch vụ (tên gọi). Bạn đang cung cấp dịch
+vụ đạt cấp độ nào, cho ví dụ về hành động phục vụ của bản thân để
+đạt cấp độ đó và bạn làm gi để đạt được cấp độ cao hơn`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "tên", "gọi", "đang", "cung", "đạt", "động", "bản", "thân", "làm"], category: "Dịch vụ & CSKH" },
+  { id: 79, question: `(DV1.31) Bạn hãy trình bày khái niệm “Dịch vụ xuất sắc”
+Bạn làm gì để bản thân (Tổ TV) luôn cung cấp dịch vụ xuất sắc trên
+từng chuyến bay`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["khái", "niệm", "xuất", "sắc", "làm", "bản", "thân", "TV", "luôn", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 80, question: `(DV1.32) Bạn hãy trình bày cấp độ 5 trong 6 cấp độ dịch vụ, nêu những hành
+động của TV ở cấp độ này và kể 1 câu chuyện mà bạn hoặc đồng
+nghiệp đã phục vụ hành khách đạt được cấp độ này.`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "này", "câu", "chuyện", "đồng", "nghiệp", "đạt", "Tồi"], category: "Dịch vụ & CSKH" },
+  { id: 81, question: `(DV1.33) Bạn hãy trình bày cấp độ 1 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách phòng ngừa, khắc phục của bạn`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "này", "cách", "phòng", "ngừa", "khắc", "Tồi", "Criminal"], category: "Dịch vụ & CSKH" },
+  { id: 82, question: `(DV1.34) Bạn hãy trình bày cấp độ 2 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách phòng ngừa, khắc phục của bạn`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "này", "cách", "phòng", "ngừa", "khắc", "Tồi", "Criminal"], category: "Dịch vụ & CSKH" },
+  { id: 83, question: `(DV1.35) Bạn hãy trình bày cấp độ 3 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách thức UP-SERVICE`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "này", "cách", "thức", "UP", "SERVICE", "Tồi", "Criminal"], category: "Dịch vụ & CSKH" },
+  { id: 84, question: `(DV1.36) Bạn hãy trình bày cấp độ 4 trong 6 cấp độ dịch vụ, nêu hành động của
+TV và kể 1 hành động mà bạn hoặc đồng nghiệp đã phục vụ khách
+hàng đạt được cấp độ này`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "đồng", "nghiệp", "hàng", "đạt", "này", "Tồi", "Criminal"], category: "Dịch vụ & CSKH" },
+  { id: 85, question: `(DV1.37) Bạn hãy trình bày cấp độ 6 trong 6 cấp độ dịch vụ, nêu những hành
+động của TV ởcấp độnàyvàkể1 hành động màbạn hoặc đồng nghiệp
+đã phục vụ khách hàng đạt được cấp độ này`, answer: `1/ Cấp độ Tồi tệ (Criminal): Dịch vụ dưới mức tối thiểu, phá vỡ các cam kết về
+dịch vụ của Doanh nghiệp với khách hàng. Khách hàng sẽ ghi nhớ, không bao
+giờ lựa chọn công ty có dịch vụ ở cấp độ này một lần nữa và họ có thể lan truyền
+tin xấu với những người khác.
+2/ Cấp độ Không vui (Basic): Dịch vụ chỉ ở mức độ tối thiểu hoặc có điều không
+vui, không thoải mái. Mức độ dịch vụ này dẫn đến sự thất bại. Khách hàng có
+thể không phàn nàn tuy nhiên họ sẽ kể cho bạn bè tránh xa và chắc chắn họ sẽ
+không bao giờ quay trở lại với loại hình dịch vụ này nữa.
+3/ Cấp độ Bình thường (Expected): Dịch vụ ở mức độ bình thường, không có
+gì đặc biệt. Khách hàng không khen, không chê và có thể quay trở lại nhưng chỉ
+khi không còn có sự lựa chọn nào khác. Cấp độ dịch vụ tiêu chuẩn này thường
+được coi là chấp nhận được.
+
+
+
+4/ Cấp độ Mong muốn (Desired): Dịch vụ cung cấp những điều khách hàng
+mong muốn, theo đúng sở thích cá nhân, được quyền lựa chọn theo nhu cầu. Dịch
+vụ ở cấp độ như Mong muốn sẽ kéo khách hàng trở lại.
+5/ Cấp độ Ngạc nhiên (Surprising): Dịch vụ ở mức độ đặc biệt, giống như món
+quà bất ngờ. Sự ngạc nhiên đem đến cho khách hàng nhiều hơn những gì họ
+nghĩ và mong muốn. Khách hàng quay trở lại với dịch vụ ngạc nhiên ở mức độ
+thường xuyên và họ cũng rất vui khi kể lại cho bạn bè.
+6/ Cấp độ Trên cả tuyệt vời (Unbelievable): Dịch vụ ở mức độ gây sửng sốt, khiến
+khách hang không thể quên, trở thành huyền thoại, được chia sẻ rộng rãi một
+cách tự hào.
+DỊCH VỤ SUẤT SẮC: không nằm trong 6 cấp độ dịch vụ nói trên. Dịch vụ xuất
+sắc có nghĩa là:
+* Liên tục hành động tạo ra nhiều giá trị mới cho người khác.
+* Biết mình đang ở cấp độ nào và hành động để lên cấp độ cao hơn.`, keywords: ["cấp", "động", "TV", "ởcấp", "độnàyvàkể", "màbạn", "đồng", "nghiệp", "hàng", "đạt"], category: "Dịch vụ & CSKH" },
+  { id: 86, question: `(DV1.38) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 1. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 87, question: `(DV1.39) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 2. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 88, question: `(DV1.40) Bạn hãy nêu 6 nhu cầu khách đi máy bay và phân tích nhu cầu 3. TV
+phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "máy", "bay", "phân", "tích", "TV", "làm", "cung", "cấp"], category: "Dịch vụ & CSKH" },
+  { id: 89, question: `(DV1.41) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 4. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 90, question: `(DV1.42) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 5. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 91, question: `(DV1.43) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 6. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `* Flight/bio safety & security
+* Timeliness
+* Cost
+* Services and Quality
+* Prompt action
+* Appreciation and status`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 92, question: `(DV1.44) Bạn hãytrình bày4 hạng mục giá trị (haycòn gọi 4 góc nhìn của khách
+hàng)
+Bạn hãy chọn 1 hạng mục giá trị và tự đánh giá bản thân đang cung
+cấp hạng mục này ở cấp độ nào và vì sao?`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["hãytrình", "hạng", "mục", "giá", "trị", "haycòn", "gọi", "góc", "nhìn", "hàng"], category: "Dịch vụ & CSKH" },
+  { id: 93, question: `(DV1.45) Bạn hãy trình bày về hạng mục giá trị “Sản phẩm chủ đạo”. Cho ví dụ
+về hạng mục giá trị mà TV cung cấp cho khách
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["hạng", "mục", "giá", "trị", "Sản", "phẩm", "chủ", "đạo", "TV", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 94, question: `(DV1.46) Bạn hãy trình bày về hạng mục giá trị “Sự thuận tiện”.
+Cho ví dụ về hạng mục giá trị mà TV cung cấp cho khách
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["hạng", "mục", "giá", "trị", "thuận", "tiện", "TV", "cung", "cấp", "này"], category: "Dịch vụ & CSKH" },
+  { id: 95, question: `(DV1.47) Bạn hãy trình bày hiểu biết về hạng mục giá trị “Tư duy dịch vụ”.
+Cho ví dụ về hạng mục giá trị mà TV cung cấp cho khách
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["hiểu", "hạng", "mục", "giá", "trị", "duy", "TV", "cung", "cấp", "này"], category: "Dịch vụ & CSKH" },
+  { id: 96, question: `(DV1.48) Bạn hãy trình bày hiểu biết về hạng mục giá trị “Phát triển mối quan
+hệ”.
+Cho ví dụ về hạng mục giá trị mà TV cung cấp cho khách
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["hiểu", "hạng", "mục", "giá", "trị", "Phát", "triển", "mối", "quan", "TV"], category: "Dịch vụ & CSKH" },
+  { id: 97, question: `(DV1.49) Bạn hãy trình bày nội dung cam kết số 2
+Bạn nói lời cảm ơn khách khi nào?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "Tôi", "đặc", "biệt"], category: "Dịch vụ & CSKH" },
+  { id: 98, question: `(DV1.50) Bạn hãy trình bày nội dung cam kết số 2
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách hỗ trợ bạn cất hành lý`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "hỗ", "trợ"], category: "Dịch vụ & CSKH" },
+  { id: 99, question: `(DV1.51) Bạn hãy trình bày nội dung cam kết số 2
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách chờ bạn làm nóng ly mì tôm`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "chờ", "làm"], category: "Dịch vụ & CSKH" },
+  { id: 100, question: `(DV1.52) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách thực hiện đề nghị của bạn, ví dụ đưa
+khay thức ăn cho bạn thu`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "thực", "hiện"], category: "Dịch vụ & CSKH" },
+  { id: 101, question: `(DV1.53) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách trợ giúp ý tế cho khách khác`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "trợ", "giúp"], category: "Dịch vụ & CSKH" },
+  { id: 102, question: `(DV1.54) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khi khách góp ý món cơm thịt bò (cơm bị nát)?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "góp"], category: "Dịch vụ & CSKH" },
+  { id: 103, question: `(DV1.55) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khoang khách có tiếng trẻ con khóc rất
+to và khá lâu (5 phút)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "khoang"], category: "Dịch vụ & CSKH" },
+  { id: 104, question: `(DV1.56) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãynói câu xin lỗi khách khi chuyến baybị delaydo kiểm tra kỹthuật
+máy bay tại TSN 30 phút (phát sinh sau khi khách đã lên tàu)`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "Hãynói", "câu"], category: "Dịch vụ & CSKH" },
+  { id: 105, question: `(DV1.57) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách va xe vào chân khách, gây tím bầm`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "vào"], category: "Dịch vụ & CSKH" },
+  { id: 106, question: `(DV1.58) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn TV phát thanh kém,
+không nghe rõ`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 107, question: `(DV1.59) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "Tôi", "đặc"], category: "Dịch vụ & CSKH" },
+  { id: 108, question: `(DV1.60) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn món ăn có vật lạ trong
+salad cá hồi`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 109, question: `(DV1.61) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn chuyến bay của VNA
+thường bị delay (chuyến bay hôm nay cũng bị delay).`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 110, question: `(DV1.62) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn chương trình giải trí
+không có nhiều lựa chọn`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 111, question: `(DV1.63) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn thức ăn, thức uống trên
+chuyến bay ít thay đổi`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 112, question: `(DV1.64) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn bỏ sót không phục vụ
+khách khăn lau tay`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 113, question: `(DV1.65) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn không có chỗ để hành
+lý bên trên chỗ ngồi`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 114, question: `(DV1.66) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn không có cà phê Cold
+Brew trên chuyến bay`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 115, question: `(DV1.67) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khi khách phàn nàn có ít lựa chọn rượu vang trên
+chuyến bay? Khách thích rượu Vang đỏ Bordeaux – 2012?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 116, question: `(DV1.68) Kỹ năng quan sát hiệu quả đóng vai trò như thế nào trong việc thực
+hiện cam kết 5?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["Kỹ", "năng", "quan", "sát", "hiệu", "quả", "đóng", "vai", "trò", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 117, question: `(DV1.69) Nếu thực hiện được cam kết 5, bạn sẽ mang lại cảm xúc cho khách
+hành ở cấp độ mấy? Vì sao?
+Hãy đưa ra một ví dụ mà bạn thực hiện cam kết 5 vào thời điểm tạm
+biệt khách?`, answer: `1/ Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với
+đồng nghiệp và đối tác.
+
+
+2/ Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho
+những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch
+vụ một cách an toàn, an ninh và nhất quán.
+3/ Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và
+cởi mở trong các mối quan hệ.
+4/ Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản
+thân và luôn nỗ lực hướng tới sự xuất sắc.
+5/ Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan
+trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm,
+chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["thực", "hiện", "cam", "kết", "mang", "lại", "cảm", "xúc", "cấp", "mấy"], category: "Dịch vụ & CSKH" },
+  { id: 118, question: `(DV1.70) TVhãynêu 4 hạng mục giá trịtheo ngôn ngữdịch vụchung của VNA?
+( hay còn gọi là 4 góc nhìn của khách hàng)
+Từng hạng mục giá trị, TV hãy nêu 1 ví dụ mà TV đã thực hiện và
+đánh giá dịch vụ đó ở cấp độ nào.`, answer: `* Sản phẩm chủ đạo: Sản phẩm chủ đạo là lý do chính và đầu tiên khách hàng
+đến với bạn.
+* Sự thuận tiện: Hệ thống bao gồm các quy trình, phương pháp, công cụ được
+sử dụng để cung cấp sản phẩm dịch vụ một cách tiện lợi, nhanh chóng, linh
+hoạt, dễ tiếp cận và dễ lựa chọn.
+* Tư duy dịch vụ: là cách thức bạn gặp gỡ, đón tiếp và đối xử với người khách.
+Đây là lĩnh vực của thái độ, tinh thần chuyên nghiệp, sự thân thiện, sự nhiệt
+huyết, sự cam kết và quan tâm chăm sóc và sự cảm thông đối với người khác.
+* Phát triển mối quan hệ: Nỗ lực kết nối, duy trì và phát triển quan hệ tốt đẹp
+với khách hàng trước, trong và sau quá trình trải nghiệm dịch vụ.`, keywords: ["TV", "hãynêu", "hạng", "mục", "giá", "trịtheo", "ngôn", "ngữdịch", "vụchung", "VNA"], category: "Dịch vụ & CSKH" },
+  { id: 119, question: `(DV1.71) Trong lúc hiện diện trong khoang khách, TV quan sát và nhận thấy
+khách co ro/xoa người (khách bị lạnh).
+TV chủ động thực hiện những hành động nào để nâng tầm dịch vụ lên
+cấp độ đáng ngạc nhiên?`, answer: `đúng với chủng loại máy bay – Bộ XLTH
+FIX:
+* Nhận thông tin từ hành khách, xin lỗi và xin phép thu hồi bảng hướng dẫn AT
+* Mời thay thế bảng hướng dẫn an toàn khác đúng với chủng loại máy bay đang khai
+thác
+* Kiểm tra ngẫu nhiên các ghế khác
+* Thay thế ngay nếu có sự sai sót
+* Kiểm tra ngẫu nhiên thêm 1 vài ghế xem có tờ hướng dẫn an toàn đúng với chủng
+loại tàu đang khai thác
+
+
+
+* Ngay lập tức lấy đúng tờ khai khác và phục vụ cho hành khách. Kiểm tra kĩ trước
+khi mời
+* Cảm ơn hành khách đã nhắc nhở
+* Báo cáo TVT và chia sẻ thông tin cho tổ TV
+CARE:
+* Quay lại trò chuyện với khách
+* Chia sẻ thêm thông tin về chủng loại tàu bay
+* TV giới thiệu chương trình giải trí
+* TV mời thêm sản phẩm dịch vụ
+ADD:
+* Quan sát, chăm sóc hành khách suốt chuyến bay, tìm hiểu sở thích
+* Cá nhân hoá hành khách bằng cách hỏi thăm về mức độ hài lòng
+* Đáp ứng nhu cầu của hành khách ở mức độ “Đáng ngạc nhiên”`, keywords: ["lúc", "hiện", "diện", "khoang", "TV", "quan", "sát", "nhận", "thấy", "xoa"], category: "Dịch vụ & CSKH" },
+  { id: 120, question: `(DV1.72) Bạn hãy cho biết:
+- Khái niệm về dịch vụ theo ngôn ngữ dịch vụ chung của Vietnam
+Airlines?
+- Ba (3) yếu tố: hành động, giá trị, người khác đều quan trọng nhưng
+chúng ta cần quan tâm yếu tố nào trước?
+- Tài liệu tra cứu “khái niệm về dịch vụ”.`, answer: `- Bộ XLTH
+FIX:
+* TV cần nhanh chóng hỏi thăm và tìm hiểu nhu cầu của khách.
+* Giải thích cho khách hiểu rằng MB đang chuẩn bị cất/ hạ cánh, khách có thể vui
+lòng sử dụng ngay sau khi MB cất/ hạ cánh, tất cả là vì sự an toàn của hành khách
+(nhấn mạnh vào sự an toàn của bản thân họ).
+* Lưu ý: TV căn cứ vào tình huống cụ thể trên CB để xử lý cho phù hợp và đảm bảo
+an toàn cho HK
+* TV quay lại sau khi cất/ hạ cánh để hỗ trợ khách.
+* Chia sẻ thông tin cho đồng nghiệp khi phục vụ bữa ăn và thời điểm chăm sóc
+(smalltalk) lưu ý những biểu hiện liên quan tới sức khoẻ của hành khách (nếu có) để
+hỗ trợ
+* Quan sát mức độ hài lòng của khách sau khi đã thực hiện giải pháp
+* Khách hài lòng: báo cáo cấp trên.
+* Khách không hài lòng hoặc TV chưa xử lý ngay được: chuyển gặp cấp trên/ TVT
+để hỗ trợ.
+* Báo cáo tình huống và hướng giải quyết + tình hình của khách hiện tại cho TVT.
+* TVT thu xếp thời gian ra tương tác và trò chuyện với khách (nếu cần)
+
+
+
+* Lưu ý: Thông báo cho TVT/ TV làm việc cùng biết sự việc đã xảy ra tránh phát
+sinh vấn đề làm khách không hài lòng
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý.
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng.
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách có thể mời một loại thức
+uống mà khách yêu thích hoặc quan tâm.
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.`, keywords: ["Khái", "niệm", "ngôn", "ngữ", "chung", "Vietnam", "Airlines", "yếu", "động", "giá"], category: "Dịch vụ & CSKH" },
+  { id: 121, question: `(DV1.73) Bạn hãy cho biết:
+-Khái niệm về dịch vụ theo ngôn ngữ dịch vụ chung của Vietnam
+Airlines?
+-Những “Hành động tạo ra giá trị” khi đón khách lên máy bay
+- Tài liệu tra cứu khái niệm về dịch vụ`, answer: `FIX:
+* TV lập tức xin lỗi khách vì đã có sơ suất không phục vụ khách bữa ăn và để khách
+phải đợi.
+* Xác định vấn đề/mức độ lỗi 1
+* Nhanh chóng kiểm tra các lựa chọn thức ăn, giới thiệu với khách, nhận yêu cầu
+của khách về thức ăn, thức uống, nhanh chóng phục vụ
+* Nhanh chóng phục vụ suất ăn đúng yêu cầu của khách.
+* Báo cáo TVT và đồng nghiệp để nắm tình hình khách, tiếp tục quan tâm chú ý
+chăm sóc hành khách.
+* TVT báo cáo cabinbook
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý.
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng. (Mời khách dùng thêm
+trà, cà phê. Hướng dẫn khách khai form. Khách muốn xem giải trí: phục vụ giải trí/
+giới thiệu/ mở chương trình khách yêu thích. Khách muốn ngủ: ngả lưng ghế, kiểm
+tra nhiệt độ...)
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách
+* Sau khi khách dùng bữa, TV phụ trách khu vực ghế khách xin phép thu dọn, xin
+lỗi khách.
+ADD:
+* TVT xin lỗi khách một lần nữa và cảm ơn sự thông cảm của khách.
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+
+
+
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”. Thông báo
+cho tổ TV chuyến bay nối chuyến để tránh xảy ra tình huống tương tự`, keywords: ["Khái", "niệm", "ngôn", "ngữ", "chung", "Vietnam", "Airlines", "động", "tạo", "giá"], category: "Dịch vụ & CSKH" },
+  { id: 122, question: `(DV1.74) Bạn hãy nêu cách hiểu của bạn về Chu trình dịch vụ và Quy trình dịch
+vụ?
+- Định nghĩa
+- Tầm quan trọng của 2 khái niệm`, answer: `FIX:
+* Ngay lập tức xin lỗi khách.
+* Kiểm tra xem tư trang của khách có bị ảnh hưởng hay không
+* Hỗ trợ làm sạch vết bẩn.
+* Đổi chỗ cho khách.
+* Ghi nhận sự việc trong Biên bản vụ việc để ĐTV chi trả chi phí giặt ủi
+* TV báo cáo ngay cho TVT
+* TVT xin lỗi khách
+* TVT báo cáo trên Cabin book (sự việc, xử lý của TV, cảm xúc của khách)
+CARE:
+* Quan tâm chăm sóc khách suốt thời gian còn lại của chuyến bay
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng
+* Hỗ trợ lấy hành lý và xuống máy bay
+ADD:
+* Quan sát biết khách thích rượu pha, mời/ hướng dẫn khách pha 1 ly thức uống
+điểm nhấn.
+* Chuyển thông tin khách và sự việc cho nhân viên mặt đất/tổ TV nối chuyến tránh
+lập lại lỗi tương tự và chủ động quan tâm chăm sóc khách.
+* Bồi thường gắn kết (trường hợp TV làm đổ nước vào người khách): Viết phiếu ghi
+nhận thông tin phục hồi và bảo đảm dịch vụ.`, keywords: ["cách", "hiểu", "Chu", "Quy", "Định", "nghĩa", "Tầm", "quan", "trọng", "khái"], category: "Dịch vụ & CSKH" },
+  { id: 123, question: `(DV1.75) TV hãy nêu 5 giá trị cốt lõi dịch vụ khách hàng của VNA?
+Nêu ý nghĩa giá trị cốt lõi số 1?
+Bạn đánh giá như thế nào về TV thực hiện giá trị cốt lõi số 1?`, answer: `khách không kịp đặt trước theo quy định - Bộ XLTH
+FIX:
+* Lắng nghe, chia sẻ, thấu hiểu cảm thông.
+* Nhận các thông tin về khách
+* TV kiểm tra lại với TVT xem suất ăn đặc biệt của khách đã được cấp lên chuyến
+bay chưa.
+* Nếu không có suất ăn khách đặt trên chuyến bay: TVT báo ASOC để hỗ trợ cấp
+suất ăn phục vụ cho khách nếu kịp.
+
+
+
+* Nếu không kịp đặt suất ăn: giới thiệu với khách thành phần bữa ăn được cấp lên
+trên CB phù hợp để khách có thể chọn thay thế cho SĂĐB.
+* Xem các thành phần của suất ăn hạng C (để riêng các loại rau thit cá…) để sắp xếp
+mời khách
+* Báo cáo lại TVT về tình huống và phương án thay thế suất ăn cho khách phù hợp.
+* TVT/TVT phụ trách khoang thông báo tới tất cả thành viên trong Tổ về tên & số
+ghế của hành khách.
+* TVT xin lỗi khách (trường hợp khách đã đặt suất ăn đặc biệt nhưng không được
+cấp lên CB)
+* TVT báo cáo trên Cabinbook (tên, số ghế, loại suất ăn đặc biệt, xử lý của TV, thái
+độ của khách)
+CARE:
+* Quan tâm, chăm sóc suốt thời gian còn lại của chuyến bay
+* Giới thiệu quy trình xác nhận lại SĂĐB trước CB
+ADD:
+* Hỗ trợ khách đặt suất ăn đặc biệt trên các chặng bay nối chuyến. TVT lập Group
+viber bao gồm TVT, ASOC, VIAGS để hỗ trợ đặt SADB cho khách
+* Thể hiện sự quan tâm hơn nữa
+* Làm cho khách hàng thấy mình quan trọng đối với công ty
+* Tặng khách món quà nhỏ: túi daynight kit/ bút viết VNA.
+* Bồi thường gắn kết: ghi nhận phiếu thông tin phục hồi và đảm bảo nếu cần (trường
+hợp khách đã đặt suất ăn đặc biệt nhưng không được cấp lên CB)`, keywords: ["TV", "giá", "trị", "cốt", "lõi", "hàng", "VNA", "nghĩa", "đánh", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 124, question: `(DV1.76) TV hãy nêu 5 giá trị cốt lõi dịch vụ khách hàng của VNA?
+Nêu ý nghĩa giá trị cốt lõi số 2?
+Bạn đánh giá như thế nào về TV thực hiện giá trị cốt lõi số 2?`, answer: `khỏe) - Bộ XLTH
+FIX:
+* Đồng cảm, tìm hiểu tình trạng sức khỏe của hành khách
+* Thể hiện sự quan tâm
+* Mời chăn và dép hạng phổ thông cho khách
+* Đưa thông tin cho khách về chất lượng sản phẩm để khách yên tâm sử dụng
+* Đánh giá tình hình để quyêt định cho khách sử dụng các loại thuốc có trên máy
+bay.
+* Nếu khách bị lạnh: Điều chỉnh van gió - Lấy áo khoác cho khách - Điều chỉnh
+nhiệt độ - Mời khách thức uống ấm theo sở thích của khách
+
+
+
+* Nếu khách bị nóng (do bị sốt): Điều chỉnh van gió - Sử dụng khăn bông chườm
+lạnh cho khách (trên các chuyến bay quốc nội, có thể đề xuất dùng khăn bông hạng
+C) - Chăm sóc khách nghỉ ngơi.
+* Thường xuyên quan sát khách, thăm hỏi tình trạng sức khỏe của khách khi khách
+tỉnh giấc. Nếu tình trạng sức khỏe của khách không cải thiện, có biểu hiện xấu đi,
+tiếp viên trưởng sẽ thực hiện các bước giải quyết tiếp theo như kêu gọi sự hỗ trợ y
+tế trên chuyến bay cũng như tại điểm đến.
+* Báo cáo TVT - Chia sẻ thông tin với đồng nghiêp – TVT báo cáo tình trạng sức
+khỏe và cách thức xử lý của tiếp viên với cơ trưởng.
+CARE:
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng: suốt chuyến bay thường
+xuyên quan sát khách để hỗ trợ khách ngay khi khách chưa gọi tiếp viên, nếu là
+chặng đường dài sẽ lấy lựa chọn món ăn trước, nếu khách đi 1 mình thì có thể giúp
+khách đi toilet nếu khách gặp vấn đề về sức khỏe, giới thiệu chương trình giải trí nếu
+khách không ngủ được, giới thiệu dịch vụ hạng C để cho những chuyến bay sau
+khách có thể sẽ muốn có tair nghiêm khác biệt.
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách.
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách: Small talk và đưa thông tin về
+nhiệt độ tại điểm đến. Nếu là mùa đông, giúp khách chuẩn bị áo ấm, khăn mũ, chuẩn
+bị thuốc nếu khách vẫn cần sử dụng, gửi khách thêm nước suối, khăn ướt (nếu cần);
+nếu khách đi tiếp tục hành trình trên chuyến bay của VNA, sử dụng kênh liên lạc
+viber báo cáo nhanh tình trạng và hành trình của khách để hệ thống có sự hỗ trợ cần
+thiết cho khách. để lưu ý chăm sóc sức khỏe cho khách.
+* Tìm mọi cách để đáp ứng nhu cầu khách ở mức độ “đáng ngạc nhiên”.`, keywords: ["TV", "giá", "trị", "cốt", "lõi", "hàng", "VNA", "nghĩa", "đánh", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 125, question: `(DV1.77) TV hãy nêu 5 giá trị cốt lõi dịch vụ khách hàng của VNA?`, answer: `dụng phòng vệ sinh hạng C - Bộ XLTH
+FIX:
+* Tiếp cận, đặt câu hỏi để tìm hiểu nhu cầu của khách.
+* Thể hiện sự đồng cảm
+* Trực tiếp hướng dẫn khách sử dụng phòng vệ sinh dưới khoang Y
+* Thông tin cho TV phụ trách khu vực khách ngồi thường xuyên kiểm tra phòng vệ
+sinh, đảm bảo sẵn sàng cho khách sử dụng.
+
+
+
+* Báo cáo TVT
+CARE:
+* Chủ động quan tâm các nhu cầu chính đáng của khách trong khả năng.
+ADD:
+* Ghi nhớ nhu cầu của khách. Thể hiện sự quan tâm chăm sóc hơn nữa.
+* Làm cho khách hàng thấy mình quan trọng đối với công ty.`, keywords: ["TV", "giá", "trị", "cốt", "lõi", "hàng", "VNA", "dụng", "phòng", "sinh"], category: "Dịch vụ & CSKH" },
+  { id: 126, question: `(DV1.78) TV hãy nêu 5 giá trị cốt lõi dịch vụ khách hàng của VNA?
+Nêu ý nghĩa giá trị cốt lõi số 4?
+Bạn đánh giá như thế nào về TV thực hiện giá trị cốt lõi số 4?`, answer: `hưởng đến sự nghỉ ngơi của các khách khác - Bộ XLTH
+FIX:
+* TV đến trả lời chuông gọi của khách tại ghế, giao tiếp mắt và nghe phản ánh của
+khách.
+* Thể hiện sự đồng cảm, xin phép tìm hiểu nguyên nhân
+* Trường hợp các bé nô đùa, nói lớn tiếng trong khoang khách
+* Nhẹ nhàng nhắc nhở các bé giữ im lặng và hướng dẫn bé về chỗ ngồi
+* Trao đổi với người lớn đi cùng để chăm sóc em bé. Lưu ý người lớn giữ các bé
+ngồi tại ghế và cài dây an toàn đề phòng máy bay bay vào khu vực thời tiết xấu có
+thể khiến các bé bị thương.
+* Mời các bé thức ăn, thức uống và đồ chơi. Giới thiệu chương trình giải trí phù
+hợp với lứa tuổi của các bé.
+* Trường hợp em bé quấy khóc → Tiếp cận ba mẹ tìm hiểu nguyên nhân bé khóc,
+xin phép được hỗ trợ.
+* Đề nghị đồng nghiệp hỗ trợ chăm sóc em bé (pha sữa, mời ăn uống, mời đồ chơi)
+* Trao đổi nguyên nhân với khách phản ánh, xin phép được hỗ trợ khách nghỉ ngơi
+(tai nghe, giới thiệu chương trình nhạc nhẹ, …). Cám ơn khách thông cảm.
+* Cùng đồng nghiệp tiếp tục hỗ trợ bố mẹ chăm sóc em bé
+* Báo cáo tiếp viên trưởng
+* Chia sẻ thông tin với tiếp viên làm việc cùng khoang
+CARE:
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý
+* Tìm kiếm các giá trị khác khách hàng đang cần để đáp ứng
+* Đáp ứng tối đa các nhu cầu khác hay sở thích của khách
+ADD:
+* Quan sát, lắng nghe để lưu lại sở thích của khách
+
+
+
+* Small talk để biết hành trình sau đó có thể hỗ trợ được gì cho khách`, keywords: ["TV", "giá", "trị", "cốt", "lõi", "hàng", "VNA", "nghĩa", "đánh", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 127, question: `(DV1.79) TV hãy nêu 5 giá trị cốt lõi dịch vụ khách hàng của VNA?
+Nêu ý nghĩa giá trị cốt lõi số 5?
+Bạn đánh giá như thế nào về TV thực hiện giá trị cốt lõi số 5?`, answer: `khoang hạng Y lên ngồi tại ghế trống bên cạnh - Bộ XLTH
+FIX:
+* Tiếp nhận yêu cầu của khách để hỏi ý kiến TVT về việc nâng hạng khách và thực
+hiện theo hướng dẫn của TVT.
+* TV cảm ơn khách đã yêu mến VNA nhưng TV không được phép nâng hạng ghế
+cho khách.
+* Xin thông tin số ghế của người nhà khách dưới khoang hạng Y và. Báo với
+khách sẽ nói TV phục vụ chu đáo người nhà khách dưới khoang Y và cũng để chủ
+động mời người nhà lên tham quan ghế hạng C vào khoảng thời gian thích hợp
+* Tiếp viên chủ động gặp gỡ người nhà của hành khách ngay khi có thể.
+* Tiếp viên báo cáo TVT về yêu cầu của hành khách, chia sẻ thông tin với đồng
+nghiệp về cách giải quyết để cùng thống nhất giải pháp và quan tâm đến người nhà
+của khách hạng C.
+* TV xin phép TVT cho người nhà khách lên nói chuyện khoảng 5-10 phút sau khi
+phục vụ bữa ăn và trước khi các khách khác nghỉ ngơi.
+CARE:
+* Tiếp viên chủ động mời khách hạng C và người nhà dùng thức uống
+* Tiếp viên chủ động trao đổi, chia sẻ thông tin về việc các tiếp viên hạng Y sẽ chăm
+sóc người nhà của khách.
+* Tiếp viên chủ động giới thiệu các dịch vụ bổ trợ: nâng hạng dịch vụ giờ chót
+* Tiếp viên trò chuyện với hành khách để hiểu những giá trị khác khách cần tìm, chủ
+động cung cấp dịch vụ ngạc nhiên.
+ADD:
+* Nếu khách nối chuyến, hoặc cần xuống gấp nhà ga hay đi cùng người nhà là hành
+khách cao tuổi, tiếp viên chủ động đề nghị hỗ trợ người nhà của đổi chỗ lên vị trí
+gần cửa trước khi hạ cánh, hỗ trợ hành lý xách tay, cung cấp thông tin điểm đến như
+thời gian, nhiệt độ và các lưu ý ở nhà ga…
+* Cảm ơn khách và gia đình đã ủng hộ VNA
+* Chủ động thông báo thời tiết tại điểm đến cho hành khách
+* Chúc hành khách tiếp tục có những trải nghiệm thú vị/1 ngày nhiều niềm vui.`, keywords: ["TV", "giá", "trị", "cốt", "lõi", "hàng", "VNA", "nghĩa", "đánh", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 128, question: `(DV1.80) Hãy nêu tiêu chuẩn khoang khách sẵn sàng đón khách lên máy bay?`, answer: `trợ giúp y tế trên CB - Bộ XLTH
+FIX:
+* Nhanh chóng tiếp cận hành khách
+* Lắng nghe, ghi nhận tình trạng sức khỏe hành khách, hỏi thăm để biết thông tin
+(bệnh tiền sử, loại thuốc đang dùng, người đi cùng, hiện trạng sức khoẻ…)
+* Hỗ trợ trong khả năng (lấy thuốc, phục vụ thuốc có trên máy bay, phục vụ ăn uống
+để lấy lại sức, cung cấp khăn, nước ấm, đổi chỗ ra vị trí rông rãi hơn...
+* Sơ cứu ngay nếu cần - Gọi trợ giúp y tế
+* Trường hợp khách cần trợ giúp y tế khẩn cấp: cơ trưởng quyết định máy bay phải
+đáp khẩn.
+* TV trong khu vực/ hoặc TV phát hiện khách có vấn đề về sức khỏe báo cáo với
+TVT
+* TVT báo cáo cơ trưởng (xin phép mở hộp thuốc, sử dụng bình Oxy, tình trạng
+khách)
+* TVT lập BB về tình trạng sức khỏe bất thường của hành khách (có chữ ký của
+người làm chứng), báo cáo Cabin book/E-report
+CARE:
+* TVT điều hành bao quát tổ TV, phân công TV phụ trách khu vực với sự hỗ trợ của
+các TV khác theo dõi và chăm sóc hành khách trong suốt CB
+* TVT phải liên hệ bàn giao khách với NVMĐ, Đại diện hoặc y tế sân bay có trách
+nhiệm tiếp tục chăm sóc hỗ trợ xách giúp hành lí cho khách.
+ADD:
+* TVT liên hệ với người nhà khách/ khách để hỏi thăm sức khỏe hành khách (hỏi ý
+kiến của Cán bộ liên đội chủ quản)
+* TVT/ TV gửi hoa chúc sức khỏe hành khách/ đến bệnh viện thăm hành khách`, keywords: ["tiêu", "chuẩn", "khoang", "sẵn", "sàng", "đón", "lên", "máy", "bay", "trợ"], category: "Dịch vụ & CSKH" },
+  { id: 129, question: `(DV1.81) Hãy trình bày quy định TV hiện diện trong khoang khách (Tần suất,
+kỹ năng đi lại, quan sát)?`, answer: `máy bay 1 lối đi do không có khí tài thay thế, khách rất khó chịu - Bộ XLTH
+FIX:
+* TV nhận diện và tiếp cận ngay khi nhận thấy khách muốn nói chuyện, khách biểu
+hiện không thoải mái
+* Ghi nhận ý kiến khách với thái độ nghiêm túc và cầu thị
+
+
+
+* Thể hiện sự đồng cảm với khách: - Em hoàn toàn đồng ý (em hiểu/ em hiểu được
+cảm giác …) + Giá trị khách hàng mong muốn.
+* Xin lỗi khách với cảm xúc chân thành
+* Mời khách về chỗ ngồi
+* Phục khách thức ăn/ thức uống đúng yêu cầu/ lựa chọn của khách
+* Báo cáo TVT & Chia sẻ thông tin với cả tổ TV
+CARE:
+* Hướng dẫn các tiện ích tại ghế ngồi cho khách.
+* Kiểm tra mức độ hài lòng của khách sau khi xử lý
+* Thường xuyên hỏi thăm khách hàng, quan tâm chăm sóc hơn, nhớ sở thích thói
+quen của khách
+* Tránh không lặp lại vấn đề khác/ tương tự với khách
+* Thể hiện sự thấu hiểu, đồng cảm và sẳn sàng hỗ trợ, giúp đỡ thêm
+* Cung cấp các dịch vụ khác biệt/ thay thế
+ADD:
+* Thể hiện sự quan tâm chăm sóc hơn nữa
+* Tặng thêm dịch vụ đặc biệt/quà tặng là sản phẩm khách ưa thích, những vật dụng
+có logo công ty…
+* Làm cho khách hàng thấy mình quan trọng đối với công ty, khách hàng là động
+lực để công ty phát triển…
+* Tặng Phiếu bồi thường gắn kết trong những tình huống khách có phản ứng gay gắt
+hoặc khách bị ảnh hưởng về lịch trình tiếp theo.`, keywords: ["quy", "định", "TV", "hiện", "diện", "khoang", "Tần", "suất", "kỹ", "năng"], category: "Dịch vụ & CSKH" },
+  { id: 130, question: `(DV1.82) Khách yêu cầu phục vụ thức uống khi máy bay đang lăn đến đầu
+đường băng, chuẩn bị cất cánh, TV xử lý như thế nào?`, answer: `báo với TV sợ bị trễ chuyến bay nối chuyến - Bộ XLTH
+FIX:
+* Tiếp cận khách ngay khi nhận biết thấy khách có nhu cầu
+* Lắng nghe trình bày của khách với sự thấu hiểu và thông cảm
+* Áp dụng mẫu câu: Em hiểu rằng + giá trị khách mong muốn
+* Xin lỗi khách chân thành
+* TV nhận thông tin về CB nối chuyến của khách (xem vé) - Hỏi xem khách có đi
+cùng ai không
+* Quay lại trả lời khách sau khi báo cáo TVT - TVT báo cáo cho NVMĐ biết thông
+tin để phối hợp giúp đỡ khách.
+
+
+
+CARE:
+* Chăm sóc, phục vụ khách chu đáo, nhiệt tình suốt chuyến bay
+* Mời khách xem chương trình giải trí, và thông tin bay trên Air show.
+ADD:
+* Mời khách thức uống hạng C
+* Khi MB sắp hạ cánh, đổi chỗ khách lên hàng ghế phía trên (nếu còn chỗ) cùng
+hành lý xách tay của khách và mời khách xuống MB nhanh nhất có thể
+* Hỗ trợ hành lý cho khách
+* Cảm ơn và chúc khách có hành trình tiếp tốt đẹp`, keywords: ["yêu", "cầu", "thức", "uống", "máy", "bay", "đang", "lăn", "đầu", "đường"], category: "Dịch vụ & CSKH" },
+  { id: 131, question: `(DV1.83) Khách yêu cầu phục vụ thức uống nóng khi máy bay giảm độ cao (đã
+thông báo Cabin Crew prepare for landing), chuẩn bị hạ cánh, TV xử
+lý như thế nào?`, answer: `* Xin lỗi hành khách về sự chậm trễ
+* Tìm hiểu ngay về nhu cầu của khách và sẵn lòng đáp ứng ngay yêu cầu của
+khách.
+* Cám ơn khách đã chờ đợi và xin lỗi khách lần nữa
+* Thường xuyên chăm sóc khách trong suốt chuyến bay
+* Báo cáo với Trưởng khoang Y, TVT để Trưởng khoang Y, TVT ra hỏi thăm và
+xin lỗi khách
+* TVT de-briefing/coaching với TV trong khoang/tổ để không xảy ra tình huống
+trên trong thời gian còn lại của CB`, keywords: ["yêu", "cầu", "thức", "uống", "nóng", "máy", "bay", "giảm", "cao", "thông"], category: "Dịch vụ & CSKH" },
+  { id: 132, question: `(DV1.84) Các lưu ý khi phục vụ khách khiếm thị thức ăn, thức uống trên chuyến
+bay?`, answer: `* Xin lỗi khách với thái độ chân thành nhất về sự chậm trễ
+* Hỏi yêu cầu của khách và đáp ứng yêu cầu đó một cách nhanh chóng nhất, hỏi
+thêm các yêu cầu khác của khách
+* Chân thành xin lỗi khách và cảm ơn khách đã thông cảm
+* Thường xuyên quan sát, chăm sóc khách trong suốt chuyến bay, tìm cơ hội phục
+vụ tốt hơn để nổi bật lên chất lượng phục vụ
+* Báo cáo TVT, TVT ra hỏi thăm và xin lỗi khách
+* TVT de-briefing/coaching với TV trong khoang/tổ để không xảy ra tình huống
+trên trong thời gian còn lại của chuyến bay`, keywords: ["lưu", "khiếm", "thị", "thức", "uống", "bay", "Xin", "lỗi", "thái", "chân"], category: "Dịch vụ & CSKH" },
+  { id: 133, question: `(DV1.85) TV hãy nêu quy định khi TV phục vụ bằng xe đẩy trong khoang
+khách?`, answer: `* Xin phép hướng dẫn cho khách phòng vệ sinh hạng Y gần nhất chỗ khách đứng.
+Giới thiệu tiện nghi bên trong và hỏi khách có cần trợ giúp gì không?
+* Nếu khách vẫn nhất định yêu cầu được sử dụng phòng vệ sinh hạng C: xin lỗi
+khách phòng vệ sinh hạng C đang kẹt khách. Mời khách sử dụng phòng vệ sinh hạng
+Y trước vì lý do khách không phải chờ đợi lâu
+* Nếu hành khách đã sử dụng phòng vệ sinh hạng C: TV đợi khách ra, xin phép giải
+thích về việc khách hạng C đang nghỉ ngơi, dùng bữa sẽ bất tiện cho việc khách đi
+lại và phải chờ đợi. + Hướng dẫn phòng vệ sinh hạng Y gần nhất cho hành khách
+* Cảm ơn sự hợp tác của khách`, keywords: ["TV", "quy", "định", "bằng", "đẩy", "khoang", "Xin", "phép", "hướng", "dẫn"], category: "Dịch vụ & CSKH" },
+  { id: 134, question: `(DV1.86) TV hãy cho biết cách phục vụ và quan tâm, chăm sóc bà mẹ có em bé
+đi cùng trên chuyến bay?`, answer: `của VNA? Training Edoc – Business Class – Dụng cụ phục vụ
+* Ly giải khát loại nhỏ (rót cách miệng 2cm)
+- Phục vụ thức uống có ga, nước trái cây, nước khoáng, nước tinh khiết, nước suối,
+sữa tươi ; Phục vụ bia ; Phục vụ rượu pha
+* Ly giải khát loại to (phục vụ như trên) → rót 2/3 ly và Welcome drink rót 1/2
+* Ly rượu vang loại nhỏ
+- Phục vụ vang trắng, đỏ, hồng (rót 1/2 ly)
+- Phục vụ nước suối, champagne (rót cách miệng 2cm)
+- Phục vụ vang mạnh, sake nóng/lạnh (rót 1/3 ly từ đáy hoặc 01 chai rượu 50ml)
+* Ly rượu vang loại to (phục vụ như trên) → rót 1/3 ly
+* Ly rượu mạnh: Phục vụ rượu mạnh uống thẳng, rượu mùi, sake nóng/lạnh (rót
+1/3 ly)
+* Ly rượu Brandy: Phục vụ Brandy uống thẳng, uống đúp (rót 1/3 ly từ đáy)
+* Ly rượu Champagne: Phục vụ rượu champagne (rót 1/3 ly)`, keywords: ["TV", "cách", "quan", "tâm", "chăm", "sóc", "cùng", "bay", "VNA", "Training"], category: "Dịch vụ & CSKH" },
+  { id: 135, question: `(DV1.87) Khi boarding, TV cần phải thực hiện những nhiệm vụ gì ngay tại vị trí
+đứng chào đón khách C và khách hạng Y/ PE?`, answer: `* Xin lỗi và giải thích lý do không thể phục vụ thức uống nóng
+* Giới thiệu khách các thức uống phù hợp có thể phục vụ vào thời điểm này (nước
+tinh khiết, nước trái cây, nước ngọt)
+* Phục vụ khách và cám ơn khách đã thông cảm. (Lưu ý thu ly đảm bảo an toàn
+trên chuyến bay)`, keywords: ["boarding", "TV", "cần", "thực", "hiện", "ngay", "trí", "đứng", "chào", "đón"], category: "Dịch vụ & CSKH" },
+  { id: 136, question: `(DV1.88) Hãy nêu thứ tự tổ TV di chuyển trong nhà ga để đảm bảo đội hình di
+chuyển phi hành đoàn VNA?`, answer: `* Giám sát HLXT của khách khi boarding: TV nhận diện và yêu cầu nhân viên
+PVMÐ xử lý các truờng hợp hành lý xách tay vuợt quá số luợng, kích thuớc, trọng
+luợng theo qui định; viết báo cáo chuyến bay ghi nhận thông tin cụ thể sau chuyến
+bay theo qui định
+* Thời điểm chuẩn bị giảm độ cao: Khi thực hiện kiểm tra khoang khách, Tiếp viên
+nhận diện khách lớn tuổi, phụ nữ có thai, trẻ em đi một mình… & nhắc khách nếu
+cần sự hỗ trợ xuống máy bay, vui lòng ngồi chờ tại ghế khi máy bay đã hạ cánh
+* Phát thanh trên CB: TVT hoặc TV đuợc phân công thực hiện đọc bài phát thanh
+“Greeting After Landing - Chào tạm biệt” với nội dung nhắc khách cẩn trọng khi
+xuống máy bay bằng xe thang. Khi đứng chào tạm biệt khách, TV thực hiện: Nhắc
+khách không nên sử dụng điện thoại và tập trung vào việc xuống cầu thang (nếu
+khách đang dùng điện thoại), đề nghị khách nên sử dụng tay vịn cầu thang để an
+toàn hơn (đặc biệt khi trời mưa)
+* Nhận diện và luu ý tất cả các khách có biểu hiện bên ngoài bất thuờng về sức
+khỏe, khách nữ đi giày/ dép cao gót… nên bám vào tay vịn khi xuống cầu thang
+* Ðề nghị dừng xuống thang và gọi nhân viên mặt đất phối hợp trợ giúp đối với
+các khách gặp khó khăn trong việc mang hành lý xách tay xuống cầu thang như:
+phụ nữ có thai đi một mình, khách bế trẻ nhỏ, khách là nguời cao tuổi
+* TV báo cáo TVT nếu không có nhân viên sẵn sàng tại chân cầu thang máy bay`, keywords: ["thứ", "TV", "chuyển", "nhà", "đảm", "bảo", "đội", "hình", "phi", "đoàn"], category: "Dịch vụ & CSKH" },
+  { id: 137, question: `(DV1.89) Thế nào là khách “No Meal” và quy trình phục vụ khách như thế nào?`, answer: `* Lưu ý khách đã uống khá nhiều đồ uống có cồn với thái độ nhẹ nhàng lịch sự.
+Thông báo với khách vì lý do đảm bảo sức khoẻ cho khách, TV không được phép
+phục vụ sau 1-2h, sau đó tạm ngưng hoặc dừng hẳn việc phục vụ thức uống có cồn.
+Cảnh báo khách có thể gây bất tiện cho bản thân hành khách và cho những hành
+khách xung quanh nếu khách say.
+* Mời hành khách thức ăn nhẹ như hạt rang, bánh mỳ, phomai và đồ uống không
+có cồn để làm chậm quá trình hấp thụ cồn
+* Báo cáo TVT và thông báo với các TV khác về tình trạng của khách
+* Ðánh giá xác định mức độ say của hành khách để xử trí phù hợp
+* Thường xuyên chăm sóc khách trong suốt chuyến bay
+
+
+
+* Thực hiện theo hướng dẫn của TVT de-brf/coaching với TV trong khoang/tổ về
+tình huống trên trong thời gian còn lại của CB`, keywords: ["Thế", "Meal", "quy", "Lưu", "uống", "khá", "nhiều", "cồn", "thái", "nhẹ"], category: "Dịch vụ & CSKH" },
+  { id: 138, question: `(DV1.90) TV cho biết quy định về công tác nhận vật tư vật phẩm phục vụ hành
+khách trước CB tại VN`, answer: `* Chân thành xin lỗi khách và lấy làm tiếc đã để xảy ra sự việc trên
+* Trước hết, TV cần kiểm tra xem hành khách bị thương tổn do sự va chạm, đánh
+giá mức độ ảnh hưởng đến khách (ví dụ như đụng vào gây đau chân)
+* Trường hợp khách bị đau chân thì phải dùng biện pháp sơ cứu cho hành khách.
+Hỏi thăm hành khách trong suốt chuyến bay xem khách đã cảm thấy đỡ chưa
+* Báo cáo TVT thông tin để lập biên bản vụ việc
+* Bản thân tiếp viên phải luôn xin lỗi về việc mình đã gây ra để mong hành khách
+thông cảm
+* Chia sẻ thông tin tới các tiếp viên trong tổ rút kinh nghiệm
+* Thường xuyên chăm sóc khách trong suốt chuyến bay
+* TVT trực tiếp hỏi thăm, xin lỗi khách và thực hiện viết báo cáo chuyến bay, biên
+bản sức khoẻ bất thường …`, keywords: ["TV", "quy", "định", "công", "tác", "nhận", "vật", "phẩm", "trước", "CB"], category: "Dịch vụ & CSKH" },
+  { id: 139, question: `(DV1.91) TV cho biết quy định về công tác bàn giao vật tư vật phẩm phục vụ
+hành khách sau CB tại VN`, answer: `rộng (B787-9, B787-10, A350) không sử dụng cửa L1, trên chuyến bay, TV
+thực hiện các công việc gì?
+* TVT chủ động xác nhận thông tin về bãi đỗ và cửa xuống máy bay từ tổ lái vào
+thời điểm lấy thông tin nhiệt độ, các thông tin điểm đến trước lúc máy bay giảm độ
+cao
+* Trường hợp vẫn chưa được cung cấp thông tin: TVT chủ động nhắc tổ lái cung
+cấp thông tin về bãi đậu vào giai đoạn "Prepare for landing" hoặc giai đoạn máy
+bay vào đến sân đỗ
+* Khi máy bay đã vào bãi đỗ, TVT thực hiện quan sát phía bên ngoài máy bay để
+chắc chắn về thông tin bãi đỗ, phương tiện sử dụng, vị trí cửa sẽ đưa khách xuống
+máy bay
+* TVT triển khai TVB/ TVY hướng dẫn khách. TVT di chuyển xuống cửa L2 để
+kiểm soát và chào tạm biệt khách
+* TVC thông báo & hướng dẫn khách hạng C di chuyển về phía sau. TVC di
+chuyển xuống cuối khoang C để đứng chào và hỗ trợ khách
+
+
+
+* TVY thực hiện dừng khách Y để khách hạng C xuống máy bay trước tại cửa L2.
++ Riêng đối với máy bay B787-10, tại cửa L2, TVY mời khách Y từ hàng 16-20
+xuống máy bay trước, sau đó đóng rèm, dừng khách hạng Y từ hàng 21 để mời
+khách hạng C xuống máy bay. Sau đó TV mời khách Y từ hàng 21 xuống máy bay.
+
+
+
+QUY ĐỊNH PHỤC HỒI VÀ ĐẢM BẢO DỊCH VỤ BỒI THƯỜNG GẮN KẾT
+* PHỤC HỒI DỊCH VỤ: Là một quá trình ghi nhận, phát hiện và xử lý lỗi phát
+sinh thuộc trách nhiệm của VNA trong quá trình cung cấp DV đến khách hàng
+* ĐẢM BẢO DỊCH VỤ: Là sự cam kết của VNA đối với khách hàng về việc sẽ
+thực hiện các hoạt động phục hồi mỗi khi có xảy ra lỗi ở các mức độ khác nhau
+* MỤC ĐÍCH: Tạo ra trải nghiệm vui vẻ, thoải mái. Xoa dịu bực bội, khó chịu và
+lấy lại niềm tin của khách hàng. Gắn kết và thu hút thêm nhiều khách hàng mới
+* GIỚI HẠN:
+- Không áp dụng với khách nội bộ sử dụng vé ID, vé giảm
+- Không áp dụng trên các chuyến bay thuê chuyến
+** THỰC HIỆN
+- Căn cứ mức độ lỗi, TVT trao quyền cho TV cung cấp thêm giá trị cho khách hàng
+(bồi thường gắn kết)
+- TVT đề xuất để khách lựa chọn hình thức bồi thường phù hợp
+- TV điền phiếu “Ghi nhận thông tin phục hồi và đảm bảo dịch vụ”
+- Gửi khách 1 liên và thông báo xuất trình tại chi nhánh, phòng vé VNA để được hỗ
+trợ
+- Bồi thường dặm thưởng sẽ được cộng vào tài khoản sau 5-7 ngày
+** LƯU Ý: Bồi thường gắn kết khác với MCO
+- Bồi thường gắn kết trên cơ sở tiết kiệm chi phí, tận dụng các phương tiện/sản phẩm
+sẵn có trên chuyến bay, thể hiện sự cầu thị
+- Công cụ bồi thường hạng Y < C (cùng mức độ lỗi)
+- TVT cần viết BCCB, lập biên bản vụ việc để theo dõi và cải tiến phù hợp
+** MỨC ĐỘ LỖI
+
+
+
+LỖI CỤ THỂ
+
+* Món ăn quá mặn/nhạt, vỏ
+ghế rách, bẩn, bạc màu,
+thảm bẩn …
+* Thái độ của TV không
+thân thiện, chu đáo, nhiệt
+tình với khách
+* TV có thái độ không
+đúng mực, không tôn trọng
+khách …
+* Suất ăn có mùi vị bất
+thường như ôi thiu, sản
+phẩm quá hạn sử dụng
+hoặc biến dạng …
+* Hệ thống giải trí hư hỏng,
+khách có cảm xúc tiêu cực,
+leo thang
+* Suất ăn có vật lạ nguy
+hiểm, HTGT trên chuyến
+bay dài bị hỏng, TV làm đổ
+đồ ăn/thức uống nóng gây
+bỏng cho khách …
+* TV phục vụ suất ăn/đồ
+uống gây dị ứng với khách
+dù khách có thông báo
+trước, gây nguy cơ đe doạ
+tính mạng của khách
+* Khách bị bỏng ở mức
+nghiêm trọng
+* Suất ăn có vật lạ gây
+nguy hiểm cho hành khách
+
+THÁI ĐỘ CỦA KHÁCH SAU
+KHI TV KHẮC PHỤC LỖI
+
+Khách chưa hài lòng, gây ra sự
+bất tiện nhỏ cho khách hàng
+
+TV QUYẾT ĐỊNH
+
+Level 1: Lỗi nhỏ
+KH đánh giá DV không
+đúng như tiêu chuẩn đã
+cam kết
+
+Khách hàng không hài lòng, gây
+ra sự kích động các
+cảm xúc tiêu cực
+
+Level 2: Lỗi vừa phải
+KH đánh giá DV không
+đúng như tiêu chuẩn đã
+cam kết
+
+Khách không hài lòng, chịu sự
+gián đoạn, sự thiệt hại
+
+Level 3: Lỗi lớn
+KH đánh giá DV không
+đúng theo cam kết
+
+Khách hàng phải chịu thiệt hại Level 4: Lỗi nghiêm trọng
+lớn về thể chất, tinh thần,
+KH đánh giá DV không
+tài chính
+đúng theo cam kết
+
+
+
+Nhóm khách hàng
+
+Công cụ bồi thường gắn kết
+
+Khách ưu tiên
+
+Khách phổ thông
+
+Mức độ 1 - Lỗi nhỏ
+Không thực hiện bồi thường, tạo thêm giá trị, tập trung vào việc xin lỗi khách hàng,
+quan tâm đến khách hàng
+Mức độ 2 - Lỗi vừa phải
+Dặm thưởng
+
+2000 dặm
+
+1000 dặm
+
+Hành lý miễn cước
+
+01 kiện 23kg
+
+Không áp dụng
+
+Voucher giảm giá
+
+10% discount
+
+5% discount
+
+Mức độ 3 - Lỗi lớn
+Dặm thưởng
+
+4000 dặm
+
+2000 dặm
+
+Hành lý miễn cước
+
+01 kiện 32kg
+
+01 kiện 23kg
+
+Voucher giảm giá
+
+15% discount
+
+10% discount
+
+Thẻ mời phòng khách
+Business
+
+Áp dụng
+
+Áp dụng
+
+Nâng hạng dịch vụ
+
+Áp dụng
+
+Không áp dụng
+
+Mức độ 4 - Lỗi nghiêm trọng
+Dặm thưởng
+
+6000 dặm
+
+4000 dặm
+
+Hành lý miễn cước
+
+02 kiện 32kg
+
+02 kiện 23kg
+
+Voucher giảm giá
+
+20% discount
+
+15% discount
+
+Thẻ mời phòng khách
+Business
+
+Áp dụng
+
+Áp dụng
+
+Nâng hạng dịch vụ
+
+Áp dụng
+
+Áp dụng
+
+
+
+QUY TRÌNH THỰC HIỆN PHỤC HỒI VÀ ĐẢM BẢO DỊCH VỤ
+* Nhận diện lỗi: TV trực tiếp tiếp xúc với khách để xem phản ứng và cảm xúc của
+khách
+* Đánh giá mức độ lỗi: TV dựa vào bảng “mức độ lỗi” để đánh giá
+* Thực hiện khắc phục: Nếu lỗi liên quan trang thiết bị nội thất → dùng MCO và
+không dùng bồi thường gắn kết
+4/ Cung cấp thêm giá trị mới cho khách → bồi thường gắn kết
+- TV dựa vào bảng “công cụ bồi thường” để cung cấp thêm giá trị cho khách hàng
+- TVT có thể áp dụng công cụ thấp hơn mức tối đa (VD cộng 1000 dặm thì có thể
+offer mức thấp hơn)
+- TVT đề xuất 1 trong các công cụ bồi thường (VD chọn 1 hình thức là cộng dặm)
+→ lưu ý cộng dặm thưởng chỉ áp dụng cho khách là hội viên Bông Sen Vàng
+- TVT có thể nâng hạng dịch vụ cho khách ngay trên chuyến bay (nếu cho phép)
+* Điền phiếu xử lý: TVT điền đầy đủ thông tin yêu cầu
+- TVT giao khách liên số 01 (xuất trình tại các chi nhánh / phòng vé VNA)
+- TVT giữ liên số 02 nộp về ĐTV + ghi BCCB
+
+TIÊU CHUẨN TRANG THIẾT BỊ NỘI THẤT – IFE
+BỒI THƯỜNG MCO (Miscellaneous Charge Order)
+* Hướng dẫn bồi thường cho hành khách sử dụng thiết bị nội thất có hỏng hóc
+- Là khách đi trên các chuyến bay do TCTHK khai thác
+- Khách được xếp chỗ vào vị trí áp dụng “bồi thường cho hành khách”
+- Khách không thuộc phạm vi sử dụng vé ID của TCTHK
+* Phương thức bồi thường
+Bồi thường bằng Chứng từ thanh toán dịch vụ vận chuyển hàng không đa mục đích
+(MCO). TCTHK có thể linh hoạt thanh toán bằng tiền mặt hoặc chuyển khoản để
+bồi thường cho khách (giá trị = 2/3 MCO)
+* Cách thức bồi thường cho lỗi phát sinh trên chuyến bay (dành cho TVHK)
+- TV trên chuyến bay tổng hợp những hỏng hóc mà Điều kiện xếp khách áp dụng là
+“bồi thường cho hành khách”
+- TV xác nhận những hành khách sẽ được ghi nhận vào “Phiếu ghi nhận thông tin
+về hành khách được bồi thường”
+
+
+
+- TV điền đầy đủ thông tin của hành khách vào “Phiếu ghi nhận thông tin về hành
+khách được bồi thường” → đưa khách 1 liên vào thông báo gửi cho đại diện VNA
+tại sân bay đến để nhận bồi thường hoặc đến bất kì chi nhánh nào của VNA để nhận
+bồi thường trong vòng 30 ngày sau chuyến bay
+
+CÁC LỖI ĐƯỢC BỒI THƯỜNG (Phụ lục C)
+STT
+
+VỊ TRÍ
+
+1
+
+Hạng C
+
+Chức năng ngả/dựng lưng ghế
+
+2
+
+Hạng C
+
+Chức năng duỗi chân của ghế
+
+Không hoạt động
+
+3
+
+Hạng PE
+
+Chức năng ngả/dựng lưng ghế
+
+Không hoạt động
+
+4
+
+Hạng C
+
+Màn hình cá nhân
+
+Không hoạt động / không xem
+được
+
+5
+
+Hạng C
+
+Thiết bị điều khiển giải trí cá nhân
+PCU đối với màn hình không có
+Mất, không hoạt động
+chức năng cảm ứng
+
+6
+
+Hạng C
+
+Hệ thống âm thanh
+
+Không hoạt động
+
+7
+
+Hạng C
+
+Màn hình chung trên máy bay
+không có Inseat Video
+
+Không hoạt động
+
+8
+
+Hạng PE
+
+Màn hình cá nhân
+
+Không hoạt động / không xem
+được
+
+9
+
+Hạng PE
+
+Thiết bị điều khiển giải trí cá nhân
+PCU đối với màn hình không có
+Mất, không hoạt động
+chức năng cảm ứng
+
+10
+
+Hạng PE
+
+Hệ thống âm thanh
+
+11
+
+Hạng C
+
+TRANG THIẾT BỊ
+
+Toilet trên các chuyến bay từ
+2-4 tiếng
+
+
+MÔ TẢ
+Không hoạt động hoặc chức
+năng ngả không hoạt động
+theo đúng thiết kế
+
+Không hoạt động
+* Bồn cầu vỡ, tắc hoặc không
+ấn được nút xả bồn cầu
+* Vòi cấp nước hỏng
+* Thoát nước chậu rửa hỏng,
+tắc
+* Cửa / Đèn toilet hỏng
+
+
+12
+
+Hạng Y
+(FT >9h)
+
+Chức năng ngả/dựng lưng ghế
+
+Không hoạt động
+
+MỨC BỒI THƯỜNG
+Chuyến bay quốc tế (hạng C)
+Mức 1: 300 USD
+
+Mức 2: 200 USD
+
+Đường bay Châu Âu
+
+Đường bay HKG
+
+Đường bay Mỹ
+Đường bay Úc
+Đường bay Nhật
+Đường bay Hàn
+
+Đường bay Đài Loan
+Đường bay China
+Đường bay SIN
+Đường bay KUL
+Đường bay CGK
+Đường bay MNL
+Các đường bay khác
+
+Mức 3: 100 USD
+Đường bay
+Xuyên Đông
+Dương
+
+Mức 4: 50 USD
+Áp dụng trong
+trường hợp hỏng
+toilet hạng C
+
+Chuyến bay quốc nội (hạng C)
+Mức 1
+800.000 VND
+
+Mức 2
+600.000 VND
+
+Mức 3
+400.000 VND
+
+Mức 4
+200.000 VND
+
+HAN –
+SGN/VCA/PQC HAN
+
+HAN/SGN –
+HUI/DAD/CXR/UIH/VCL
+– HAN/SGN
+SGN – VDO/VDH/VII –
+SGN
+
+Các chặng bay
+khác
+
+Áp dụng trong
+trường hợp hỏng
+toilet hạng C
+
+SGN-HPH-SGN
+
+HAN –
+TBB/BMV/DLI/PXU HAN
+
+** HẠNG PE → mức bồi thường = 100 USD/khách (QUỐC TẾ)
+** HẠNG Y → mức bồi thường = 70 USD/khách (QUỐC TẾ)
+
+GIÁ TRỊ TIỀN MẶT BỒI THƯỜNG (2/3 MCO)
+
+
+
+Chuyến bay quốc tế
+
+Chuyến bay quốc nội
+
+MCO
+
+Tiền mặt / Chuyển
+khoản
+
+300 USD
+200 USD
+100 USD
+70 USD
+50 USD
+
+200 USD
+135 USD
+70 USD
+50 USD
+35 USD
+
+MCO
+
+Tiền mặt /
+Chuyển khoản
+
+800.000 VND
+600.000 VND
+400.000 VND
+200.000 VND
+
+550.000 VND
+400.000 VND
+270.000 VND
+150.000 VND
+
+ĐỊNH MỨC GHI PHIẾU BỒI THƯỜNG MCO
+* A350 / B787 → 20 PHIẾU (2 CHIỀU)
+* A321 → 10 PHIẾU (2 CHIỀU)
+* ATR72 → 05 PHIẾU (2 CHIỀU)`, keywords: ["TV", "quy", "định", "công", "tác", "bàn", "giao", "vật", "phẩm", "sau"], category: "Dịch vụ & CSKH" },
+  { id: 140, question: `(DV1.92) -TV cho biết các thông tin cần phải ghi khi chuyển tiền bán trà sữa vào
+tài khoản của TCTHK?
+-TV vào loại “ LotusSky- Trà sữa” trên cabinbook để TV thực hiện
+thao tác gì?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "thông", "tin", "cần", "ghi", "chuyển", "tiền", "bán", "trà", "sữa"], category: "Dịch vụ & CSKH" },
+  { id: 141, question: `(DV1.93) TV hãycho biết cách pha trà, café phục vụ khách hạng Y như thế nào?`, answer: `* Pha trà hạng Y: Cho túi trà vào ly/tách, rót nước sôi, đợi 2-3 phút cho trà ngấm đủ độ đậm.
+* Pha café hạng Y: Dùng café hoà tan (instant coffee), cho 1 gói café vào ly, rót nước sôi, khuấy đều.
+* Lượng nước cách miệng ly khoảng 1-2cm.
+* Phục vụ kèm đường và sữa theo yêu cầu của khách.`, keywords: ["TV", "hãycho", "cách", "pha", "trà", "café", "hạng", "thế", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 142, question: `(DV1.94) Bạn hãy trình bày nội dung cam kết số 1 của TV. Nêu ý nghĩa của cam
+kết. Bạn đánh giá TV đang thực hiện cam kết này như thế nào. (cấp
+độ mấy, điểm mạnh, điểm cần cải thiện)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "TV.", "nghĩa", "đánh", "giá", "TV", "đang"], category: "Dịch vụ & CSKH" },
+  { id: 143, question: `(DV1.95) Bạn hãy trình bày nội dung cam kết số 2 của TV. Nêu ý nghĩa của cam
+kết. Bạn đánh giá TV đang thực hiện trên chuyến bay như thế nào.
+(cấp độ mấy, điểm mạnh, điểm cần cải thiện)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "TV.", "nghĩa", "đánh", "giá", "TV", "đang"], category: "Dịch vụ & CSKH" },
+  { id: 144, question: `(DV1.96) Bạn hãy trình bày nội dung cam kết số 3 của TV. Giải thích cụm từ “
+nhất quán” trong cam kết. Bạn đánh giá TV đang thực hiện cam kết
+này trên chuyến bay như thế nào (cấp độ mấy, điểm mạnh, điểm cần
+cải thiện)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "TV.", "Giải", "thích", "cụm", "nhất", "quán"], category: "Dịch vụ & CSKH" },
+  { id: 145, question: `(DV1.97) Bạn hãy trình bày nội dung cam kết số 4 của TV. Giải thích cụm từ
+“mang lại sự hài lòng thực sự” trong cam kết.. Bạn đánh giá TV đang
+thực hiện cam kết nàytrên chuyến baynhư thế nào. (cấp độ mấy, điểm
+mạnh, điểm cần cải thiện)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "TV.", "Giải", "thích", "cụm", "mang", "lại"], category: "Dịch vụ & CSKH" },
+  { id: 146, question: `(DV1.98) Bạn hãy trình bày cam kết số 5 của TV. Giải thích cụm từ “giá trị dịch
+vụ” trong cam kết. Bạn đánh giá TV đang vận dụng thực hiện cam kết
+này trên chuyến bay như thế nào. (cấp độ mấy, điểm mạnh, điểm cần
+cải thiện)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cam", "kết", "TV.", "Giải", "thích", "cụm", "giá", "trị", "đánh", "TV"], category: "Dịch vụ & CSKH" },
+  { id: 147, question: `(DV1.99) Bạn hãy trình bày 6 cấp độ dịch vụ dưới góc nhìn của khách hàng.
+Theo bạn, bạn đang cung cấp dịch vụ đạt cấp độ nào, cho ví dụ về
+hành động phục vụ của bản thân để đạt cấp độ đó và bạn làm gì để đạt
+được cấp độ cao hơn?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "dưới", "góc", "nhìn", "hàng", "đang", "cung", "đạt", "động", "bản"], category: "Dịch vụ & CSKH" },
+  { id: 148, question: `(DV1.100) Bạn hãy trình bày khái niệm “Dịch vụ xuất sắc”
+Bạn làm gì để bản thân (Tổ TV) luôn cung cấp dịch vụ xuất sắc trên
+từng chuyến bay`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["khái", "niệm", "xuất", "sắc", "làm", "bản", "thân", "TV", "luôn", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 149, question: `(DV1.101) Bạn hãy trình bày cấp độ 5 trong 6 cấp độ dịch vụ, nêu những hành
+động của TV ở cấp độ này và kể 1 câu chuyện mà bạn hoặc đồng
+nghiệp đã phục vụ hành khách đạt được cấp độ này.`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "này", "câu", "chuyện", "đồng", "nghiệp", "đạt", "Tham"], category: "Dịch vụ & CSKH" },
+  { id: 150, question: `(DV1.102) Bạn hãy trình bày cấp độ 1 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách phòng ngừa, khắc phục của bạn`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "này", "cách", "phòng", "ngừa", "khắc", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 151, question: `(DV1.103) Bạn hãy trình bày cấp độ 2 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách phòng ngừa, khắc phục của bạn`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "này", "cách", "phòng", "ngừa", "khắc", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 152, question: `(DV1.104) Bạn hãy trình bày cấp độ 3 trong 6 cấp độ dịch vụ, nêu ra những hành
+động của TV ở cấp độ này và cách thức UP-SERVICE`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "này", "cách", "thức", "UP", "SERVICE", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 153, question: `(DV1.105) Bạn hãy trình bày cấp độ 4 trong 6 cấp độ dịch vụ, nêu hành động của
+TV và kể 1 hành động mà bạn hoặc đồng nghiệp đã phục vụ khách
+hàng đạt được cấp độ này`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "đồng", "nghiệp", "hàng", "đạt", "này", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 154, question: `(DV1.106) Bạn hãy trình bày cấp độ 6 trong 6 cấp độ dịch vụ, nêu những hành
+động của TV ởcấp độnàyvàkể1 hành động màbạn hoặc đồng nghiệp
+đã phục vụ khách hàng đạt được cấp độ này`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["cấp", "động", "TV", "ởcấp", "độnàyvàkể", "màbạn", "đồng", "nghiệp", "hàng", "đạt"], category: "Dịch vụ & CSKH" },
+  { id: 155, question: `(DV1.107) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 1. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 156, question: `(DV1.108) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 2. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 157, question: `(DV1.109) Bạn hãy nêu 6 nhu cầu khách đi máy bay và phân tích nhu cầu 3. TV
+phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "máy", "bay", "phân", "tích", "TV", "làm", "cung", "cấp"], category: "Dịch vụ & CSKH" },
+  { id: 158, question: `(DV1.110) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 4. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 159, question: `(DV1.111) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 5. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 160, question: `(DV1.112) Bạn hãy nêu 6 nhu cầu cơ bản của hành khách đi máy bay và phân tích
+nhu cầu 6. TV phải làm gì để cung cấp nhu cầu này cho khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nhu", "cầu", "bản", "máy", "bay", "phân", "tích", "TV", "làm", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 161, question: `(DV1.113) Bạn hãy trình bày 4 hạng mục giá trị.
+Bạn hãy chọn 1 hạng mục giá trị và tự đánh giá bản thân đang cung
+cấp hạng mục này ở cấp độ nào và vì sao?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["hạng", "mục", "giá", "trị", "chọn", "đánh", "bản", "thân", "đang", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 162, question: `(DV1.114) Bạn hãy trình bày về hạng mục giá trị “Sản phẩm chủ đạo”.
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["hạng", "mục", "giá", "trị", "Sản", "phẩm", "chủ", "đạo", "TV", "cung"], category: "Dịch vụ & CSKH" },
+  { id: 163, question: `(DV1.115) Bạn hãy trình bày về hạng mục giá trị “Sự thuận tiện”. TV cung cấp
+cho khách ở hạng mục này ở cấp độ nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["hạng", "mục", "giá", "trị", "thuận", "tiện", "TV", "cung", "cấp", "này"], category: "Dịch vụ & CSKH" },
+  { id: 164, question: `(DV1.116) Bạn hãy trình bày hiểu biết về hạng mục giá trị “Tư duy dịch vụ”.
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["hiểu", "hạng", "mục", "giá", "trị", "duy", "TV", "cung", "cấp", "này"], category: "Dịch vụ & CSKH" },
+  { id: 165, question: `(DV1.117) Bạn hãy trình bày hiểu biết về hạng mục giá trị “Phát triển mối quan
+hệ”.
+TV cung cấp cho khách ở hạng mục này ở cấp độ nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["hiểu", "hạng", "mục", "giá", "trị", "Phát", "triển", "mối", "quan", "TV"], category: "Dịch vụ & CSKH" },
+  { id: 166, question: `(DV1.118) Bạn hãy trình bày nội dung cam kết số 2
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi chào khách lên máy bay`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "chào", "lên"], category: "Dịch vụ & CSKH" },
+  { id: 167, question: `(DV1.119) Bạn hãy trình bày nội dung cam kết số 2
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách chờ bạn làm nóng ly mì tôm`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "chờ", "làm"], category: "Dịch vụ & CSKH" },
+  { id: 168, question: `(DV1.120) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách thực hiện đề nghị của bạn, ví dụ đưa
+khay thức ăn cho bạn thu`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "thực", "hiện"], category: "Dịch vụ & CSKH" },
+  { id: 169, question: `(DV1.121) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời cảm ơn khách khi nào?
+Hãy nói câu cảm ơn khi khách trợ giúp ý tế cho khách khác`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "cảm", "câu", "trợ", "giúp"], category: "Dịch vụ & CSKH" },
+  { id: 170, question: `(DV1.122) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khi khách góp ý món cơm thịt bò (cơm bị nát)?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "góp"], category: "Dịch vụ & CSKH" },
+  { id: 171, question: `(DV1.123) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khoang khách có tiếng trẻ con khóc rất
+to và khá lâu (5 phút)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "khoang"], category: "Dịch vụ & CSKH" },
+  { id: 172, question: `(DV1.124) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãynói câu xin lỗi khách khi chuyến baybị delaydo kiểm tra kỹthuật
+máy bay tại TSN 30 phút (phát sinh sau khi khách đã lên tàu)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "Hãynói", "câu"], category: "Dịch vụ & CSKH" },
+  { id: 173, question: `(DV1.125) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách va xe vào chân khách, gây tím bầm`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "vào"], category: "Dịch vụ & CSKH" },
+  { id: 174, question: `(DV1.126) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn TV phát thanh kém,
+không nghe rõ`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 175, question: `(DV1.127) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn TV không niềm nở, vui
+vẻ`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 176, question: `(DV1.128) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn món ăn có vật lạ trong
+salad cá hồi`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 177, question: `(DV1.129) Bạn hãy trình bày nội dung cam kết số 2.`, answer: `Cam kết số 2: TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch vụ một cách an toàn, an ninh và nhất quán.
+* Nói lời cảm ơn khách khi: khách hỗ trợ cất hành lý, khách chờ đợi, khách thực hiện đề nghị của TV, khách trợ giúp y tế cho khách khác.
+* Nói lời xin lỗi khách khi: có sự cố, sai sót trong phục vụ, delay, phàn nàn về dịch vụ.`, keywords: ["nội", "dung", "cam", "kết", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 178, question: `(DV1.130) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn chương trình giải trí
+không có nhiều lựa chọn`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 179, question: `(DV1.131) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn thức ăn, thức uống trên
+chuyến bay ít thay đổi`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 180, question: `(DV1.132) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn bỏ sót không phục vụ
+khách khăn lau tay`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 181, question: `(DV1.133) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn không có chỗ để hành
+lý bên trên chỗ ngồi`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 182, question: `(DV1.134) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khách khi khách phàn nàn không có cà phê Cold
+Brew trên chuyến bay`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 183, question: `(DV1.135) Bạn hãy trình bày nội dung cam kết số 2.
+Bạn nói lời Xin lỗi khách khi nào?
+Hãy nói câu xin lỗi khi khách phàn nàn có ít lựa chọn rượu vang trên
+chuyến bay? Khách thích rượu Vang đỏ Bordeaux – 2012?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["nội", "dung", "cam", "kết", "nói", "lời", "Xin", "lỗi", "câu", "phàn"], category: "Dịch vụ & CSKH" },
+  { id: 184, question: `(DV1.136) Kỹ năng quan sát hiệu quả đóng vai trò như thế nào trong việc thực
+hiện cam kết 5?
+Bạn hãy cho ví dụ về việc vận dụng kỹ năng quan sát hiệu quả để thực
+hiện cam kết 5.`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Kỹ", "năng", "quan", "sát", "hiệu", "quả", "đóng", "vai", "trò", "thế"], category: "Dịch vụ & CSKH" },
+  { id: 185, question: `(DV1.137) Nếu thực hiện được cam kết 5, bạn sẽ mang lại cảm xúc cho khách
+hành ở cấp độ mấy? Vì sao?
+Hãy đưa ra một ví dụ mà bạn thực hiện cam kết 5 vào thời điểm tạm
+biệt khách?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["thực", "hiện", "cam", "kết", "mang", "lại", "cảm", "xúc", "cấp", "mấy"], category: "Dịch vụ & CSKH" },
+  { id: 186, question: `(DV1.138) TV hãy nêu 4 hạng mục giá trị theo ngôn ngữ dịch vụ chung của
+VNA?.
+Từng hạng mục giá trị, TV hãy nêu 1 ví dụ mà TV đã thực hiện và
+đánh giá dịch vụ đó ở cấp độ nào.`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "hạng", "mục", "giá", "trị", "ngôn", "ngữ", "chung", "VNA", "Từng"], category: "Dịch vụ & CSKH" },
+  { id: 187, question: `(DV1.139) Trong lúc hiện diện trong khoang khách, TV quan sát và nhận thấy
+khách co ro/xoa người (khách bị lạnh).
+TV chủ động thực hiện những hành động nào để nâng tầm dịch vụ lên
+cấp độ đáng ngạc nhiên?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["lúc", "hiện", "diện", "khoang", "TV", "quan", "sát", "nhận", "thấy", "xoa"], category: "Dịch vụ & CSKH" },
+  { id: 188, question: `(DV1.140) Bạn hãy cho biết:
+- Khái niệm về dịch vụ theo ngôn ngữ dịch vụ chung của Vietnam
+Airlines?
+- Ba (3) yếu tố: hành động, giá trị, người khác đều quan trọng nhưng
+chúng ta cần quan tâm yếu tố nào trước?
+- Tài liệu tra cứu “khái niệm về dịch vụ”.`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Khái", "niệm", "ngôn", "ngữ", "chung", "Vietnam", "Airlines", "yếu", "động", "giá"], category: "Dịch vụ & CSKH" },
+  { id: 189, question: `(DV1.141) Bạn hãy cho biết:
+-Khái niệm về dịch vụ theo ngôn ngữ dịch vụ chung của Vietnam
+Airlines?
+-Những “Hành động tạo ra giá trị” khi đón khách lên máy bay
+- Tài liệu tra cứu khái niệm về dịch vụ`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Khái", "niệm", "ngôn", "ngữ", "chung", "Vietnam", "Airlines", "động", "tạo", "giá"], category: "Dịch vụ & CSKH" },
+  { id: 190, question: `(DV1.142) Bạn hãy cho biết Nguyên tắc hành động số 1 là gì?`, answer: `Nguyên tắc hành động số 1:
+Tôi đặc biệt chú ý đến ngoại hình, ngôn ngữ và thái độ tích cực khi giao tiếp với đồng nghiệp và đối tác.`, keywords: ["Nguyên", "tắc", "động", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 191, question: `(DV1.143) Bạn hãy cho biết Nguyên tắc hành động số 2 là gì?`, answer: `Nguyên tắc hành động số 2:
+Tôi cam kết rằng TÔI CÓ THỂ (và tôi SẼ) chịu trách nhiệm cá nhân cho những hành động, quyết định, kết quả của mình và làm gương để cung cấp dịch vụ một cách an toàn, an ninh và nhất quán.`, keywords: ["Nguyên", "tắc", "động", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 192, question: `(DV1.144) Bạn hãy cho biết Nguyên tắc hành động số 3 là gì?`, answer: `Nguyên tắc hành động số 3:
+Tôi cam kết góp phần tạo dựng môi trường làm việc tích cực, dung hợp và cởi mở trong các mối quan hệ.`, keywords: ["Nguyên", "tắc", "động", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 193, question: `(DV1.145) Bạn hãy cho biết Nguyên tắc hành động số 4 là gì?`, answer: `Nguyên tắc hành động số 4:
+Tôi tự hào là một phần của ngôi nhà Vietnam Airlines, liên tục cải thiện bản thân và luôn nỗ lực hướng tới sự xuất sắc.`, keywords: ["Nguyên", "tắc", "động", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 194, question: `(DV1.146) Bạn hãy cho biết Nguyên tắc hành động số 5 là gì?`, answer: `Nguyên tắc hành động số 5:
+Tôi nhận ra rằng suy nghĩ, cảm xúc và hoàn cảnh của người khác cũng quan trọng như chính mình và sẽ cố gắng hết sức lắng nghe, thấu hiểu, đồng cảm, chia sẻ và giúp đỡ người khác trong công việc và cuộc sống.`, keywords: ["Nguyên", "tắc", "động", "Tham", "khảo", "tài", "liệu"], category: "Dịch vụ & CSKH" },
+  { id: 195, question: `(DV2.1) Hành khách đã đặt suất ăn đặc biệt (VGML) nhưng không được cấp
+lên c/bay, TV cần xử lý như thế nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["đặt", "suất", "đặc", "biệt", "VGML", "nhưng", "cấp", "lên", "bay", "TV"], category: "Dịch vụ & CSKH" },
+  { id: 196, question: `(DV2.2) Để phục vụ khách xuống máy bay khi khai thác các tàu bay thân rộng
+(B787-9, B787-10, A350) không sử dụng cửa L1, trên chuyến bay,
+Tiếp viên thực hiện các công việc gì?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["xuống", "máy", "bay", "khai", "thác", "tàu", "thân", "rộng", "B787", "A350"], category: "Dịch vụ & CSKH" },
+  { id: 197, question: `(DV2.3) Để phục vụ khách VIP1 xuống máy bay khi khai thác các tàu bay thân
+rộng (B787-9, B787-10, A350) không sử dụng cửa L1, trên chuyến
+bay, Tiếp viên thực hiện các công việc gì?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["VIP1", "xuống", "máy", "bay", "khai", "thác", "tàu", "thân", "rộng", "B787"], category: "Dịch vụ & CSKH" },
+  { id: 198, question: `(DV2.4) Để phối hợp đảm bảo nhiệt độ khoang khách phục vụ các chuyến bay
+mùa nắng nóng, Tiếp viên cần thực hiện các việc gì?
+(thời điểm: trước khi boarding, trong lúc boarding, máy bay trên
+đường lăn)`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["phối", "hợp", "đảm", "bảo", "nhiệt", "khoang", "bay", "mùa", "nắng", "nóng"], category: "Dịch vụ & CSKH" },
+  { id: 199, question: `(DV2.5) Anh/chị hãy trình bày nội dung và cách vận dụng các nguyên tắc
+chung kỹ năng phục vụ hạng Thương gia?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Anh", "chị", "nội", "dung", "cách", "vận", "dụng", "nguyên", "tắc", "chung"], category: "Dịch vụ & CSKH" },
+  { id: 200, question: `(DV2.6) Khi thấy khách có biểu hiện khác thường về sức khỏe: bị nôn/ ói, da
+mặt xanh xao…, TV cần xử lý như thế nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["thấy", "biểu", "hiện", "khác", "thường", "sức", "khỏe", "nôn", "mặt", "xanh"], category: "Dịch vụ & CSKH" },
+  { id: 201, question: `(DV2.7) TV phục vụ sơ ý đẩyxe phục vụ đồ uống/ suất ănđụng vào chân khách,
+TV cần xử lý như thế nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "đẩyxe", "uống", "suất", "ănđụng", "vào", "chân", "cần", "thế", "Tham"], category: "Dịch vụ & CSKH" },
+  { id: 202, question: `(DV2.8) TV cần xử lý như thế nào khi đang phục vụ khách thức uống có cồn
+nhưng nhận thấy khách có dấu hiệu say rượu?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "cần", "thế", "đang", "thức", "uống", "cồn", "nhưng", "nhận", "thấy"], category: "Dịch vụ & CSKH" },
+  { id: 203, question: `(DV2.9) Quy định số lượng, trọng lượng chuyên chở PETC?
+Quy trình quản lý, TV cần lưu ý gì trên chuyến bay có chuyên chở
+PETC?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Quy", "định", "lượng", "trọng", "chuyên", "chở", "PETC", "quản", "TV", "cần"], category: "Dịch vụ & CSKH" },
+  { id: 204, question: `(DV2.10) Hãy nêu các bước TV phải thực hiện khi có khách bị khó thở phải sử
+dụng bình oxy?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["bước", "TV", "thực", "hiện", "khó", "thở", "dụng", "bình", "oxy", "Tham"], category: "Dịch vụ & CSKH" },
+  { id: 205, question: `(DV2.11) TV hãy cho biết quy trình phục vụ khách UM (từ 6 tuổi trở lên đến
+dưới 12 tuổi) như thế nào?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "quy", "UM", "tuổi", "trở", "lên", "dưới", "thế", "Tham", "khảo"], category: "Dịch vụ & CSKH" },
+  { id: 206, question: `(DV2.12) TV hãy giới thiệu và trình bày cách thức phục vụ Welcome drink trên
+chuyến bay VNA?
+- Các bước chuẩn bị?
+- Phục vụ Welcome drink chuyến bay đường ngắn? Đường trung/dài?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["TV", "giới", "thiệu", "cách", "thức", "Welcome", "drink", "bay", "VNA", "bước"], category: "Dịch vụ & CSKH" },
+  { id: 207, question: `(DV2.13) TV hãy nêu cách thức pha café phin giấy trên máy bay?`, answer: `* Xé gói café phin giấy, mở nắp ly
+* Đặt phin giấy lên miệng ly
+* Rót nước sôi từ từ vào phin giấy, đợi nước chảy hết qua phin
+* Có thể rót thêm nước sôi nếu khách muốn café loãng hơn
+* Bỏ phin giấy sau khi pha xong
+* Phục vụ kèm đường, sữa theo yêu cầu khách`, keywords: ["TV", "cách", "thức", "pha", "café", "phin", "giấy", "máy", "bay", "Tham"], category: "Dịch vụ & CSKH" },
+  { id: 208, question: `(DV2.14) Khi khách liên hệ với TV và yêu cầu được dùng thuốc trong hộp thuốc
+cứu thương trên máy bay, TV phục vụ phải làm gì?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["liên", "TV", "yêu", "cầu", "dùng", "thuốc", "hộp", "cứu", "thương", "máy"], category: "Dịch vụ & CSKH" },
+  { id: 209, question: `(DV2.15) Nhằm giảm thiểu tình trạng khách bị ngã cầu thang khi xuống tàu bay,
+Tiếp viên phải thực hiện các nội dung công việc gì?`, answer: `(Tham khảo tài liệu Dịch vụ)`, keywords: ["Nhằm", "giảm", "thiểu", "tình", "trạng", "ngã", "cầu", "thang", "xuống", "tàu"], category: "Dịch vụ & CSKH" },
 ];
